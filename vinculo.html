@@ -6,7 +6,7 @@
 <title>KAIzen Consult — Agentes IA a Medida para Pymes | Procesos + IA + Ejecución Ágil</title>
 <meta name="description" content="Agentes IA a medida para pymes. Procesos optimizados, eficiencia operativa, escalabilidad 24/7. De idea a producción en días. RAG, n8n, metodología Kaizen.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -28,6 +28,7 @@
   --border: #e2e8f0;
   --border-light: #f1f5f9;
   --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Space Grotesk', var(--font);
 }
 
 html { scroll-behavior: smooth; font-size: 16px; }
@@ -90,6 +91,27 @@ nav a:hover { color: var(--text); }
   display: flex; align-items: center;
   padding-top: 5rem;
   position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 80%;
+  height: 120%;
+  background: radial-gradient(ellipse, rgba(163, 230, 53, 0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 50%;
+  height: 80%;
+  background: radial-gradient(ellipse, rgba(0, 102, 255, 0.08) 0%, transparent 60%);
+  pointer-events: none;
 }
 .hero-content { position: relative; z-index: 2; }
 .hero-badge {
@@ -103,10 +125,11 @@ nav a:hover { color: var(--text); }
   border-radius: 6px;
 }
 .hero h1 {
+  font-family: var(--font-display);
   font-size: clamp(2.5rem, 5.5vw, 4rem);
   font-weight: 700;
   line-height: 1.1;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
   max-width: 720px;
   color: var(--text);
 }
@@ -155,14 +178,26 @@ nav a:hover { color: var(--text); }
   display: flex; gap: 2.5rem;
   flex-wrap: wrap;
 }
-.hero-stat-value { font-size: 1.75rem; font-weight: 700; color: var(--text); }
-.hero-stat-label { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem; }
+.hero-stat {
+  padding: 1rem 1.5rem;
+  background: rgba(255,255,255,0.6);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s;
+}
+.hero-stat:hover {
+  border-color: var(--lime);
+  box-shadow: 0 4px 20px rgba(163, 230, 53, 0.15);
+}
+.hero-stat-value { font-family: var(--font-display); font-size: 2rem; font-weight: 700; color: var(--lime-dark); line-height: 1.2; }
+.hero-stat-label { font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.25rem; font-weight: 500; }
 
 /* BADGES */
 .badges {
-  padding: 2.5rem 0;
+  padding: 3rem 0;
   border-bottom: 1px solid var(--border-light);
-  background: var(--bg-alt);
+  background: linear-gradient(180deg, var(--bg-alt) 0%, var(--bg) 100%);
 }
 .badges-inner {
   display: flex; justify-content: center; align-items: center;
@@ -171,11 +206,18 @@ nav a:hover { color: var(--text); }
 .badges-label { font-size: 0.8rem; color: var(--text-muted); }
 .badges-logos { display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; }
 .badge-pill {
-  font-size: 0.85rem; color: var(--text-secondary);
-  padding: 0.4rem 1rem;
+  font-size: 0.85rem; font-weight: 500;
+  color: var(--text);
+  padding: 0.5rem 1.1rem;
   background: var(--bg);
   border-radius: 100px;
   border: 1px solid var(--border);
+  transition: all 0.25s;
+}
+.badge-pill:hover {
+  border-color: var(--lime);
+  background: var(--lime-light);
+  color: var(--lime-dark);
 }
 
 /* SOLUTIONS */
@@ -191,10 +233,11 @@ nav a:hover { color: var(--text); }
   margin-bottom: 0.75rem;
 }
 .section-title {
+  font-family: var(--font-display);
   font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 700;
   line-height: 1.2;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
   max-width: 640px;
   color: var(--text);
 }
@@ -238,6 +281,8 @@ nav a:hover { color: var(--text); }
   transform: translateY(-2px);
 }
 .solution-card:hover::before { opacity: 1; }
+.solution-card:first-child::before { opacity: 0.5; }
+.solution-card:first-child:hover::before { opacity: 1; }
 .solution-category {
   font-size: 0.7rem; font-weight: 600;
   text-transform: uppercase; letter-spacing: 0.08em;
@@ -294,8 +339,13 @@ nav a:hover { color: var(--text); }
 .feature-card {
   background: var(--bg);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 16px;
   padding: 2rem;
+  transition: all 0.3s;
+}
+.feature-card:hover {
+  border-color: var(--lime);
+  box-shadow: 0 8px 24px rgba(163, 230, 53, 0.1);
 }
 .feature-icon {
   width: 44px; height: 44px;
@@ -320,13 +370,15 @@ nav a:hover { color: var(--text); }
 }
 .process-step { flex: 1; min-width: 200px; text-align: center; }
 .process-num {
-  width: 36px; height: 36px;
-  background: var(--text);
-  color: #fff;
-  border-radius: 50%;
+  width: 44px; height: 44px;
+  background: linear-gradient(135deg, var(--lime), var(--lime-dark));
+  color: var(--text);
+  border-radius: 12px;
   display: flex; align-items: center; justify-content: center;
-  font-weight: 700; font-size: 0.9rem;
+  font-family: var(--font-display);
+  font-weight: 700; font-size: 1rem;
   margin: 0 auto 1rem;
+  box-shadow: 0 4px 12px rgba(163, 230, 53, 0.25);
 }
 .process-step h4 { font-size: 1rem; font-weight: 600; margin-bottom: 0.35rem; color: var(--text); }
 .process-step p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; }
@@ -337,15 +389,57 @@ nav a:hover { color: var(--text); }
   background: linear-gradient(135deg, var(--accent-light) 0%, var(--lime-light) 50%, rgba(255,255,255,0) 100%);
   border-top: 1px solid var(--border-light);
 }
-.proactive-inner { max-width: 700px; margin: 0 auto; text-align: center; }
+.proactive-inner { max-width: 720px; margin: 0 auto; }
 .proactive h2 {
+  font-family: var(--font-display);
   font-size: clamp(1.5rem, 2.5vw, 2rem);
   font-weight: 700;
   line-height: 1.25;
   margin-bottom: 1rem;
   color: var(--text);
+  text-align: center;
 }
+.proactive-inner > p { text-align: center; }
 .proactive p { color: var(--text-secondary); font-size: 1rem; line-height: 1.7; }
+.proactive-mockup {
+  margin-top: 2.5rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+}
+.proactive-mockup-header {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-size: 0.75rem; font-weight: 600; color: var(--lime-dark);
+  margin-bottom: 1rem;
+}
+.proactive-mockup-header::before {
+  content: '';
+  width: 8px; height: 8px;
+  background: var(--lime);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+.proactive-msg {
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.proactive-msg.user {
+  background: var(--bg-alt);
+  color: var(--text);
+  margin-left: 0;
+}
+.proactive-msg.bot {
+  background: linear-gradient(135deg, var(--lime-light), rgba(163, 230, 53, 0.08));
+  border: 1px solid rgba(163, 230, 53, 0.3);
+  color: var(--text);
+}
+.proactive-msg strong { color: var(--lime-dark); }
 
 /* COMPLIANCE */
 .compliance { padding: 4rem 0; background: var(--bg-alt); }
@@ -370,12 +464,63 @@ nav a:hover { color: var(--text); }
 .compliance h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: 0.35rem; color: var(--text); }
 .compliance p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; max-width: 600px; }
 
+/* TESTIMONIALS */
+.testimonials {
+  padding: 5rem 0;
+  background: var(--bg);
+}
+.testimonials h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.5vw, 1.85rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text);
+}
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.testimonial-card {
+  padding: 1.5rem 1.75rem;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  transition: all 0.3s;
+}
+.testimonial-card:hover {
+  border-color: var(--lime);
+  box-shadow: 0 4px 20px rgba(163, 230, 53, 0.08);
+}
+.testimonial-card blockquote {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin: 0 0 1rem 0;
+  font-style: italic;
+}
+.testimonial-card cite {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+  font-style: normal;
+}
+.testimonial-card .testimonial-role {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
 /* CTA + FORM */
 .cta {
   padding: 6rem 0;
   text-align: center;
 }
 .cta h2 {
+  font-family: var(--font-display);
   font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 700;
   line-height: 1.2;
@@ -476,6 +621,7 @@ footer {
 @media (max-width: 1024px) {
   .solutions-grid { grid-template-columns: 1fr; }
   .features-grid { grid-template-columns: 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 768px) {
   nav ul { display: none; }
@@ -573,7 +719,11 @@ footer {
         <div class="solution-category">Ventas B2B</div>
         <h3 class="solution-title">Agente de Prospección y Outreach</h3>
         <p class="solution-desc">Gestiona todo el pipeline: detecta leads, investiga prospectos, redacta outreach personalizado y hace seguimiento. Autónomamente.</p>
-        <div class="solution-result">→ Pipeline de lead a primer contacto en &lt;2 minutos</div>
+        <div class="solution-metrics" style="display:flex;gap:1.25rem;margin-bottom:0.75rem;font-size:0.8rem;">
+          <span style="font-weight:600;color:var(--lime-dark);">Lead→contacto &lt;2 min</span>
+          <span style="color:var(--text-muted);">↑ +40% pipeline</span>
+        </div>
+        <div class="solution-result">→ Pipeline completo de lead a primer contacto en &lt;2 minutos</div>
         <a href="soluciones.html#ventas" class="solution-cta reveal">Ver más y solicitar info</a>
         <div class="solution-tags">
           <span class="solution-tag">HubSpot</span>
@@ -758,6 +908,11 @@ footer {
     <div class="proactive-inner reveal">
       <h2>Proactivos por defecto</h2>
       <p>Detectamos problemas antes de que escalen. Proponemos acciones, no solo alertas. Cada recomendación se traduce en impacto directo en tu P&L.</p>
+      <div class="proactive-mockup reveal">
+        <div class="proactive-mockup-header">Actividad en vivo · Proactivo</div>
+        <div class="proactive-msg user">¿Algo raro en el pipeline esta semana?</div>
+        <div class="proactive-msg bot">3 deals llevan más de 10 días en "Cualificado". He redactado emails de seguimiento para cada uno y marcado el de mayor valor (<strong>42K€</strong>) para tu revisión.</div>
+      </div>
     </div>
   </div>
 </section>
@@ -774,6 +929,25 @@ footer {
       <div>
         <h3>Cumplimiento normativo — EU AI Act</h3>
         <p>Soporte para que tus sistemas de IA cumplan con el Reglamento europeo: homologación, documentación técnica y formaciones en normativa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="container">
+    <h2 class="reveal">Lo que dicen empresas que escalan</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <blockquote>"Identificó un cuello de botella en nuestro proceso de cualificación que no habíamos visto. De idea a automatización funcionando en menos de una semana."</blockquote>
+        <cite>— Director Comercial</cite>
+        <div class="testimonial-role">B2B · Industria</div>
+      </div>
+      <div class="testimonial-card reveal">
+        <blockquote>"El agente de soporte resolvió el 70% de consultas recurrentes desde el primer día. Nuestro equipo pudo pasar a casos complejos."</blockquote>
+        <cite>— Responsable CX</cite>
+        <div class="testimonial-role">SaaS · Servicios</div>
       </div>
     </div>
   </div>
