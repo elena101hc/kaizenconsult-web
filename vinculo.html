@@ -444,6 +444,44 @@ nav a:hover { color: var(--text); }
 /* COMPLIANCE */
 .compliance { padding: 4rem 0; background: var(--bg-alt); }
 .team-intro { margin-top: 1.5rem; }
+.team-unified {
+  margin-top: 2.5rem;
+  padding: 2.5rem 2.75rem;
+  background: linear-gradient(135deg, var(--bg) 0%, var(--bg-alt) 50%, rgba(163, 230, 53, 0.06) 100%);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 102, 255, 0.06);
+}
+.team-unified-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.75rem 0 1.5rem;
+}
+.team-unified-pill {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.45rem 1rem;
+  background: var(--lime-light);
+  color: var(--lime-dark);
+  border-radius: 100px;
+}
+.team-unified p {
+  color: var(--text-secondary);
+  line-height: 1.75;
+  max-width: 800px;
+  margin-top: 1rem;
+}
+.team-unified p:first-of-type { margin-top: 0; }
+.team-unified-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 1.75rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--border);
+}
+.team-unified-tags .solution-tag { font-size: 0.72rem; }
 .compliance-inner {
   display: flex;
   align-items: center;
@@ -639,6 +677,7 @@ footer {
   .compliance-inner { flex-direction: column; text-align: center; }
   .form-row { flex-direction: column; }
   .form-row .form-group { min-width: 100%; }
+  .team-unified { padding: 1.5rem 1.25rem; }
 }
 </style>
 </head>
@@ -654,7 +693,7 @@ footer {
     <ul>
       <li><a href="soluciones.html">Soluciones</a></li>
       <li><a href="#proceso">Proceso</a></li>
-      <li><a href="vinculo.html#contacto" class="nav-cta">Agendar demo</a></li>
+      <li><a href="vinculo.html#contacto" class="nav-cta">Contáctanos</a></li>
     </ul>
   </div>
 </nav>
@@ -663,9 +702,9 @@ footer {
 <section class="hero">
   <div class="container">
     <div class="hero-content">
-      <div class="hero-badge reveal">Automatizaciones impulsadas por IA · Procesos · Metodología Kaizen</div>
-      <h1 class="reveal">Automatizaciones de vanguardia. Potenciadas por IA.</h1>
-      <p class="hero-sub reveal">A la última en automatizaciones gracias a la IA: flujos B2B, ventas, compras, soporte, documentación. n8n, RAG, LLMs e integraciones. Desde procesos manuales a sistemas que escalan 24/7. Metodología Kaizen: de idea a solución en días.</p>
+      <div class="hero-badge reveal">Automatizaciones impulsadas por IA · Procesos · Innovación · Mejora Contínua</div>
+      <h1 class="reveal">Automatizaciones de vanguardia potenciadas por <span style="color:var(--lime)">IA</span>.</h1>
+      <p class="hero-sub reveal">Te acompañamos para que tu empresa esté a la última en automatizaciones gracias a la IA: flujos de ventas, compras, soporte, innovación. Expertos en negocio y tecnología de vanguardia (n8n, integraciones, RAGs, LLMs). De procesos manuales a sistemas que escalan y trabajan 24/7.</p>
       <div class="hero-actions reveal">
         <a href="#contacto" class="btn-primary">Agendar diagnóstico gratuito →</a>
         <a href="soluciones.html" class="btn-secondary">Ver soluciones</a>
@@ -680,8 +719,8 @@ footer {
           <div class="hero-stat-label">años en procesos y reingeniería</div>
         </div>
         <div class="hero-stat">
-          <div class="hero-stat-value">100%</div>
-          <div class="hero-stat-label">foco en ROI</div>
+          <div class="hero-stat-value">+40</div>
+          <div class="hero-stat-label">años de experiencia combinada en el equipo</div>
         </div>
       </div>
     </div>
@@ -695,11 +734,11 @@ footer {
       <span class="badges-label">Tecnologías e integraciones</span>
       <div class="badges-logos">
         <span class="badge-pill">n8n</span>
-        <span class="badge-pill">HubSpot</span>
-        <span class="badge-pill">WhatsApp</span>
-        <span class="badge-pill">RAG + LLM</span>
+        <span class="badge-pill">OpenClaw</span>
+        <span class="badge-pill">CRM</span>
         <span class="badge-pill">VAPI</span>
-        <span class="badge-pill">Zendesk</span>
+        <span class="badge-pill">RAG + LLM</span>
+        <span class="badge-pill">WhatsApp</span>
       </div>
     </div>
   </div>
@@ -710,9 +749,9 @@ footer {
   <div class="container">
     <div class="section-header reveal">
       <div class="section-tag">Casos de uso</div>
-      <h2 class="section-title">Escalabilidad 24/7. Eficiencia operativa. Digitalización ejecutiva.</h2>
-      <p class="section-desc">Prospección y Outreach, Soporte al Cliente, Automatización de Procesos, Reingeniería y Procesos, Voice Bots, Capacitación en IA. Soluciones que escalan.</p>
-      <a href="vinculo.html#contacto" class="btn-primary" style="margin-top:1.5rem;">¿Tu negocio está listo para dar el salto? Agenda diagnóstico gratuito →</a>
+      <h2 class="section-title">Sistemas de IA escalables, trabajando 24/7. Digitalización ejecutiva orientada a resultados.</h2>
+      <p class="section-desc">Prospección, Outreach, Soporte al Cliente, Automatización de Procesos, Reingeniería e Innovación, Agentes de voz. Nuestro valor: Entendemos tu negocio y creamos Soluciones que escalan.</p>
+      <a href="vinculo.html#contacto" class="btn-primary" style="margin-top:1.5rem;">¿Estás listo para dar el salto? →</a>
     </div>
     <div class="solutions-grid">
       <div class="solution-card reveal">
@@ -735,13 +774,16 @@ footer {
       <div class="solution-card reveal">
         <div class="solution-category">Customer Experience</div>
         <h3 class="solution-title">Agente de Soporte al Cliente</h3>
-        <p class="solution-desc">Gestiona Tier 1 en Zendesk, WhatsApp y Slack. Resuelve tickets en segundos, detecta patrones y corrige causas raíz de forma proactiva.</p>
+        <p class="solution-desc">Gestiona Tier 1 en WhatsApp, Slack y canales enlazados a tu CRM (n8n, OpenClaw). Resuelve tickets en segundos, detecta patrones y corrige causas raíz de forma proactiva.</p>
         <div class="solution-result">→ 78% auto-resolución · 38s respuesta media</div>
         <a href="soluciones.html#soporte" class="solution-cta reveal">Ver más y solicitar info</a>
         <div class="solution-tags">
-          <span class="solution-tag">Zendesk</span>
-          <span class="solution-tag">WhatsApp</span>
+          <span class="solution-tag">n8n</span>
+          <span class="solution-tag">OpenClaw</span>
+          <span class="solution-tag">CRM</span>
+          <span class="solution-tag">VAPI</span>
           <span class="solution-tag">RAG + LLM</span>
+          <span class="solution-tag">WhatsApp</span>
         </div>
       </div>
 
@@ -761,8 +803,8 @@ footer {
 
       <div class="solution-card reveal">
         <div class="solution-category">Consultoría</div>
-        <h3 class="solution-title">Reingeniería y Procesos</h3>
-        <p class="solution-desc">+30 años en mejora continua y reingeniería en automoción e industria. La base que toda transformación digital necesita.</p>
+        <h3 class="solution-title">Reingeniería e Innovación</h3>
+        <p class="solution-desc">+30 años en mejora continua y reingeniería en Automoción y DeepTech. La base sólida que toda transformación digital necesita.</p>
         <div class="solution-result">→ Procesos optimizados antes de automatizar</div>
         <a href="soluciones.html#consultoria" class="solution-cta reveal">Ver más y solicitar info</a>
         <div class="solution-tags">
@@ -774,7 +816,7 @@ footer {
 
       <div class="solution-card reveal">
         <div class="solution-category">Voz</div>
-        <h3 class="solution-title">Voice Bots y Callbots</h3>
+        <h3 class="solution-title">Agentes de Voz y Callbots</h3>
         <p class="solution-desc">Asistentes de voz para reservas, pagos y atención telefónica. Tu centralita potenciada con IA conversacional. 24/7.</p>
         <div class="solution-result">→ Atención sin esperas · Multiidioma</div>
         <a href="soluciones.html#voz" class="solution-cta reveal">Ver más y solicitar info</a>
@@ -854,54 +896,6 @@ footer {
   </div>
 </section>
 
-<!-- TEAM -->
-<section class="features team-section" style="padding: 4rem 0;">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="section-tag">Equipo</div>
-      <h2 class="section-title">Ingeniería, industria y pragmatismo</h2>
-      <p class="section-desc" style="max-width: 720px;">Un equipo que viene de la ingeniería y las ciencias industriales. Sabemos cómo funcionan las empresas por dentro porque hemos trabajado en ellas.</p>
-    </div>
-    <div class="team-intro reveal">
-      <h3 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 1rem; color: var(--text);">No somos teóricos. Somos ingenieros que resuelven problemas</h3>
-      <p style="color: var(--text-secondary); line-height: 1.75; max-width: 720px;">KAIzen Consult nace de la intersección entre ingeniería industrial, ventas B2B y tecnología de IA. Más de 40 años de experiencia combinada en sectores donde los errores cuestan dinero: automoción, manufactura, logística y tecnología.</p>
-      <p style="color: var(--text-secondary); line-height: 1.75; max-width: 720px; margin-top: 1rem;">Hemos gestionado equipos, negociado contratos, optimizado líneas de producción y transformado procesos antes de que la IA fuera una opción. Ahora aplicamos esa misma mentalidad — analítica, pragmática, orientada a resultados — a la implementación de Inteligencia Artificial.</p>
-    </div>
-    <div class="features-grid team-cards" style="grid-template-columns: repeat(2, 1fr); margin-top: 3rem;">
-      <div class="feature-card reveal">
-        <div class="feature-icon">👤</div>
-        <h3 class="feature-title">IA aplicada al negocio</h3>
-        <p class="feature-desc">+10 años en ventas, compras y headhunting B2B. Ingeniera especializada en automatizaciones con IA, agentes conversacionales, RAG y workflows inteligentes.</p>
-        <div class="solution-tags" style="margin-top: 1rem;">
-          <span class="solution-tag">IA Generativa</span>
-          <span class="solution-tag">Agentes IA</span>
-          <span class="solution-tag">n8n</span>
-          <span class="solution-tag">Ventas B2B</span>
-          <span class="solution-tag">HubSpot</span>
-          <span class="solution-tag">Lean</span>
-          <span class="solution-tag">Reingeniería</span>
-          <span class="solution-tag">Automoción</span>
-          <span class="solution-tag">Change Management</span>
-          <span class="solution-tag">Mejora Continua</span>
-          <span class="solution-tag">Inteligencia Artificial</span>
-        </div>
-      </div>
-      <div class="feature-card reveal">
-        <div class="feature-icon">⚙️</div>
-        <h3 class="feature-title">Procesos e Innovación</h3>
-        <p class="feature-desc">Reingeniería industrial. +30 años en mejora continua, reingeniería de procesos y gestión de la innovación en el sector de automoción e industria. La base sólida que toda transformación necesita.</p>
-        <div class="solution-tags" style="margin-top: 1rem;">
-          <span class="solution-tag">Lean</span>
-          <span class="solution-tag">Reingeniería</span>
-          <span class="solution-tag">Automoción</span>
-          <span class="solution-tag">Mejora Continua</span>
-          <span class="solution-tag">Innovación</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- PROACTIVE -->
 <section class="proactive">
   <div class="container">
@@ -912,6 +906,42 @@ footer {
         <div class="proactive-mockup-header">Actividad en vivo · Proactivo</div>
         <div class="proactive-msg user">¿Algo raro en el pipeline esta semana?</div>
         <div class="proactive-msg bot">3 deals llevan más de 10 días en "Cualificado". He redactado emails de seguimiento para cada uno y marcado el de mayor valor (<strong>42K€</strong>) para tu revisión.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="features team-section" style="padding: 4rem 0;">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">Equipo</div>
+      <h2 class="section-title">Un equipo. Experiencia completa.</h2>
+      <p class="section-desc" style="max-width: 720px;">Ingeniería, industria y pragmatismo en una sola mesa: no son dos perfiles sueltos, es el mismo equipo cruzando proceso real con IA que escala.</p>
+    </div>
+    <div class="team-unified reveal">
+      <h3 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; color: var(--text); margin-bottom: 0.5rem;">No somos teóricos. Somos ingenieros que resuelven problemas</h3>
+      <div class="team-unified-pill-row">
+        <span class="team-unified-pill">+40 años de experiencia combinada</span>
+        <span class="team-unified-pill">B2B · IA · Procesos industriales</span>
+        <span class="team-unified-pill">Una sola mesa, un solo criterio de ROI</span>
+      </div>
+      <p>KAIzen Consult une dos trayectorias que se complementan: por un lado, más de una década en ventas, compras y headhunting B2B, con ingeniería aplicada a automatizaciones con IA — agentes conversacionales, RAG, n8n y workflows inteligentes. Por otro, más de tres décadas en reingeniería industrial, mejora continua, Lean e innovación en automoción e industria: la base sólida que toda transformación necesita antes de automatizar.</p>
+      <p>Juntos sumamos experiencia en sectores donde el error cuesta dinero — automoción, manufactura, logística y tecnología. Hemos gestionado equipos, negociado contratos, optimizado líneas de producción y transformado procesos antes de que la IA fuera una opción. Hoy aplicamos la misma mentalidad analítica y pragmática a la implementación de Inteligencia Artificial: entendemos tu negocio por dentro y lo llevamos a producción con criterio técnico.</p>
+      <div class="team-unified-tags">
+        <span class="solution-tag">IA Generativa</span>
+        <span class="solution-tag">Agentes IA</span>
+        <span class="solution-tag">n8n</span>
+        <span class="solution-tag">RAG</span>
+        <span class="solution-tag">Ventas B2B</span>
+        <span class="solution-tag">HubSpot</span>
+        <span class="solution-tag">Reingeniería industrial</span>
+        <span class="solution-tag">Lean</span>
+        <span class="solution-tag">Automoción</span>
+        <span class="solution-tag">Mejora continua</span>
+        <span class="solution-tag">Innovación</span>
+        <span class="solution-tag">Change management</span>
+        <span class="solution-tag">Inteligencia artificial aplicada</span>
       </div>
     </div>
   </div>
@@ -983,7 +1013,7 @@ footer {
               <option value="ventas">Agente de Ventas</option>
               <option value="soporte">Agente de Soporte</option>
               <option value="automatizacion">Automatización</option>
-              <option value="voice">Voice Bots</option>
+              <option value="voice">Agentes de Voz</option>
               <option value="consultoria">Consultoría</option>
               <option value="formacion">Formación</option>
               <option value="otro">Otro</option>
