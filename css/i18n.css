@@ -22,9 +22,9 @@
 }
 
 .lang-toggle:hover {
-  border-color: var(--lime-dark, #84cc16);
+  border-color: var(--lime-dark, #9cc832);
   color: var(--text, #0f172a);
-  background: var(--lime-light, rgba(163, 230, 53, 0.15));
+  background: var(--lime-light, rgba(184, 224, 74, 0.12));
 }
 
 .lang-toggle .lang-option {
@@ -34,7 +34,7 @@
 }
 
 .lang-toggle .lang-option.active {
-  background: var(--lime, #a3e635);
+  background: var(--lime, #b8e04a);
   color: var(--text, #0f172a);
 }
 

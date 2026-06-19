@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/i18n.css">
+<link rel="stylesheet" href="css/footer.css">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -18,14 +19,14 @@
   --text: #0f172a;
   --text-secondary: #475569;
   --text-muted: #64748b;
-  --electric: #0066ff;
-  --electric-hover: #0052cc;
-  --lime: #a3e635;
-  --lime-dark: #84cc16;
-  --accent: #0066ff;
-  --accent-hover: #0052cc;
-  --accent-light: rgba(0, 102, 255, 0.08);
-  --lime-light: rgba(163, 230, 53, 0.15);
+  --electric: #2563eb;
+  --electric-hover: #1d4ed8;
+  --lime: #b8e04a;
+  --lime-dark: #9cc832;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-light: rgba(37, 99, 235, 0.08);
+  --lime-light: rgba(184, 224, 74, 0.12);
   --border: #e2e8f0;
   --border-light: #f1f5f9;
   --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -101,7 +102,7 @@ nav a:hover { color: var(--text); }
   right: -20%;
   width: 80%;
   height: 120%;
-  background: radial-gradient(ellipse, rgba(163, 230, 53, 0.12) 0%, transparent 60%);
+  background: radial-gradient(ellipse, rgba(184, 224, 74, 0.1) 0%, transparent 60%);
   pointer-events: none;
 }
 .hero::after {
@@ -111,7 +112,7 @@ nav a:hover { color: var(--text); }
   left: -10%;
   width: 50%;
   height: 80%;
-  background: radial-gradient(ellipse, rgba(0, 102, 255, 0.08) 0%, transparent 60%);
+  background: radial-gradient(ellipse, rgba(37, 99, 235, 0.06) 0%, transparent 60%);
   pointer-events: none;
 }
 .hero-content { position: relative; z-index: 2; }
@@ -625,56 +626,6 @@ nav a:hover { color: var(--text); }
 .cta-links a { font-size: 0.9rem; color: var(--text-secondary); text-decoration: none; }
 .cta-links a:hover { color: var(--electric); }
 
-/* FOOTER */
-footer {
-  padding: 2.5rem 0;
-  border-top: 1px solid var(--border-light);
-  background: var(--bg-alt);
-}
-.footer-inner {
-  display: flex; justify-content: space-between; align-items: center;
-  flex-wrap: wrap; gap: 1rem;
-}
-.footer-left { font-size: 0.85rem; color: var(--text-muted); }
-.footer-links { display: flex; gap: 1.5rem; }
-.footer-links a {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-.footer-links a:hover { color: var(--electric); }
-.footer-location {
-  margin-top: 1.75rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--border-light);
-  text-align: center;
-}
-.footer-location h3 {
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 0.75rem;
-}
-.footer-address {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-  white-space: pre-line;
-  margin-bottom: 0.5rem;
-}
-.footer-email {
-  display: inline-block;
-  font-size: 0.9rem;
-  color: var(--text);
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-.footer-email:hover { color: var(--electric); }
-
 /* REVEAL */
 .reveal {
   opacity: 0;
@@ -1065,22 +1016,24 @@ footer {
 </section>
 
 <!-- FOOTER -->
-<footer>
+<footer class="site-footer">
   <div class="container">
-    <div class="footer-inner">
-      <div class="footer-left">
-        <a href="vinculo.html" class="logo" style="font-size:1.1rem; color:var(--text);">K<span style="color:var(--lime)">AI</span>zen Consult</a>
-        <div style="margin-top:0.4rem; font-size:0.8rem;" data-i18n="footer.tagline">© 2025 KAIzen Consult — AI Agents, Processes & Automation</div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="vinculo.html" class="footer-logo">K<span>AI</span>zen Consult</a>
+        <div class="footer-contact">
+          <p class="footer-label" data-i18n="footer.findUs">Find us</p>
+          <p class="footer-address" data-i18n="footer.address">C/ Pau Claris, 162-164, pl. 3
+08037 Barcelona</p>
+          <a href="mailto:hello@kaizenconsult.es" class="footer-email">hello@kaizenconsult.es</a>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="https://www.linkedin.com/company/kaizen-consult-ai/" target="_blank" rel="noopener">LinkedIn</a>
+      <div class="footer-nav">
+        <a href="https://www.linkedin.com/company/kaizen-consult-ai/" target="_blank" rel="noopener" class="footer-social">LinkedIn</a>
       </div>
     </div>
-    <div class="footer-location">
-      <h3 data-i18n="footer.findUs">Find us</h3>
-      <p class="footer-address" data-i18n="footer.address">C/ Pau Claris, 162-164, pl. 3
-08037 Barcelona</p>
-      <a href="mailto:hello@kaizenconsult.es" class="footer-email">hello@kaizenconsult.es</a>
+    <div class="footer-bottom">
+      <p data-i18n="footer.tagline">© 2025 KAIzen Consult — AI Agents, Processes & Automation</p>
     </div>
   </div>
 </footer>
