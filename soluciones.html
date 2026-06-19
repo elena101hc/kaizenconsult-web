@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Soluciones — KAIzen Consult | Agentes IA, Automatización y Consultoría</title>
-<meta name="description" content="Detalle de servicios: agentes IA de ventas y soporte, automatización de procesos, reingeniería e innovación, agentes de voz y formación. Proyectos con ROI medible.">
+<title>Solutions — KAIzen Consult | AI Agents, Automation & Consulting</title>
+<meta name="description" content="Service details: sales and support AI agents, process automation, reengineering and innovation, voice agents, and training. Projects with measurable ROI.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/i18n.css">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
@@ -36,7 +37,7 @@ nav {
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
 }
-nav .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+nav .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; position: relative; }
 .logo { font-weight: 700; font-size: 1.35rem; letter-spacing: -0.03em; color: var(--text); text-decoration: none; }
 .logo span { color: var(--lime); }
 nav a { font-size: 0.9rem; font-weight: 500; color: var(--text-secondary); text-decoration: none; }
@@ -159,37 +160,43 @@ footer p { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem; }
 }
 </style>
 </head>
-<body>
+<body data-page-title="meta.solutions.title" data-page-description="meta.solutions.description">
 
 <nav>
   <div class="nav-inner">
     <a href="vinculo.html" class="logo">K<span>AI</span>zen Consult</a>
-    <div>
-      <a href="vinculo.html">Inicio</a>
-      <a href="vinculo.html#proceso" style="margin-left:1.5rem;">Proceso</a>
-      <a href="vinculo.html#contacto" class="nav-cta">Contáctanos</a>
+    <div class="nav-right">
+      <div>
+        <a href="vinculo.html" data-i18n="nav.home">Home</a>
+        <a href="vinculo.html#proceso" style="margin-left:1.5rem;" data-i18n="nav.process">Process</a>
+        <a href="vinculo.html#contacto" class="nav-cta" data-i18n="nav.contact">Contact us</a>
+      </div>
+      <div class="lang-toggle" id="lang-toggle" role="group" aria-label="Language">
+        <span class="lang-option active" data-lang="en">EN</span>
+        <span class="lang-option" data-lang="es">ES</span>
+      </div>
     </div>
   </div>
 </nav>
 
 <section class="page-hero">
   <div class="container">
-    <h1>Soluciones que escalan. Servicios con impacto.</h1>
-    <p>En este orden: Prospección, Outreach, Soporte al Cliente, Automatización de Procesos, Reingeniería e Innovación, Agentes de voz, Capacitación en IA. Detalle de cada servicio y tipo de proyectos. ROI medible desde el día uno.</p>
+    <h1 data-i18n="page.solutions.hero.title">Solutions that scale. Services with impact.</h1>
+    <p data-i18n="page.solutions.hero.desc">In this order: Prospecting, Outreach, Customer Support, Process Automation, Reengineering & Innovation, Voice Agents, AI Training. Details for each service and project types. Measurable ROI from day one.</p>
   </div>
 </section>
 
 <section class="service-section" id="ventas">
   <div class="container">
-    <div class="service-category">Ventas B2B</div>
-    <h2>Agente de Prospección y Outreach</h2>
-    <p>Un agente IA que trabaja tu pipeline comercial de forma autónoma: detecta leads en tu web o CRM, investiga prospectos, redacta outreach personalizado y hace seguimiento. Integrado con HubSpot, LinkedIn, Gmail y tus fuentes de datos.</p>
-    <p><strong>Tipos de proyectos:</strong></p>
+    <div class="service-category" data-i18n="card.ventas.category">B2B Sales</div>
+    <h2 data-i18n="card.ventas.title">Prospecting & Outreach Agent</h2>
+    <p data-i18n="detail.ventas.desc">An AI agent that works your sales pipeline autonomously: detects leads on your website or CRM, researches prospects, drafts personalized outreach, and follows up. Integrated with HubSpot, LinkedIn, Gmail, and your data sources.</p>
+    <p><strong data-i18n="page.solutions.projectTypes">Project types:</strong></p>
     <ul>
-      <li>Detección y cualificación de leads inbound 24/7</li>
-      <li>Prospección outbound con research en tiempo real</li>
-      <li>Nurturing automático hasta primera reunión</li>
-      <li>Lead scoring y routing a comerciales con brief completo</li>
+      <li data-i18n="detail.ventas.li1">24/7 inbound lead detection and qualification</li>
+      <li data-i18n="detail.ventas.li2">Outbound prospecting with real-time research</li>
+      <li data-i18n="detail.ventas.li3">Automated nurturing until first meeting</li>
+      <li data-i18n="detail.ventas.li4">Lead scoring and routing to sales with full brief</li>
     </ul>
     <div class="project-types">
       <span class="project-tag">HubSpot</span>
@@ -198,21 +205,21 @@ footer p { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem; }
       <span class="project-tag">ZoomInfo</span>
       <span class="project-tag">CRM</span>
     </div>
-    <a href="vinculo.html#contacto" class="service-cta">Solicitar información →</a>
+    <a href="vinculo.html#contacto" class="service-cta" data-i18n="detail.ventas.cta">Request information →</a>
   </div>
 </section>
 
 <section class="service-section" id="soporte">
   <div class="container">
-    <div class="service-category">Customer Experience</div>
-    <h2>Agente de Soporte al Cliente</h2>
-    <p>Chatbots multicanal (web, WhatsApp, email) que resuelven incidencias Tier 1 en segundos. RAG sobre tu base de conocimiento, respuestas coherentes y escalado sin ampliar plantilla. Detecta patrones y propone correcciones proactivas.</p>
-    <p><strong>Tipos de proyectos:</strong></p>
+    <div class="service-category" data-i18n="card.soporte.category">Customer Experience</div>
+    <h2 data-i18n="card.soporte.title">Customer Support Agent</h2>
+    <p data-i18n="detail.soporte.desc">Multichannel chatbots (web, WhatsApp, email) that resolve Tier 1 issues in seconds. RAG on your knowledge base, consistent responses, and scaling without expanding headcount. Detects patterns and proposes proactive fixes.</p>
+    <p><strong data-i18n="page.solutions.projectTypes">Project types:</strong></p>
     <ul>
-      <li>Chatbot web con RAG sobre documentación interna</li>
-      <li>WhatsApp Business integrado con CRM</li>
-      <li>Email automático con clasificación y respuestas</li>
-      <li>Escalado a humano cuando el agente no puede resolver</li>
+      <li data-i18n="detail.soporte.li1">Web chatbot with RAG on internal documentation</li>
+      <li data-i18n="detail.soporte.li2">WhatsApp Business integrated with CRM</li>
+      <li data-i18n="detail.soporte.li3">Automated email with classification and responses</li>
+      <li data-i18n="detail.soporte.li4">Escalation to human when the agent cannot resolve</li>
     </ul>
     <div class="project-types">
       <span class="project-tag">n8n</span>
@@ -222,21 +229,21 @@ footer p { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem; }
       <span class="project-tag">RAG + LLM</span>
       <span class="project-tag">WhatsApp</span>
     </div>
-    <a href="vinculo.html#contacto" class="service-cta">Solicitar información →</a>
+    <a href="vinculo.html#contacto" class="service-cta" data-i18n="detail.ventas.cta">Request information →</a>
   </div>
 </section>
 
 <section class="service-section" id="automatizacion">
   <div class="container">
-    <div class="service-category">Operaciones</div>
-    <h2>Automatización de Procesos</h2>
-    <p>Elimina cuellos de botella y tareas repetitivas. Lectura inteligente de documentos (OCR + IA), extracción de datos estructurados, flujos que conectan n8n, CRM, APIs y tus sistemas sin escribir código. Proceso primero, tecnología después.</p>
-    <p><strong>Tipos de proyectos:</strong></p>
+    <div class="service-category" data-i18n="card.automatizacion.category">Operations</div>
+    <h2 data-i18n="card.automatizacion.title">Process Automation</h2>
+    <p data-i18n="detail.automatizacion.desc">Eliminate bottlenecks and repetitive tasks. Intelligent document reading (OCR + AI), structured data extraction, flows connecting n8n, CRM, APIs, and your systems without writing code. Process first, technology second.</p>
+    <p><strong data-i18n="page.solutions.projectTypes">Project types:</strong></p>
     <ul>
-      <li>Procesamiento automático de facturas y documentos</li>
-      <li>Extracción de datos de PDFs, emails o formularios</li>
-      <li>Flujos entre CRM, ERP y herramientas de equipo</li>
-      <li>Automatización de onboarding, aprobaciones y reportes</li>
+      <li data-i18n="detail.automatizacion.li1">Automatic invoice and document processing</li>
+      <li data-i18n="detail.automatizacion.li2">Data extraction from PDFs, emails, or forms</li>
+      <li data-i18n="detail.automatizacion.li3">Flows between CRM, ERP, and team tools</li>
+      <li data-i18n="detail.automatizacion.li4">Onboarding, approvals, and reporting automation</li>
     </ul>
     <div class="project-types">
       <span class="project-tag">n8n</span>
@@ -244,115 +251,115 @@ footer p { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem; }
       <span class="project-tag">APIs</span>
       <span class="project-tag">OCR + IA</span>
     </div>
-    <a href="vinculo.html#contacto" class="service-cta">Solicitar información →</a>
+    <a href="vinculo.html#contacto" class="service-cta" data-i18n="detail.ventas.cta">Request information →</a>
   </div>
 </section>
 
 <section class="service-section" id="consultoria">
   <div class="container">
-    <div class="service-category">Consultoría</div>
-    <h2>Reingeniería e Innovación</h2>
-    <p>+30 años en mejora continua y reingeniería en Automoción y DeepTech. La base sólida que toda transformación digital necesita. Antes de automatizar, optimizamos: diagnóstico, mapeo y diseño de flujos.</p>
-    <p><strong>Tipos de proyectos:</strong></p>
+    <div class="service-category" data-i18n="card.consultoria.category">Consulting</div>
+    <h2 data-i18n="card.consultoria.title">Reengineering & Innovation</h2>
+    <p data-i18n="detail.consultoria.desc">30+ years in continuous improvement and reengineering in Automotive and DeepTech. The solid foundation every digital transformation needs. Before automating, we optimize: diagnosis, mapping, and flow design.</p>
+    <p><strong data-i18n="page.solutions.projectTypes">Project types:</strong></p>
     <ul>
-      <li>Diagnóstico y mapeo de procesos actuales</li>
-      <li>Reingeniería para reducir ineficiencias</li>
-      <li>Lean y mejora continua</li>
-      <li>Preparación para automatización (identificación de cuellos de botella)</li>
+      <li data-i18n="detail.consultoria.li1">Diagnosis and mapping of current processes</li>
+      <li data-i18n="detail.consultoria.li2">Reengineering to reduce inefficiencies</li>
+      <li data-i18n="detail.consultoria.li3">Lean and continuous improvement</li>
+      <li data-i18n="detail.consultoria.li4">Preparation for automation (bottleneck identification)</li>
     </ul>
     <div class="project-types">
       <span class="project-tag">Lean</span>
-      <span class="project-tag">Automoción</span>
-      <span class="project-tag">Industria</span>
-      <span class="project-tag">Mejora Continua</span>
+      <span class="project-tag" data-i18n="tag.automotive">Automotive</span>
+      <span class="project-tag" data-i18n="tag.industry">Industry</span>
+      <span class="project-tag" data-i18n="tag.continuous">Continuous improvement</span>
     </div>
-    <a href="vinculo.html#contacto" class="service-cta">Solicitar información →</a>
+    <a href="vinculo.html#contacto" class="service-cta" data-i18n="detail.ventas.cta">Request information →</a>
   </div>
 </section>
 
 <section class="service-section" id="voz">
   <div class="container">
-    <div class="service-category">Voz</div>
-    <h2>Agentes de Voz y Callbots</h2>
-    <p>Asistentes de voz inteligentes para gestión de reservas, pagos, información y atención telefónica. IA conversacional en tiempo real. Tu centralita potenciada 24/7, multiidioma y sin esperas.</p>
-    <p><strong>Tipos de proyectos:</strong></p>
+    <div class="service-category" data-i18n="card.voz.category">Voice</div>
+    <h2 data-i18n="card.voz.title">Voice Agents & Callbots</h2>
+    <p data-i18n="detail.voz.desc">Intelligent voice assistants for bookings, payments, information, and phone support. Real-time conversational AI. Your switchboard powered 24/7, multilingual, with no wait times.</p>
+    <p><strong data-i18n="page.solutions.projectTypes">Project types:</strong></p>
     <ul>
-      <li>Reservas por teléfono (restaurantes, clínicas, servicios)</li>
-      <li>Gestión de pagos e incidencias por voz</li>
-      <li>Desviación inteligente de llamadas</li>
-      <li>Información de horarios, precios y disponibilidad</li>
+      <li data-i18n="detail.voz.li1">Phone bookings (restaurants, clinics, services)</li>
+      <li data-i18n="detail.voz.li2">Payment and issue management by voice</li>
+      <li data-i18n="detail.voz.li3">Intelligent call routing</li>
+      <li data-i18n="detail.voz.li4">Hours, pricing, and availability information</li>
     </ul>
     <div class="project-types">
       <span class="project-tag">VAPI</span>
-      <span class="project-tag">Reservas</span>
-      <span class="project-tag">Pagos</span>
-      <span class="project-tag">Multiidioma</span>
+      <span class="project-tag" data-i18n="tag.bookings">Bookings</span>
+      <span class="project-tag" data-i18n="tag.payments">Payments</span>
+      <span class="project-tag" data-i18n="tag.multilingual">Multilingual</span>
     </div>
-    <a href="vinculo.html#contacto" class="service-cta">Solicitar información →</a>
+    <a href="vinculo.html#contacto" class="service-cta" data-i18n="detail.ventas.cta">Request information →</a>
   </div>
 </section>
 
 <section class="service-section" id="formacion">
   <div class="container">
-    <div class="service-category">Formación</div>
-    <h2>Capacitación en IA</h2>
-    <p>Workshops prácticos de prompt engineering, adopción de IA y change management. Tu equipo aprende a aprovechar la IA con criterio de negocio. No teoría: casos reales, ejercicios y herramientas listas para usar.</p>
-    <p><strong>Tipos de proyectos:</strong></p>
+    <div class="service-category" data-i18n="card.formacion.category">Training</div>
+    <h2 data-i18n="card.formacion.title">AI Training</h2>
+    <p data-i18n="detail.formacion.desc">Hands-on workshops on prompt engineering, AI adoption, and change management. Your team learns to leverage AI with business judgment. Not theory: real cases, exercises, and ready-to-use tools.</p>
+    <p><strong data-i18n="page.solutions.projectTypes">Project types:</strong></p>
     <ul>
-      <li>Prompt engineering para equipos comerciales, soporte o operaciones</li>
-      <li>Adopción de IA en el día a día</li>
-      <li>Workshops a medida por departamento</li>
-      <li>Change management para implementación de agentes IA</li>
+      <li data-i18n="detail.formacion.li1">Prompt engineering for sales, support, or operations teams</li>
+      <li data-i18n="detail.formacion.li2">AI adoption in day-to-day work</li>
+      <li data-i18n="detail.formacion.li3">Custom workshops by department</li>
+      <li data-i18n="detail.formacion.li4">Change management for AI agent implementation</li>
     </ul>
     <div class="project-types">
       <span class="project-tag">Prompt engineering</span>
       <span class="project-tag">Change Management</span>
       <span class="project-tag">Workshops</span>
     </div>
-    <a href="vinculo.html#contacto" class="service-cta">Solicitar información →</a>
+    <a href="vinculo.html#contacto" class="service-cta" data-i18n="detail.ventas.cta">Request information →</a>
   </div>
 </section>
 
 <section class="contact-section" id="contacto">
   <div class="container">
-    <h2>¿Hablamos?</h2>
-    <p>Cuéntanos tu proyecto y te respondemos con una propuesta en menos de 24h.</p>
+    <h2 data-i18n="contact.title.short">Let's talk?</h2>
+    <p data-i18n="contact.desc.short">Tell us about your project and we'll respond with a proposal in under 24 hours.</p>
     <div class="contact-form-wrap">
       <form class="contact-form" action="https://formsubmit.co/elena@vinculo.io" method="POST" id="contact-form">
-        <input type="hidden" name="_subject" value="Solicitud desde Soluciones - KAIzen Consult">
+        <input type="hidden" name="_subject" data-i18n-value="form.subject.solutions" value="Request from Solutions - KAIzen Consult">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_next" value="" id="form-next">
         <div class="form-row">
           <div class="form-group">
-            <input type="text" name="name" placeholder="Tu nombre *" required>
+            <input type="text" name="name" data-i18n-placeholder="form.name" placeholder="Your name *" required>
           </div>
           <div class="form-group">
-            <input type="email" name="email" placeholder="Email *" required>
+            <input type="email" name="email" data-i18n-placeholder="form.email" placeholder="Email *" required>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
-            <input type="text" name="empresa" placeholder="Empresa (opcional)">
+            <input type="text" name="empresa" data-i18n-placeholder="form.company" placeholder="Company (optional)">
           </div>
           <div class="form-group">
             <select name="interes">
-              <option value="">¿Qué servicio te interesa?</option>
-              <option value="ventas">Agente de Ventas</option>
-              <option value="soporte">Agente de Soporte</option>
-              <option value="automatizacion">Automatización</option>
-              <option value="voice">Agentes de Voz</option>
-              <option value="consultoria">Consultoría</option>
-              <option value="formacion">Formación</option>
-              <option value="otro">Otro</option>
+              <option value="" data-i18n="form.interest.service">Which service interests you?</option>
+              <option value="ventas" data-i18n="form.opt.ventas">Sales Agent</option>
+              <option value="soporte" data-i18n="form.opt.soporte">Support Agent</option>
+              <option value="automatizacion" data-i18n="form.opt.automatizacion">Automation</option>
+              <option value="voice" data-i18n="form.opt.voice">Voice Agents</option>
+              <option value="consultoria" data-i18n="form.opt.consultoria">Consulting</option>
+              <option value="formacion" data-i18n="form.opt.formacion">Training</option>
+              <option value="otro" data-i18n="form.opt.otro">Other</option>
             </select>
           </div>
         </div>
         <div class="form-group">
-          <textarea name="message" placeholder="Describe brevemente tu proyecto o necesidad..." rows="4"></textarea>
+          <textarea name="message" data-i18n-placeholder="form.message.solutions" placeholder="Briefly describe your project or need..." rows="4"></textarea>
         </div>
-        <button type="submit" class="form-submit">Enviar mensaje →</button>
-        <p class="form-note">Sin compromiso · Respuesta en menos de 24h</p>
+        <button type="submit" class="form-submit" data-i18n="form.submit">Send message →</button>
+        <p class="form-note" data-i18n="form.note">No commitment · We respond within 24 hours</p>
       </form>
     </div>
     <div class="contact-links">
@@ -365,7 +372,7 @@ footer p { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem; }
 <footer>
   <div class="container">
     <a href="vinculo.html">K<span>AI</span>zen Consult</a>
-    <p>© 2025 KAIzen Consult — Agentes IA, Procesos y Automatización</p>
+    <p data-i18n="footer.tagline">© 2025 KAIzen Consult — AI Agents, Processes & Automation</p>
   </div>
 </footer>
 
@@ -375,12 +382,16 @@ if (window.location.search.includes('sent=1')) {
   const wrap = document.querySelector('.contact-form-wrap');
   if (wrap) {
     const msg = document.createElement('p');
+    msg.className = 'form-success';
     msg.style.cssText = 'color:var(--electric);font-weight:600;margin-bottom:1rem;';
-    msg.textContent = '✓ Mensaje enviado. Te responderemos en menos de 24h.';
+    msg.setAttribute('data-i18n', 'form.success');
+    msg.textContent = '✓ Message sent. We\'ll respond within 24 hours.';
     wrap.insertBefore(msg, wrap.firstChild);
+    if (window.KaizenI18n) window.KaizenI18n.setLang(window.KaizenI18n.getLang());
   }
 }
 </script>
+<script src="js/i18n.js"></script>
 
 </body>
 </html>

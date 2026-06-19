@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KAIzen Consult — Agentes IA a Medida para Pymes | Procesos + IA + Ejecución Ágil</title>
-<meta name="description" content="Agentes IA a medida para pymes. Procesos optimizados, eficiencia operativa, escalabilidad 24/7. De idea a producción en días. RAG, n8n, metodología Kaizen.">
+<title>KAIzen Consult — Custom AI Agents for SMBs | Processes + AI + Agile Execution</title>
+<meta name="description" content="Custom AI agents for SMBs. Optimized processes, operational efficiency, 24/7 scalability. From idea to production in days. RAG, n8n, Kaizen methodology.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/i18n.css">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -662,15 +663,7 @@ footer {
   .testimonials-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 768px) {
-  nav ul { display: none; }
-  nav ul.open {
-    display: flex; flex-direction: column;
-    position: absolute; top: 100%; left: 0; right: 0;
-    background: var(--bg);
-    padding: 1rem 1.5rem;
-    border-bottom: 1px solid var(--border);
-    gap: 1rem;
-  }
+  nav ul { display: flex; flex-direction: column; gap: 1rem; }
   .hamburger { display: block; }
   .hero h1 { font-size: 2rem; }
   .process-steps { flex-direction: column; }
@@ -681,20 +674,26 @@ footer {
 }
 </style>
 </head>
-<body>
+<body data-page-title="meta.home.title" data-page-description="meta.home.description">
 
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
     <a href="vinculo.html" class="logo">K<span style="color:var(--lime)">AI</span>zen Consult</a>
-    <button class="hamburger" onclick="document.querySelector('nav ul').classList.toggle('open')" aria-label="Menu">
+    <button class="hamburger" onclick="document.querySelector('.nav-right').classList.toggle('open')" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
-    <ul>
-      <li><a href="soluciones.html">Soluciones</a></li>
-      <li><a href="#proceso">Proceso</a></li>
-      <li><a href="vinculo.html#contacto" class="nav-cta">Contáctanos</a></li>
-    </ul>
+    <div class="nav-right mobile-collapsible">
+      <ul>
+        <li><a href="soluciones.html" data-i18n="nav.solutions">Solutions</a></li>
+        <li><a href="#proceso" data-i18n="nav.process">Process</a></li>
+        <li><a href="vinculo.html#contacto" class="nav-cta" data-i18n="nav.contact">Contact us</a></li>
+      </ul>
+      <div class="lang-toggle" id="lang-toggle" role="group" aria-label="Language">
+        <span class="lang-option active" data-lang="en">EN</span>
+        <span class="lang-option" data-lang="es">ES</span>
+      </div>
+    </div>
   </div>
 </nav>
 
@@ -702,25 +701,25 @@ footer {
 <section class="hero">
   <div class="container">
     <div class="hero-content">
-      <div class="hero-badge reveal">Automatizaciones impulsadas por IA · Procesos · Innovación · Mejora Contínua</div>
-      <h1 class="reveal">Automatizaciones de vanguardia potenciadas por <span style="color:var(--lime)">IA</span>.</h1>
-      <p class="hero-sub reveal">Te acompañamos para que tu empresa esté a la última en automatizaciones gracias a la IA: flujos de ventas, compras, soporte, innovación. Expertos en negocio y tecnología de vanguardia (n8n, integraciones, RAGs, LLMs). De procesos manuales a sistemas que escalan y trabajan 24/7.</p>
+      <div class="hero-badge reveal" data-i18n="hero.badge">AI-powered automations · Processes · Innovation · Continuous Improvement</div>
+      <h1 class="reveal" data-i18n="hero.title" data-i18n-html>Cutting-edge automations powered by <span style="color:var(--lime)">AI</span>.</h1>
+      <p class="hero-sub reveal" data-i18n="hero.subtitle">We help your company stay at the forefront of AI-driven automations: sales, procurement, support, and innovation flows. Business experts with cutting-edge technology (n8n, integrations, RAG, LLMs). From manual processes to systems that scale and work 24/7.</p>
       <div class="hero-actions reveal">
-        <a href="#contacto" class="btn-primary">Agendar diagnóstico gratuito →</a>
-        <a href="soluciones.html" class="btn-secondary">Ver soluciones</a>
+        <a href="#contacto" class="btn-primary" data-i18n="hero.cta1">Book a free assessment →</a>
+        <a href="soluciones.html" class="btn-secondary" data-i18n="hero.cta2">View solutions</a>
       </div>
       <div class="hero-stats reveal">
         <div class="hero-stat">
           <div class="hero-stat-value">+10</div>
-          <div class="hero-stat-label">años en B2B e industria</div>
+          <div class="hero-stat-label" data-i18n="hero.stat1.label">years in B2B and industry</div>
         </div>
         <div class="hero-stat">
           <div class="hero-stat-value">+30</div>
-          <div class="hero-stat-label">años en procesos y reingeniería</div>
+          <div class="hero-stat-label" data-i18n="hero.stat2.label">years in processes and reengineering</div>
         </div>
         <div class="hero-stat">
           <div class="hero-stat-value">+40</div>
-          <div class="hero-stat-label">años de experiencia combinada en el equipo</div>
+          <div class="hero-stat-label" data-i18n="hero.stat3.label">years of combined team experience</div>
         </div>
       </div>
     </div>
@@ -731,7 +730,7 @@ footer {
 <section class="badges">
   <div class="container">
     <div class="badges-inner reveal">
-      <span class="badges-label">Tecnologías e integraciones</span>
+      <span class="badges-label" data-i18n="badges.label">Technologies and integrations</span>
       <div class="badges-logos">
         <span class="badge-pill">n8n</span>
         <span class="badge-pill">OpenClaw</span>
@@ -748,22 +747,22 @@ footer {
 <section class="solutions" id="soluciones">
   <div class="container">
     <div class="section-header reveal">
-      <div class="section-tag">Casos de uso</div>
-      <h2 class="section-title">Sistemas de IA escalables, trabajando 24/7. Digitalización ejecutiva orientada a resultados.</h2>
-      <p class="section-desc">Prospección, Outreach, Soporte al Cliente, Automatización de Procesos, Reingeniería e Innovación, Agentes de voz. Nuestro valor: Entendemos tu negocio y creamos Soluciones que escalan.</p>
-      <a href="vinculo.html#contacto" class="btn-primary" style="margin-top:1.5rem;">¿Estás listo para dar el salto? →</a>
+      <div class="section-tag" data-i18n="solutions.tag">Use cases</div>
+      <h2 class="section-title" data-i18n="solutions.title">Scalable AI systems, working 24/7. Executive digitalization focused on results.</h2>
+      <p class="section-desc" data-i18n="solutions.desc">Prospecting, outreach, customer support, process automation, reengineering and innovation, voice agents. Our value: we understand your business and build solutions that scale.</p>
+      <a href="vinculo.html#contacto" class="btn-primary" style="margin-top:1.5rem;" data-i18n="solutions.cta">Ready to take the leap? →</a>
     </div>
     <div class="solutions-grid">
       <div class="solution-card reveal">
-        <div class="solution-category">Ventas B2B</div>
-        <h3 class="solution-title">Agente de Prospección y Outreach</h3>
-        <p class="solution-desc">Gestiona todo el pipeline: detecta leads, investiga prospectos, redacta outreach personalizado y hace seguimiento. Autónomamente.</p>
+        <div class="solution-category" data-i18n="card.ventas.category">B2B Sales</div>
+        <h3 class="solution-title" data-i18n="card.ventas.title">Prospecting & Outreach Agent</h3>
+        <p class="solution-desc" data-i18n="card.ventas.desc">Manages the full pipeline: detects leads, researches prospects, drafts personalized outreach, and follows up. Autonomously.</p>
         <div class="solution-metrics" style="display:flex;gap:1.25rem;margin-bottom:0.75rem;font-size:0.8rem;">
-          <span style="font-weight:600;color:var(--lime-dark);">Lead→contacto &lt;2 min</span>
-          <span style="color:var(--text-muted);">↑ +40% pipeline</span>
+          <span style="font-weight:600;color:var(--lime-dark);" data-i18n="card.ventas.metric1">Lead→contact &lt;2 min</span>
+          <span style="color:var(--text-muted);" data-i18n="card.ventas.metric2">↑ +40% pipeline</span>
         </div>
-        <div class="solution-result">→ Pipeline completo de lead a primer contacto en &lt;2 minutos</div>
-        <a href="soluciones.html#ventas" class="solution-cta reveal">Ver más y solicitar info</a>
+        <div class="solution-result" data-i18n="card.ventas.result">→ Full pipeline from lead to first contact in &lt;2 minutes</div>
+        <a href="soluciones.html#ventas" class="solution-cta reveal" data-i18n="card.ventas.cta">Learn more and request info</a>
         <div class="solution-tags">
           <span class="solution-tag">HubSpot</span>
           <span class="solution-tag">LinkedIn</span>
@@ -772,11 +771,11 @@ footer {
       </div>
 
       <div class="solution-card reveal">
-        <div class="solution-category">Customer Experience</div>
-        <h3 class="solution-title">Agente de Soporte al Cliente</h3>
-        <p class="solution-desc">Gestiona Tier 1 en WhatsApp, Slack y canales enlazados a tu CRM (n8n, OpenClaw). Resuelve tickets en segundos, detecta patrones y corrige causas raíz de forma proactiva.</p>
-        <div class="solution-result">→ 78% auto-resolución · 38s respuesta media</div>
-        <a href="soluciones.html#soporte" class="solution-cta reveal">Ver más y solicitar info</a>
+        <div class="solution-category" data-i18n="card.soporte.category">Customer Experience</div>
+        <h3 class="solution-title" data-i18n="card.soporte.title">Customer Support Agent</h3>
+        <p class="solution-desc" data-i18n="card.soporte.desc">Handles Tier 1 on WhatsApp, Slack, and channels linked to your CRM (n8n, OpenClaw). Resolves tickets in seconds, detects patterns, and proactively fixes root causes.</p>
+        <div class="solution-result" data-i18n="card.soporte.result">→ 78% auto-resolution · 38s average response</div>
+        <a href="soluciones.html#soporte" class="solution-cta reveal" data-i18n="card.soporte.cta">Learn more and request info</a>
         <div class="solution-tags">
           <span class="solution-tag">n8n</span>
           <span class="solution-tag">OpenClaw</span>
@@ -788,11 +787,11 @@ footer {
       </div>
 
       <div class="solution-card reveal">
-        <div class="solution-category">Operaciones</div>
-        <h3 class="solution-title">Automatización de Procesos</h3>
-        <p class="solution-desc">Elimina cuellos de botella. Lectura inteligente de documentos, extracción de datos, flujos que conectan tus sistemas sin código.</p>
-        <div class="solution-result">→ Horas de trabajo manual eliminadas por semana</div>
-        <a href="soluciones.html#automatizacion" class="solution-cta reveal">Ver más y solicitar info</a>
+        <div class="solution-category" data-i18n="card.automatizacion.category">Operations</div>
+        <h3 class="solution-title" data-i18n="card.automatizacion.title">Process Automation</h3>
+        <p class="solution-desc" data-i18n="card.automatizacion.desc">Eliminate bottlenecks. Intelligent document reading, data extraction, and flows that connect your systems without code.</p>
+        <div class="solution-result" data-i18n="card.automatizacion.result">→ Hours of manual work eliminated per week</div>
+        <a href="soluciones.html#automatizacion" class="solution-cta reveal" data-i18n="card.automatizacion.cta">Learn more and request info</a>
         <div class="solution-tags">
           <span class="solution-tag">n8n</span>
           <span class="solution-tag">CRM</span>
@@ -802,37 +801,37 @@ footer {
       </div>
 
       <div class="solution-card reveal">
-        <div class="solution-category">Consultoría</div>
-        <h3 class="solution-title">Reingeniería e Innovación</h3>
-        <p class="solution-desc">+30 años en mejora continua y reingeniería en Automoción y DeepTech. La base sólida que toda transformación digital necesita.</p>
-        <div class="solution-result">→ Procesos optimizados antes de automatizar</div>
-        <a href="soluciones.html#consultoria" class="solution-cta reveal">Ver más y solicitar info</a>
+        <div class="solution-category" data-i18n="card.consultoria.category">Consulting</div>
+        <h3 class="solution-title" data-i18n="card.consultoria.title">Reengineering & Innovation</h3>
+        <p class="solution-desc" data-i18n="card.consultoria.desc">30+ years in continuous improvement and reengineering in Automotive and DeepTech. The solid foundation every digital transformation needs.</p>
+        <div class="solution-result" data-i18n="card.consultoria.result">→ Optimized processes before automation</div>
+        <a href="soluciones.html#consultoria" class="solution-cta reveal" data-i18n="card.consultoria.cta">Learn more and request info</a>
         <div class="solution-tags">
           <span class="solution-tag">Lean</span>
-          <span class="solution-tag">Automoción</span>
-          <span class="solution-tag">Mejora Continua</span>
+          <span class="solution-tag" data-i18n="tag.automotive">Automotive</span>
+          <span class="solution-tag" data-i18n="tag.continuous">Continuous improvement</span>
         </div>
       </div>
 
       <div class="solution-card reveal">
-        <div class="solution-category">Voz</div>
-        <h3 class="solution-title">Agentes de Voz y Callbots</h3>
-        <p class="solution-desc">Asistentes de voz para reservas, pagos y atención telefónica. Tu centralita potenciada con IA conversacional. 24/7.</p>
-        <div class="solution-result">→ Atención sin esperas · Multiidioma</div>
-        <a href="soluciones.html#voz" class="solution-cta reveal">Ver más y solicitar info</a>
+        <div class="solution-category" data-i18n="card.voz.category">Voice</div>
+        <h3 class="solution-title" data-i18n="card.voz.title">Voice Agents & Callbots</h3>
+        <p class="solution-desc" data-i18n="card.voz.desc">Voice assistants for bookings, payments, and phone support. Your switchboard powered by conversational AI. 24/7.</p>
+        <div class="solution-result" data-i18n="card.voz.result">→ Support without wait times · Multilingual</div>
+        <a href="soluciones.html#voz" class="solution-cta reveal" data-i18n="card.voz.cta">Learn more and request info</a>
         <div class="solution-tags">
           <span class="solution-tag">VAPI</span>
-          <span class="solution-tag">Reservas</span>
-          <span class="solution-tag">Pagos</span>
+          <span class="solution-tag" data-i18n="tag.bookings">Bookings</span>
+          <span class="solution-tag" data-i18n="tag.payments">Payments</span>
         </div>
       </div>
 
       <div class="solution-card reveal">
-        <div class="solution-category">Formación</div>
-        <h3 class="solution-title">Capacitación en IA</h3>
-        <p class="solution-desc">Workshops prácticos de prompt engineering y adopción. Tu equipo aprende a aprovechar la IA con criterio de negocio.</p>
-        <div class="solution-result">→ 2 días/semana ahorrados en tareas operativas</div>
-        <a href="soluciones.html#formacion" class="solution-cta reveal">Ver más y solicitar info</a>
+        <div class="solution-category" data-i18n="card.formacion.category">Training</div>
+        <h3 class="solution-title" data-i18n="card.formacion.title">AI Training</h3>
+        <p class="solution-desc" data-i18n="card.formacion.desc">Hands-on workshops on prompt engineering and adoption. Your team learns to leverage AI with business judgment.</p>
+        <div class="solution-result" data-i18n="card.formacion.result">→ 2 days/week saved on operational tasks</div>
+        <a href="soluciones.html#formacion" class="solution-cta reveal" data-i18n="card.formacion.cta">Learn more and request info</a>
         <div class="solution-tags">
           <span class="solution-tag">Prompt engineering</span>
           <span class="solution-tag">Change Management</span>
@@ -846,24 +845,24 @@ footer {
 <section class="features">
   <div class="container">
     <div class="section-header reveal">
-      <div class="section-tag">Por qué KAIzen Consult</div>
-      <h2 class="section-title">Velocidad de ejecución. Procesos primero. IA a medida.</h2>
+      <div class="section-tag" data-i18n="features.tag">Why KAIzen Consult</div>
+      <h2 class="section-title" data-i18n="features.title">Execution speed. Processes first. Custom AI.</h2>
     </div>
     <div class="features-grid">
       <div class="feature-card reveal">
         <div class="feature-icon">⚡</div>
-        <h3 class="feature-title">Idea a solución funcional en días</h3>
-        <p class="feature-desc">Metodología Kaizen y ejecución ágil. No proyectos de 6 meses. Pasamos de brief a agente IA en producción en días, no meses.</p>
+        <h3 class="feature-title" data-i18n="features.1.title">From idea to working solution in days</h3>
+        <p class="feature-desc" data-i18n="features.1.desc">Kaizen methodology and agile execution. No 6-month projects. We go from brief to production AI agent in days, not months.</p>
       </div>
       <div class="feature-card reveal">
         <div class="feature-icon">⚙️</div>
-        <h3 class="feature-title">Procesos antes que código</h3>
-        <p class="feature-desc">Flujos B2B, ventas, compras, operaciones. Mapeamos y optimizamos antes de desplegar. La IA amplifica procesos bien diseñados.</p>
+        <h3 class="feature-title" data-i18n="features.2.title">Processes before code</h3>
+        <p class="feature-desc" data-i18n="features.2.desc">B2B flows, sales, procurement, operations. We map and optimize before deploying. AI amplifies well-designed processes.</p>
       </div>
       <div class="feature-card reveal">
         <div class="feature-icon">🎯</div>
-        <h3 class="feature-title">IA a medida, no genérica</h3>
-        <p class="feature-desc">Agentes configurados para tu caso de uso. RAG sobre tu documentación, integraciones con tus sistemas, lógica de negocio incorporada.</p>
+        <h3 class="feature-title" data-i18n="features.3.title">Custom AI, not generic</h3>
+        <p class="feature-desc" data-i18n="features.3.desc">Agents configured for your use case. RAG on your documentation, integrations with your systems, built-in business logic.</p>
       </div>
     </div>
   </div>
@@ -873,24 +872,24 @@ footer {
 <section class="process" id="proceso">
   <div class="container">
     <div class="section-header reveal">
-      <div class="section-tag">Cómo trabajamos</div>
-      <h2 class="section-title">Enfoque Kaizen: conecta, configura, despliega.</h2>
+      <div class="section-tag" data-i18n="process.tag">How we work</div>
+      <h2 class="section-title" data-i18n="process.title">Kaizen approach: connect, configure, deploy.</h2>
     </div>
     <div class="process-steps">
       <div class="process-step reveal">
         <div class="process-num">1</div>
-        <h4>Conecta</h4>
-        <p>Brief de procesos, flujos B2B e integraciones. Diagnóstico gratuito de oportunidades.</p>
+        <h4 data-i18n="process.1.title">Connect</h4>
+        <p data-i18n="process.1.desc">Process brief, B2B flows, and integrations. Free opportunity assessment.</p>
       </div>
       <div class="process-step reveal">
         <div class="process-num">2</div>
-        <h4>Configura</h4>
-        <p>Mapeo de procesos, diseño del agente a medida y stack técnico (RAG, n8n, APIs).</p>
+        <h4 data-i18n="process.2.title">Configure</h4>
+        <p data-i18n="process.2.desc">Process mapping, custom agent design, and technical stack (RAG, n8n, APIs).</p>
       </div>
       <div class="process-step reveal">
         <div class="process-num">3</div>
-        <h4>Despliega</h4>
-        <p>Implementación ágil. Idea a agente en producción en días. Sin DevOps, sin equipos grandes.</p>
+        <h4 data-i18n="process.3.title">Deploy</h4>
+        <p data-i18n="process.3.desc">Agile implementation. From idea to production agent in days. No DevOps, no large teams.</p>
       </div>
     </div>
   </div>
@@ -900,12 +899,12 @@ footer {
 <section class="proactive">
   <div class="container">
     <div class="proactive-inner reveal">
-      <h2>Proactivos por defecto</h2>
-      <p>Detectamos problemas antes de que escalen. Proponemos acciones, no solo alertas. Cada recomendación se traduce en impacto directo en tu P&L.</p>
+      <h2 data-i18n="proactive.title">Proactive by default</h2>
+      <p data-i18n="proactive.desc">We detect problems before they escalate. We propose actions, not just alerts. Every recommendation translates into direct impact on your P&L.</p>
       <div class="proactive-mockup reveal">
-        <div class="proactive-mockup-header">Actividad en vivo · Proactivo</div>
-        <div class="proactive-msg user">¿Algo raro en el pipeline esta semana?</div>
-        <div class="proactive-msg bot">3 deals llevan más de 10 días en "Cualificado". He redactado emails de seguimiento para cada uno y marcado el de mayor valor (<strong>42K€</strong>) para tu revisión.</div>
+        <div class="proactive-mockup-header" data-i18n="proactive.mockup.header">Live activity · Proactive</div>
+        <div class="proactive-msg user" data-i18n="proactive.mockup.user">Anything unusual in the pipeline this week?</div>
+        <div class="proactive-msg bot" data-i18n="proactive.mockup.bot" data-i18n-html>3 deals have been in "Qualified" for more than 10 days. I've drafted follow-up emails for each and flagged the highest-value one (<strong>€42K</strong>) for your review.</div>
       </div>
     </div>
   </div>
@@ -915,33 +914,33 @@ footer {
 <section class="features team-section" style="padding: 4rem 0;">
   <div class="container">
     <div class="section-header reveal">
-      <div class="section-tag">Equipo</div>
-      <h2 class="section-title">Un equipo. Experiencia completa.</h2>
-      <p class="section-desc" style="max-width: 720px;">Ingeniería, industria y pragmatismo en una sola mesa: no son dos perfiles sueltos, es el mismo equipo cruzando proceso real con IA que escala.</p>
+      <div class="section-tag" data-i18n="team.tag">Team</div>
+      <h2 class="section-title" data-i18n="team.title">One team. Complete experience.</h2>
+      <p class="section-desc" style="max-width: 720px;" data-i18n="team.desc">Engineering, industry, and pragmatism at one table: not two separate profiles, but the same team bridging real processes with AI that scales.</p>
     </div>
     <div class="team-unified reveal">
-      <h3 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; color: var(--text); margin-bottom: 0.5rem;">No somos teóricos. Somos ingenieros que resuelven problemas</h3>
+      <h3 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; color: var(--text); margin-bottom: 0.5rem;" data-i18n="team.heading">We're not theorists. We're engineers who solve problems</h3>
       <div class="team-unified-pill-row">
-        <span class="team-unified-pill">+40 años de experiencia combinada</span>
-        <span class="team-unified-pill">B2B · IA · Procesos industriales</span>
-        <span class="team-unified-pill">Una sola mesa, un solo criterio de ROI</span>
+        <span class="team-unified-pill" data-i18n="team.pill1">+40 years of combined experience</span>
+        <span class="team-unified-pill" data-i18n="team.pill2">B2B · AI · Industrial processes</span>
+        <span class="team-unified-pill" data-i18n="team.pill3">One table, one ROI criterion</span>
       </div>
-      <p>KAIzen Consult une dos trayectorias que se complementan: por un lado, más de una década en ventas, compras y headhunting B2B, con ingeniería aplicada a automatizaciones con IA — agentes conversacionales, RAG, n8n y workflows inteligentes. Por otro, más de tres décadas en reingeniería industrial, mejora continua, Lean e innovación en automoción e industria: la base sólida que toda transformación necesita antes de automatizar.</p>
-      <p>Juntos sumamos experiencia en sectores donde el error cuesta dinero — automoción, manufactura, logística y tecnología. Hemos gestionado equipos, negociado contratos, optimizado líneas de producción y transformado procesos antes de que la IA fuera una opción. Hoy aplicamos la misma mentalidad analítica y pragmática a la implementación de Inteligencia Artificial: entendemos tu negocio por dentro y lo llevamos a producción con criterio técnico.</p>
+      <p data-i18n="team.p1">KAIzen Consult brings together two complementary paths: on one side, more than a decade in B2B sales, procurement, and headhunting, with engineering applied to AI automations — conversational agents, RAG, n8n, and intelligent workflows. On the other, more than three decades in industrial reengineering, continuous improvement, Lean, and innovation in automotive and industry: the solid foundation every transformation needs before automation.</p>
+      <p data-i18n="team.p2">Together we bring experience in sectors where mistakes cost money — automotive, manufacturing, logistics, and technology. We've managed teams, negotiated contracts, optimized production lines, and transformed processes before AI was an option. Today we apply the same analytical, pragmatic mindset to AI implementation: we understand your business from the inside and take it to production with technical rigor.</p>
       <div class="team-unified-tags">
-        <span class="solution-tag">IA Generativa</span>
-        <span class="solution-tag">Agentes IA</span>
+        <span class="solution-tag">Generative AI</span>
+        <span class="solution-tag">AI Agents</span>
         <span class="solution-tag">n8n</span>
         <span class="solution-tag">RAG</span>
-        <span class="solution-tag">Ventas B2B</span>
+        <span class="solution-tag">B2B Sales</span>
         <span class="solution-tag">HubSpot</span>
-        <span class="solution-tag">Reingeniería industrial</span>
+        <span class="solution-tag" data-i18n="tag.industrial">Industrial reengineering</span>
         <span class="solution-tag">Lean</span>
-        <span class="solution-tag">Automoción</span>
-        <span class="solution-tag">Mejora continua</span>
-        <span class="solution-tag">Innovación</span>
+        <span class="solution-tag" data-i18n="tag.automotive">Automotive</span>
+        <span class="solution-tag" data-i18n="tag.continuous">Continuous improvement</span>
+        <span class="solution-tag">Innovation</span>
         <span class="solution-tag">Change management</span>
-        <span class="solution-tag">Inteligencia artificial aplicada</span>
+        <span class="solution-tag" data-i18n="tag.applied">Applied artificial intelligence</span>
       </div>
     </div>
   </div>
@@ -951,14 +950,14 @@ footer {
 <section class="compliance">
   <div class="container">
     <div class="compliance-block reveal" style="margin-bottom: 2.5rem;">
-      <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; color: var(--text);">Nuestro valor diferencial</h3>
-      <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; max-width: 640px;">Entendemos tu negocio antes de proponer una solución. Porque la mejor tecnología aplicada al problema equivocado es solo un gasto más.</p>
+      <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; color: var(--text);" data-i18n="compliance.diff.title">Our differentiator</h3>
+      <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; max-width: 640px;" data-i18n="compliance.diff.desc">We understand your business before proposing a solution. Because the best technology applied to the wrong problem is just another expense.</p>
     </div>
     <div class="compliance-inner reveal">
       <div class="compliance-badge">🇪🇺</div>
       <div>
-        <h3>Cumplimiento normativo — EU AI Act</h3>
-        <p>Soporte para que tus sistemas de IA cumplan con el Reglamento europeo: homologación, documentación técnica y formaciones en normativa.</p>
+        <h3 data-i18n="compliance.eu.title">Regulatory compliance — EU AI Act</h3>
+        <p data-i18n="compliance.eu.desc">Support so your AI systems comply with European regulation: certification, technical documentation, and regulatory training.</p>
       </div>
     </div>
   </div>
@@ -967,17 +966,17 @@ footer {
 <!-- TESTIMONIALS -->
 <section class="testimonials">
   <div class="container">
-    <h2 class="reveal">Lo que dicen empresas que escalan</h2>
+    <h2 class="reveal" data-i18n="testimonials.title">What scaling companies say</h2>
     <div class="testimonials-grid">
       <div class="testimonial-card reveal">
-        <blockquote>"Identificó un cuello de botella en nuestro proceso de cualificación que no habíamos visto. De idea a automatización funcionando en menos de una semana."</blockquote>
-        <cite>— Director Comercial</cite>
-        <div class="testimonial-role">B2B · Industria</div>
+        <blockquote data-i18n="testimonials.1.quote">"Identified a bottleneck in our qualification process we hadn't seen. From idea to working automation in less than a week."</blockquote>
+        <cite data-i18n="testimonials.1.role">— Sales Director</cite>
+        <div class="testimonial-role" data-i18n="testimonials.1.industry">B2B · Industry</div>
       </div>
       <div class="testimonial-card reveal">
-        <blockquote>"El agente de soporte resolvió el 70% de consultas recurrentes desde el primer día. Nuestro equipo pudo pasar a casos complejos."</blockquote>
-        <cite>— Responsable CX</cite>
-        <div class="testimonial-role">SaaS · Servicios</div>
+        <blockquote data-i18n="testimonials.2.quote">"The support agent resolved 70% of recurring inquiries from day one. Our team could focus on complex cases."</blockquote>
+        <cite data-i18n="testimonials.2.role">— CX Lead</cite>
+        <div class="testimonial-role" data-i18n="testimonials.2.industry">SaaS · Services</div>
       </div>
     </div>
   </div>
@@ -986,45 +985,45 @@ footer {
 <!-- CTA + FORM -->
 <section class="cta" id="contacto">
   <div class="container reveal">
-    <h2>Si tu negocio está listo para dar el salto, hablemos.</h2>
-    <p>Diagnóstico gratuito: identificamos procesos, flujos y oportunidades de IA a medida para tu operación.</p>
+    <h2 data-i18n="contact.title">If your business is ready to take the leap, let's talk.</h2>
+    <p data-i18n="contact.desc">Free assessment: we identify processes, flows, and custom AI opportunities for your operation.</p>
 
     <div class="contact-form-wrap">
       <form class="contact-form" action="https://formsubmit.co/elena@vinculo.io" method="POST" id="contact-form">
-        <input type="hidden" name="_subject" value="Nuevo contacto desde KAIzen Consult">
+        <input type="hidden" name="_subject" data-i18n-value="form.subject.home" value="New contact from KAIzen Consult">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_next" value="" id="form-next">
         <div class="form-row">
           <div class="form-group">
-            <input type="text" name="name" placeholder="Tu nombre *" required>
+            <input type="text" name="name" data-i18n-placeholder="form.name" placeholder="Your name *" required>
           </div>
           <div class="form-group">
-            <input type="email" name="email" placeholder="Email *" required>
+            <input type="email" name="email" data-i18n-placeholder="form.email" placeholder="Email *" required>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
-            <input type="text" name="empresa" placeholder="Empresa (opcional)">
+            <input type="text" name="empresa" data-i18n-placeholder="form.company" placeholder="Company (optional)">
           </div>
           <div class="form-group">
             <select name="interes">
-              <option value="">¿Qué te interesa?</option>
-              <option value="ventas">Agente de Ventas</option>
-              <option value="soporte">Agente de Soporte</option>
-              <option value="automatizacion">Automatización</option>
-              <option value="voice">Agentes de Voz</option>
-              <option value="consultoria">Consultoría</option>
-              <option value="formacion">Formación</option>
-              <option value="otro">Otro</option>
+              <option value="" data-i18n="form.interest">What are you interested in?</option>
+              <option value="ventas" data-i18n="form.opt.ventas">Sales Agent</option>
+              <option value="soporte" data-i18n="form.opt.soporte">Support Agent</option>
+              <option value="automatizacion" data-i18n="form.opt.automatizacion">Automation</option>
+              <option value="voice" data-i18n="form.opt.voice">Voice Agents</option>
+              <option value="consultoria" data-i18n="form.opt.consultoria">Consulting</option>
+              <option value="formacion" data-i18n="form.opt.formacion">Training</option>
+              <option value="otro" data-i18n="form.opt.otro">Other</option>
             </select>
           </div>
         </div>
         <div class="form-group">
-          <textarea name="message" placeholder="Cuéntanos brevemente tu situación..." rows="4"></textarea>
+          <textarea name="message" data-i18n-placeholder="form.message.home" placeholder="Tell us briefly about your situation..." rows="4"></textarea>
         </div>
-        <button type="submit" class="form-submit">Enviar mensaje →</button>
-        <p class="form-note">Sin compromiso · Te respondemos en menos de 24h</p>
+        <button type="submit" class="form-submit" data-i18n="form.submit">Send message →</button>
+        <p class="form-note" data-i18n="form.note">No commitment · We respond within 24 hours</p>
       </form>
     </div>
 
@@ -1041,7 +1040,7 @@ footer {
     <div class="footer-inner">
       <div class="footer-left">
         <a href="vinculo.html" class="logo" style="font-size:1.1rem; color:var(--text);">K<span style="color:var(--lime)">AI</span>zen Consult</a>
-        <div style="margin-top:0.4rem; font-size:0.8rem;">© 2025 KAIzen Consult — Agentes IA, Procesos y Automatización</div>
+        <div style="margin-top:0.4rem; font-size:0.8rem;" data-i18n="footer.tagline">© 2025 KAIzen Consult — AI Agents, Processes & Automation</div>
       </div>
       <div class="footer-links">
         <a href="https://www.linkedin.com/company/kaizen-consult-ai/" target="_blank" rel="noopener">LinkedIn</a>
@@ -1062,7 +1061,8 @@ if (window.location.search.includes('sent=1') || window.location.hash.includes('
     const msg = document.createElement('p');
     msg.className = 'form-success';
     msg.style.cssText = 'color:var(--electric);font-weight:600;margin-bottom:1rem;';
-    msg.textContent = '✓ Mensaje enviado. Te responderemos en menos de 24h.';
+    msg.setAttribute('data-i18n', 'form.success');
+    msg.textContent = '✓ Message sent. We\'ll respond within 24 hours.';
     wrap.insertBefore(msg, wrap.firstChild);
   }
 }
@@ -1078,9 +1078,10 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 document.querySelectorAll('nav a').forEach(a => {
-  a.addEventListener('click', () => document.querySelector('nav ul').classList.remove('open'));
+  a.addEventListener('click', () => document.querySelector('.nav-right')?.classList.remove('open'));
 });
 </script>
+<script src="js/i18n.js"></script>
 
 </body>
 </html>
