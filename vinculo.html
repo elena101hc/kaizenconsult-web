@@ -644,6 +644,36 @@ footer {
   transition: color 0.2s;
 }
 .footer-links a:hover { color: var(--electric); }
+.footer-location {
+  margin-top: 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-light);
+  text-align: center;
+}
+.footer-location h3 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+.footer-address {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  white-space: pre-line;
+  margin-bottom: 0.5rem;
+}
+.footer-email {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-email:hover { color: var(--electric); }
 
 /* REVEAL */
 .reveal {
@@ -1028,7 +1058,7 @@ footer {
     </div>
 
     <div class="cta-links">
-      <a href="mailto:hola@kaizenconsult.es">hola@kaizenconsult.es</a>
+      <a href="mailto:hello@kaizenconsult.es">hello@kaizenconsult.es</a>
       <a href="https://www.linkedin.com/company/kaizen-consult-ai/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
@@ -1044,8 +1074,13 @@ footer {
       </div>
       <div class="footer-links">
         <a href="https://www.linkedin.com/company/kaizen-consult-ai/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="mailto:hola@kaizenconsult.es">hola@kaizenconsult.es</a>
       </div>
+    </div>
+    <div class="footer-location">
+      <h3 data-i18n="footer.findUs">Find us</h3>
+      <p class="footer-address" data-i18n="footer.address">C/ Pau Claris, 162-164, pl. 3
+08037 Barcelona</p>
+      <a href="mailto:hello@kaizenconsult.es" class="footer-email">hello@kaizenconsult.es</a>
     </div>
   </div>
 </footer>

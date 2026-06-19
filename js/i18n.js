@@ -144,6 +144,8 @@
       'form.opt.otro': 'Other',
 
       'footer.tagline': '© 2025 KAIzen Consult — AI Agents, Processes & Automation',
+      'footer.findUs': 'Find us',
+      'footer.address': 'C/ Pau Claris, 162-164, pl. 3\n08037 Barcelona',
 
       'page.solutions.hero.title': 'Solutions that scale. Services with impact.',
       'page.solutions.hero.desc': 'In this order: Prospecting, Outreach, Customer Support, Process Automation, Reengineering & Innovation, Voice Agents, AI Training. Details for each service and project types. Measurable ROI from day one.',
@@ -337,6 +339,8 @@
       'form.opt.otro': 'Otro',
 
       'footer.tagline': '© 2025 KAIzen Consult — Agentes IA, Procesos y Automatización',
+      'footer.findUs': 'Dónde estamos',
+      'footer.address': 'C/ Pau Claris, 162-164, pl. 3\n08037 Barcelona',
 
       'page.solutions.hero.title': 'Soluciones que escalan. Servicios con impacto.',
       'page.solutions.hero.desc': 'En este orden: Prospección, Outreach, Soporte al Cliente, Automatización de Procesos, Reingeniería e Innovación, Agentes de voz, Capacitación en IA. Detalle de cada servicio y tipo de proyectos. ROI medible desde el día uno.',

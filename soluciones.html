@@ -153,6 +153,35 @@ footer {
 footer a { color: var(--text); font-weight: 600; text-decoration: none; }
 footer a span { color: var(--lime); }
 footer p { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem; }
+.footer-location {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+.footer-location h3 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+.footer-address {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  white-space: pre-line;
+  margin-bottom: 0.5rem;
+}
+.footer-email {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-email:hover { color: var(--electric); }
 
 @media (max-width: 768px) {
   .form-row { flex-direction: column; }
@@ -363,7 +392,7 @@ footer p { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem; }
       </form>
     </div>
     <div class="contact-links">
-      <a href="mailto:hola@kaizenconsult.es">hola@kaizenconsult.es</a>
+      <a href="mailto:hello@kaizenconsult.es">hello@kaizenconsult.es</a>
       <a href="https://www.linkedin.com/company/kaizen-consult-ai/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
@@ -373,6 +402,12 @@ footer p { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem; }
   <div class="container">
     <a href="vinculo.html">K<span>AI</span>zen Consult</a>
     <p data-i18n="footer.tagline">© 2025 KAIzen Consult — AI Agents, Processes & Automation</p>
+    <div class="footer-location">
+      <h3 data-i18n="footer.findUs">Find us</h3>
+      <p class="footer-address" data-i18n="footer.address">C/ Pau Claris, 162-164, pl. 3
+08037 Barcelona</p>
+      <a href="mailto:hello@kaizenconsult.es" class="footer-email">hello@kaizenconsult.es</a>
+    </div>
   </div>
 </footer>
 
