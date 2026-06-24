@@ -97,12 +97,12 @@
       'proactive.mockup.bot': '3 deals have been in "Qualified" for more than 10 days. I\'ve drafted follow-up emails for each and flagged the highest-value one (<strong>€42K</strong>) for your review.',
 
       'team.tag': 'Team',
-      'team.title': 'One team. Complete experience.',
-      'team.desc': 'Engineering, industry, and pragmatism at one table: not two separate profiles, but the same team bridging real processes with AI that scales.',
+      'team.title': 'Two experts. One partnership.',
+      'team.desc': 'A lean, hands-on duo: business and engineering on one side, industrial processes and reengineering on the other. No layers, no big agency — just direct work with you.',
       'team.heading': 'We\'re not theorists. We\'re engineers who solve problems',
       'team.pill1': '+40 years of combined experience',
       'team.pill2': 'B2B · AI · Industrial processes',
-      'team.pill3': 'One table, one ROI criterion',
+      'team.pill3': 'Two partners, one ROI criterion',
       'team.p1': 'KAIzen Consult brings together two complementary paths: on one side, more than a decade in B2B sales, procurement, and headhunting, with engineering applied to AI automations — conversational agents, RAG, n8n, and intelligent workflows. On the other, more than three decades in industrial reengineering, continuous improvement, Lean, and innovation in automotive and industry: the solid foundation every transformation needs before automation.',
       'team.p2': 'Together we bring experience in sectors where mistakes cost money — automotive, manufacturing, logistics, and technology. We\'ve managed teams, negotiated contracts, optimized production lines, and transformed processes before AI was an option. Today we apply the same analytical, pragmatic mindset to AI implementation: we understand your business from the inside and take it to production with technical rigor.',
 
@@ -195,7 +195,19 @@
       'tag.industry': 'Industry',
       'tag.bookings': 'Bookings',
       'tag.payments': 'Payments',
-      'tag.multilingual': 'Multilingual'
+      'tag.multilingual': 'Multilingual',
+
+      'visual.hero.caption': 'Barcelona · Eixample — AI consulting from the heart of the city',
+      'visual.showcase.1': 'Barcelona skyline',
+      'visual.showcase.2': 'Eixample · Barcelona',
+      'visual.showcase.3': 'Data-driven ops',
+      'visual.process.title': 'Built for real business outcomes',
+      'visual.process.desc': 'We combine industrial process expertise with production-ready AI — so every automation maps to measurable ROI.',
+
+      'office.tag': 'Where we work',
+      'office.title': 'Based in Barcelona, working with companies everywhere.',
+      'office.desc': 'Our base is a modern coworking in Eixample — rooftop terrace with views over Barcelona, natural light, and a direct, agile way of working. Pau Claris 162, in the heart of the city.',
+      'office.badge': 'Barcelona · Eixample terrace'
     },
 
     es: {
@@ -292,12 +304,12 @@
       'proactive.mockup.bot': '3 deals llevan más de 10 días en "Cualificado". He redactado emails de seguimiento para cada uno y marcado el de mayor valor (<strong>42K€</strong>) para tu revisión.',
 
       'team.tag': 'Equipo',
-      'team.title': 'Un equipo. Experiencia completa.',
-      'team.desc': 'Ingeniería, industria y pragmatismo en una sola mesa: no son dos perfiles sueltos, es el mismo equipo cruzando proceso real con IA que escala.',
+      'team.title': 'Dos expertos. Una misma mesa.',
+      'team.desc': 'Un dúo ágil y directo: negocio e ingeniería por un lado, procesos industriales y reingeniería por el otro. Sin capas ni gran agencia — trabajo directo contigo.',
       'team.heading': 'No somos teóricos. Somos ingenieros que resuelven problemas',
       'team.pill1': '+40 años de experiencia combinada',
       'team.pill2': 'B2B · IA · Procesos industriales',
-      'team.pill3': 'Una sola mesa, un solo criterio de ROI',
+      'team.pill3': 'Dos socios, un solo criterio de ROI',
       'team.p1': 'KAIzen Consult une dos trayectorias que se complementan: por un lado, más de una década en ventas, compras y headhunting B2B, con ingeniería aplicada a automatizaciones con IA — agentes conversacionales, RAG, n8n y workflows inteligentes. Por otro, más de tres décadas en reingeniería industrial, mejora continua, Lean e innovación en automoción e industria: la base sólida que toda transformación necesita antes de automatizar.',
       'team.p2': 'Juntos sumamos experiencia en sectores donde el error cuesta dinero — automoción, manufactura, logística y tecnología. Hemos gestionado equipos, negociado contratos, optimizado líneas de producción y transformado procesos antes de que la IA fuera una opción. Hoy aplicamos la misma mentalidad analítica y pragmática a la implementación de Inteligencia Artificial: entendemos tu negocio por dentro y lo llevamos a producción con criterio técnico.',
 
@@ -390,7 +402,19 @@
       'tag.industry': 'Industria',
       'tag.bookings': 'Reservas',
       'tag.payments': 'Pagos',
-      'tag.multilingual': 'Multiidioma'
+      'tag.multilingual': 'Multiidioma',
+
+      'visual.hero.caption': 'Barcelona · Eixample — consultoría IA desde el corazón de la ciudad',
+      'visual.showcase.1': 'Skyline de Barcelona',
+      'visual.showcase.2': 'Eixample · Barcelona',
+      'visual.showcase.3': 'Operaciones con datos',
+      'visual.process.title': 'Diseñado para resultados reales',
+      'visual.process.desc': 'Combinamos experiencia en procesos industriales con IA lista para producción — cada automatización conectada con ROI medible.',
+
+      'office.tag': 'Dónde trabajamos',
+      'office.title': 'Con base en Barcelona, trabajando con empresas en todas partes.',
+      'office.desc': 'Nuestra base es un coworking moderno en el Eixample — terraza con vistas sobre Barcelona, luz natural y una forma de trabajar directa y ágil. Pau Claris 162, en el corazón de la ciudad.',
+      'office.badge': 'Barcelona · Terraza Eixample'
     }
   };
 

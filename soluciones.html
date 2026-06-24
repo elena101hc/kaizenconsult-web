@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/i18n.css">
 <link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/images.css">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
@@ -28,7 +29,7 @@
 }
 html { scroll-behavior: smooth; }
 body { font-family: var(--font); color: var(--text); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
-.container { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
 
 nav {
   position: fixed; top: 0; left: 0; right: 0;
@@ -171,7 +172,7 @@ nav a:hover { color: var(--text); }
   </div>
 </nav>
 
-<section class="page-hero">
+<section class="page-hero page-hero-visual">
   <div class="container">
     <h1 data-i18n="page.solutions.hero.title">Solutions that scale. Services with impact.</h1>
     <p data-i18n="page.solutions.hero.desc">In this order: Prospecting, Outreach, Customer Support, Process Automation, Reengineering & Innovation, Voice Agents, AI Training. Details for each service and project types. Measurable ROI from day one.</p>
@@ -179,7 +180,11 @@ nav a:hover { color: var(--text); }
 </section>
 
 <section class="service-section" id="ventas">
-  <div class="container">
+  <div class="container service-split">
+    <div class="service-media">
+      <img src="images/sales-analytics.jpg" alt="Laptop with sales analytics and charts" loading="lazy" width="520" height="390">
+    </div>
+    <div class="service-content">
     <div class="service-category" data-i18n="card.ventas.category">B2B Sales</div>
     <h2 data-i18n="card.ventas.title">Prospecting & Outreach Agent</h2>
     <p data-i18n="detail.ventas.desc">An AI agent that works your sales pipeline autonomously: detects leads on your website or CRM, researches prospects, drafts personalized outreach, and follows up. Integrated with HubSpot, LinkedIn, Gmail, and your data sources.</p>
@@ -198,11 +203,16 @@ nav a:hover { color: var(--text); }
       <span class="project-tag">CRM</span>
     </div>
     <a href="vinculo.html#contacto" class="service-cta" data-i18n="detail.ventas.cta">Request information →</a>
+    </div>
   </div>
 </section>
 
 <section class="service-section" id="soporte">
-  <div class="container">
+  <div class="container service-split reverse">
+    <div class="service-media">
+      <img src="images/modern-office.jpg" alt="Professional working by window in modern office" loading="lazy" width="520" height="390">
+    </div>
+    <div class="service-content">
     <div class="service-category" data-i18n="card.soporte.category">Customer Experience</div>
     <h2 data-i18n="card.soporte.title">Customer Support Agent</h2>
     <p data-i18n="detail.soporte.desc">Multichannel chatbots (web, WhatsApp, email) that resolve Tier 1 issues in seconds. RAG on your knowledge base, consistent responses, and scaling without expanding headcount. Detects patterns and proposes proactive fixes.</p>
@@ -222,11 +232,16 @@ nav a:hover { color: var(--text); }
       <span class="project-tag">WhatsApp</span>
     </div>
     <a href="vinculo.html#contacto" class="service-cta" data-i18n="detail.ventas.cta">Request information →</a>
+    </div>
   </div>
 </section>
 
 <section class="service-section" id="automatizacion">
-  <div class="container">
+  <div class="container service-split">
+    <div class="service-media">
+      <img src="images/automation-dashboard.jpg" alt="Analytics dashboard on monitor" loading="lazy" width="520" height="390">
+    </div>
+    <div class="service-content">
     <div class="service-category" data-i18n="card.automatizacion.category">Operations</div>
     <h2 data-i18n="card.automatizacion.title">Process Automation</h2>
     <p data-i18n="detail.automatizacion.desc">Eliminate bottlenecks and repetitive tasks. Intelligent document reading (OCR + AI), structured data extraction, flows connecting n8n, CRM, APIs, and your systems without writing code. Process first, technology second.</p>
@@ -244,11 +259,16 @@ nav a:hover { color: var(--text); }
       <span class="project-tag">OCR + IA</span>
     </div>
     <a href="vinculo.html#contacto" class="service-cta" data-i18n="detail.ventas.cta">Request information →</a>
+    </div>
   </div>
 </section>
 
 <section class="service-section" id="consultoria">
-  <div class="container">
+  <div class="container service-split reverse">
+    <div class="service-media">
+      <img src="images/strategy-planning.jpg" alt="Process mapping and strategy planning" loading="lazy" width="520" height="390">
+    </div>
+    <div class="service-content">
     <div class="service-category" data-i18n="card.consultoria.category">Consulting</div>
     <h2 data-i18n="card.consultoria.title">Reengineering & Innovation</h2>
     <p data-i18n="detail.consultoria.desc">30+ years in continuous improvement and reengineering in Automotive and DeepTech. The solid foundation every digital transformation needs. Before automating, we optimize: diagnosis, mapping, and flow design.</p>
@@ -266,11 +286,16 @@ nav a:hover { color: var(--text); }
       <span class="project-tag" data-i18n="tag.continuous">Continuous improvement</span>
     </div>
     <a href="vinculo.html#contacto" class="service-cta" data-i18n="detail.ventas.cta">Request information →</a>
+    </div>
   </div>
 </section>
 
 <section class="service-section" id="voz">
-  <div class="container">
+  <div class="container service-split">
+    <div class="service-media">
+      <img src="images/voice-support.jpg" alt="Consultant on a headset call in a modern office" loading="lazy" width="520" height="390">
+    </div>
+    <div class="service-content">
     <div class="service-category" data-i18n="card.voz.category">Voice</div>
     <h2 data-i18n="card.voz.title">Voice Agents & Callbots</h2>
     <p data-i18n="detail.voz.desc">Intelligent voice assistants for bookings, payments, information, and phone support. Real-time conversational AI. Your switchboard powered 24/7, multilingual, with no wait times.</p>
@@ -288,11 +313,16 @@ nav a:hover { color: var(--text); }
       <span class="project-tag" data-i18n="tag.multilingual">Multilingual</span>
     </div>
     <a href="vinculo.html#contacto" class="service-cta" data-i18n="detail.ventas.cta">Request information →</a>
+    </div>
   </div>
 </section>
 
 <section class="service-section" id="formacion">
-  <div class="container">
+  <div class="container service-split reverse">
+    <div class="service-media">
+      <img src="images/barcelona-terrace-pexels.jpg" alt="Notebook and laptop on a professional desk" loading="lazy" width="520" height="390">
+    </div>
+    <div class="service-content">
     <div class="service-category" data-i18n="card.formacion.category">Training</div>
     <h2 data-i18n="card.formacion.title">AI Training</h2>
     <p data-i18n="detail.formacion.desc">Hands-on workshops on prompt engineering, AI adoption, and change management. Your team learns to leverage AI with business judgment. Not theory: real cases, exercises, and ready-to-use tools.</p>
@@ -309,6 +339,7 @@ nav a:hover { color: var(--text); }
       <span class="project-tag">Workshops</span>
     </div>
     <a href="vinculo.html#contacto" class="service-cta" data-i18n="detail.ventas.cta">Request information →</a>
+    </div>
   </div>
 </section>
 
