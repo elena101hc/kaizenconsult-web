@@ -1,0 +1,21 @@
+/* Shared styles for service landing pages & blog */
+.landing-hero-media {
+  margin: 0 auto 2rem;
+  max-width: 900px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border, #e2e8f0);
+  aspect-ratio: 21 / 9;
+  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.08);
+}
+.landing-hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}

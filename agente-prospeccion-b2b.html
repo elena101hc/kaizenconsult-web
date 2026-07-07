@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agente de Prospección B2B para Pymes Industriales — Un pipeline que se trabaja solo | KAIzen Consult</title>
+<meta name="description" content="Cuando nadie tiene tiempo de prospectar, el pipeline se vacía sin avisar. Un sistema que busca empresas como las que ya te compran, les escribe con un motivo real y hace el seguimiento cada día. Para pymes B2B e industriales.">
+<link rel="canonical" href="https://kaizenconsult-web.vercel.app/agente-prospeccion-b2b.html">
+<meta property="og:title" content="Agente de Prospección B2B — KAIzen Consult">
+<meta property="og:description" content="El día que tu mejor cliente baje pedidos, ¿qué hay en el pipeline? Un sistema de prospección que trabaja cada día, sin depender de la agenda de nadie.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/i18n.css">
+<link rel="stylesheet" href="css/landing.css">
+<link rel="stylesheet" href="css/footer.css">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #ffffff;
+  --bg-alt: #fafafa;
+  --text: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --electric: #2563eb;
+  --lime: #b8e04a;
+  --lime-dark: #9cc832;
+  --accent-light: rgba(37, 99, 235, 0.08);
+  --lime-light: rgba(184, 224, 74, 0.12);
+  --border: #e2e8f0;
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Space Grotesk', var(--font);
+}
+html { scroll-behavior: smooth; }
+body { font-family: var(--font); color: var(--text); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+.container { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; }
+
+nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 1rem 1.5rem;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+nav .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+.logo { font-weight: 700; font-size: 1.35rem; letter-spacing: -0.03em; color: var(--text); text-decoration: none; }
+.logo span { color: var(--lime); }
+nav a { font-size: 0.9rem; font-weight: 500; color: var(--text-secondary); text-decoration: none; }
+nav a:hover { color: var(--text); }
+.nav-cta { background: var(--lime); color: var(--text) !important; padding: 0.55rem 1.25rem; border-radius: 8px; font-weight: 600 !important; text-decoration: none; margin-left: 1.5rem; }
+.nav-cta:hover { background: var(--lime-dark); }
+
+.breadcrumb { padding: 6.5rem 0 0; font-size: 0.85rem; color: var(--text-muted); }
+.breadcrumb a { color: var(--text-muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--electric); }
+
+.page-hero { padding: 1.5rem 0 3.5rem; }
+.service-category { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--lime-dark); margin-bottom: 0.75rem; }
+.page-hero h1 { font-family: var(--font-display); font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 700; line-height: 1.15; letter-spacing: -0.03em; max-width: 720px; }
+.page-hero .hero-sub { color: var(--text-secondary); font-size: 1.15rem; margin-top: 1.25rem; max-width: 620px; line-height: 1.65; }
+.hero-actions { display: flex; gap: 0.75rem; margin-top: 2rem; flex-wrap: wrap; }
+.btn-primary {
+  background: var(--lime); color: var(--text);
+  padding: 0.9rem 1.75rem; border-radius: 8px;
+  font-family: var(--font); font-size: 0.95rem; font-weight: 600;
+  text-decoration: none; border: none; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 0.5rem; transition: background 0.2s;
+}
+.btn-primary:hover { background: var(--lime-dark); }
+.btn-secondary {
+  background: transparent; color: var(--text);
+  padding: 0.9rem 1.75rem; border-radius: 8px;
+  font-size: 0.95rem; font-weight: 500; text-decoration: none;
+  border: 1px solid var(--border); transition: all 0.2s;
+}
+.btn-secondary:hover { border-color: var(--text); background: var(--bg-alt); }
+
+section { padding: 3.5rem 0; }
+.section-tag { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--electric); margin-bottom: 0.75rem; }
+h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 700; line-height: 1.25; letter-spacing: -0.02em; margin-bottom: 1rem; }
+.section-intro { color: var(--text-secondary); max-width: 640px; margin-bottom: 2rem; }
+
+.pain-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+.pain-card { background: var(--bg-alt); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; }
+.pain-card p { color: var(--text-secondary); font-size: 0.95rem; }
+.pain-card .pain-quote { font-weight: 600; color: var(--text); font-style: italic; margin-bottom: 0.5rem; font-size: 1rem; }
+
+.steps { counter-reset: step; display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.5rem; }
+.step { display: flex; gap: 1.25rem; align-items: flex-start; }
+.step-num {
+  flex-shrink: 0; width: 2.25rem; height: 2.25rem; border-radius: 50%;
+  background: var(--lime); color: var(--text);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-weight: 700;
+}
+.step h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.25rem; }
+.step p { color: var(--text-secondary); font-size: 0.95rem; max-width: 560px; }
+
+.results-band { background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+.result-item { text-align: center; }
+.result-value { font-family: var(--font-display); font-size: 2.25rem; font-weight: 700; color: var(--lime-dark); line-height: 1.2; }
+.result-label { font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.35rem; }
+
+.fit-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; }
+.fit-col { border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; }
+.fit-col.yes { background: var(--lime-light); border-color: var(--lime); }
+.fit-col h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem; }
+.fit-col ul { padding-left: 1.1rem; }
+.fit-col li { color: var(--text-secondary); font-size: 0.95rem; margin: 0.4rem 0; }
+@media (max-width: 640px) { .fit-cols { grid-template-columns: 1fr; } }
+
+.tech-divider {
+  background: var(--text); color: #cbd5e1;
+  padding: 2.5rem 0; text-align: center;
+}
+.tech-divider h2 { color: #f8fafc; margin-bottom: 0.5rem; }
+.tech-divider p { font-size: 0.95rem; max-width: 560px; margin: 0 auto; }
+
+.tech-section { background: var(--bg-alt); }
+.tech-block { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.75rem; margin-bottom: 1.25rem; }
+.tech-block h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; }
+.tech-block p, .tech-block li { color: var(--text-secondary); font-size: 0.95rem; }
+.tech-block ul { padding-left: 1.25rem; margin-top: 0.5rem; }
+.tech-block li { margin: 0.4rem 0; }
+.project-types { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.project-tag { font-size: 0.8rem; padding: 0.35rem 0.75rem; background: var(--lime-light); color: var(--lime-dark); border-radius: 6px; font-weight: 500; }
+
+.screenshot-placeholder {
+  border: 2px dashed var(--border); border-radius: 12px;
+  padding: 3rem 1.5rem; text-align: center; color: var(--text-muted);
+  font-size: 0.9rem; margin-top: 1rem; background: var(--bg);
+}
+
+.faq-list { margin-top: 1.5rem; }
+.faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 0.75rem; background: var(--bg); }
+.faq-item summary {
+  cursor: pointer; padding: 1.1rem 1.25rem; font-weight: 600; font-size: 0.98rem;
+  list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: '+'; font-size: 1.3rem; color: var(--lime-dark); flex-shrink: 0; }
+.faq-item[open] summary::after { content: '−'; }
+.faq-item .faq-answer { padding: 0 1.25rem 1.25rem; color: var(--text-secondary); font-size: 0.95rem; line-height: 1.65; }
+
+.contact-section { background: var(--bg-alt); border-top: 1px solid var(--border); }
+.contact-section h2 { text-align: center; }
+.contact-section .contact-lead { text-align: center; color: var(--text-secondary); margin-bottom: 2rem; }
+.contact-form-wrap { max-width: 480px; margin: 0 auto; }
+.contact-form { display: flex; flex-direction: column; gap: 1rem; }
+.form-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+.form-row .form-group { flex: 1; min-width: 200px; }
+.form-group input, .form-group textarea {
+  width: 100%; padding: 0.75rem 1rem;
+  border: 1px solid var(--border); border-radius: 8px;
+  font-family: var(--font); font-size: 0.95rem; background: var(--bg); color: var(--text);
+}
+.form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--electric); }
+.form-group textarea { min-height: 100px; resize: vertical; }
+.form-submit {
+  background: var(--lime); color: var(--text);
+  padding: 1rem 1.5rem; border-radius: 8px;
+  font-weight: 600; font-size: 1rem; border: none; cursor: pointer; font-family: var(--font);
+}
+.form-submit:hover { background: var(--lime-dark); }
+.form-note { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem; text-align: center; }
+@media (max-width: 768px) { .form-row { flex-direction: column; } .form-row .form-group { min-width: 100%; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Agente de Prospección B2B",
+  "serviceType": "Automatización de prospección comercial con IA",
+  "provider": { "@type": "Organization", "name": "KAIzen Consult", "email": "hello@kaizenconsult.es", "address": { "@type": "PostalAddress", "streetAddress": "C/ Pau Claris, 162-164, pl. 3", "postalCode": "08037", "addressLocality": "Barcelona", "addressCountry": "ES" } },
+  "areaServed": "España",
+  "audience": { "@type": "BusinessAudience", "name": "Pymes B2B e industriales" },
+  "description": "Sistema de prospección comercial automatizada: identifica clientes potenciales, redacta correos personalizados y hace el seguimiento hasta conseguir la primera reunión."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "¿Los correos no parecerán spam?", "acceptedAnswer": { "@type": "Answer", "text": "No, y esa es la diferencia clave con las herramientas de envío masivo. El sistema trabaja con listas reducidas y seleccionadas a mano, escribe cada correo con información real de la empresa destinataria y solo envía a direcciones verificadas. Hablamos de decenas de correos relevantes a la semana, no de miles de correos genéricos." } },
+    { "@type": "Question", "name": "¿Quién revisa lo que se envía en mi nombre?", "acceptedAnswer": { "@type": "Answer", "text": "Tú, si quieres. El sistema puede dejar cada correo preparado como borrador para que lo revises antes de enviarlo, o enviar directamente los mensajes de seguimiento ya validados. El nivel de supervisión lo decides tú y puede cambiar con el tiempo, a medida que ganas confianza en el sistema." } },
+    { "@type": "Question", "name": "¿Necesito tener un CRM o conocimientos técnicos?", "acceptedAnswer": { "@type": "Answer", "text": "No. Si ya usas un CRM (HubSpot, por ejemplo), lo integramos. Si no, el sistema funciona con un registro sencillo que puedes consultar en cualquier momento. De la parte técnica nos ocupamos nosotros: tú solo necesitas saber a qué tipo de cliente quieres llegar." } },
+    { "@type": "Question", "name": "¿Esto cumple con el RGPD?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. La prospección B2B a correos corporativos se apoya en el interés legítimo, siempre que el mensaje sea relevante para la actividad de la empresa y se ofrezca una forma clara de darse de baja. El sistema gestiona las bajas automáticamente y no vuelve a contactar a quien lo solicita." } },
+    { "@type": "Question", "name": "¿El sistema es mío o pago una suscripción?", "acceptedAnswer": { "@type": "Answer", "text": "Es tuyo. Construimos el sistema sobre infraestructura que controlas, te lo entregamos documentado y te enseñamos a usarlo. No dependes de nosotros para que siga funcionando ni pagas licencias por usuario. Es la diferencia entre alquilar una herramienta y ser dueño de tu sistema de captación." } },
+    { "@type": "Question", "name": "¿Cuánto se tarda en ponerlo en marcha?", "acceptedAnswer": { "@type": "Answer", "text": "Entre dos y cuatro semanas desde la reunión inicial, dependiendo de las integraciones necesarias. La primera semana definimos juntos el cliente objetivo y el mensaje; después construimos, probamos con un grupo reducido y ampliamos." } }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://kaizenconsult-web.vercel.app/" },
+    { "@type": "ListItem", "position": 2, "name": "Soluciones", "item": "https://kaizenconsult-web.vercel.app/soluciones.html" },
+    { "@type": "ListItem", "position": 3, "name": "Agente de Prospección B2B" }
+  ]
+}
+</script>
+</head>
+<body data-page-title="meta.lp.ventas.title" data-page-description="meta.lp.ventas.description">
+
+<nav>
+  <div class="nav-inner">
+    <a href="vinculo.html" class="logo">K<span>AI</span>zen Consult</a>
+    <div class="nav-right">
+      <div>
+        <a href="vinculo.html" data-i18n="nav.home">Inicio</a>
+        <a href="soluciones.html" style="margin-left:1.5rem;" data-i18n="nav.solutions">Soluciones</a>
+        <a href="#contacto" class="nav-cta" data-i18n="nav.contact.short">Hablemos</a>
+      </div>
+      <div class="lang-toggle" id="lang-toggle" role="group" aria-label="Language">
+        <span class="lang-option" data-lang="en">EN</span>
+        <span class="lang-option" data-lang="es">ES</span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container breadcrumb">
+  <a href="vinculo.html" data-i18n="breadcrumb.home">Inicio</a> / <a href="soluciones.html" data-i18n="breadcrumb.solutions">Soluciones</a> / <span data-i18n="breadcrumb.ventas">Agente de Prospección B2B</span>
+</div>
+
+<div class="container landing-hero-media">
+  <img src="images/sales-analytics.jpg" alt="B2B sales pipeline analytics" width="900" height="386" loading="eager">
+</div>
+
+<!-- ============ PARTE SUPERIOR: NEGOCIO ============ -->
+
+<header class="page-hero">
+  <div class="container">
+    <div class="service-category" data-i18n="lp.ventas.hero.category">Ventas B2B</div>
+    <h1 data-i18n="lp.ventas.hero.title">El día que tu mejor cliente baje pedidos, ¿qué hay en el pipeline?</h1>
+    <p class="hero-sub" data-i18n="lp.ventas.hero.sub">La respuesta honesta en la mayoría de pymes industriales: nada, porque nadie tiene tiempo de prospectar. Un sistema que busca empresas como las que ya te compran, les escribe con un motivo real y hace el seguimiento — cada día, sin depender de la agenda de nadie.</p>
+    <div class="hero-actions">
+      <a href="#contacto" class="btn-primary" data-i18n="lp.cta.free">Pedir una valoración gratuita →</a>
+      <a href="#como-funciona" class="btn-secondary" data-i18n="lp.cta.how">Ver cómo funciona</a>
+    </div>
+  </div>
+</header>
+
+<section id="problemas">
+  <div class="container">
+    <div class="section-tag" data-i18n="lp.section.problem">El problema</div>
+    <h2 data-i18n="lp.section.pain.q">¿Te suena alguna de estas situaciones?</h2>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <p class="pain-quote" data-i18n="lp.ventas.pain.1.quote">"Vivimos de los clientes de siempre."</p>
+        <p data-i18n="lp.ventas.pain.1.text">Los pedidos llegan por relaciones históricas y boca a boca. Cuando un cliente grande baja el volumen, no hay recambio en el horizonte.</p>
+      </div>
+      <div class="pain-card">
+        <p class="pain-quote" data-i18n="lp.ventas.pain.2.quote">"No tenemos tiempo para buscar clientes nuevos."</p>
+        <p data-i18n="lp.ventas.pain.2.text">Entre presupuestos, producción y el día a día, la prospección siempre es lo primero que se cae de la agenda.</p>
+      </div>
+      <div class="pain-card">
+        <p class="pain-quote" data-i18n="lp.ventas.pain.3.quote">"Enviamos correos pero nadie contesta."</p>
+        <p data-i18n="lp.ventas.pain.3.text">Mensajes genéricos a listas compradas no funcionan. Lo que funciona es escribir a la empresa adecuada con un mensaje que le importe. Eso lleva horas por cada contacto… si lo haces a mano.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="como-funciona" style="padding-top:0;">
+  <div class="container">
+    <div class="section-tag" data-i18n="lp.section.solution">La solución</div>
+    <h2 data-i18n="lp.ventas.solution.title">Qué hace el agente por ti, cada día</h2>
+    <p class="section-intro" data-i18n="lp.ventas.solution.intro">No es una herramienta que tengas que aprender a usar. Es un sistema que trabaja solo y te entrega resultados. Así funciona, sin tecnicismos:</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <h3 data-i18n="lp.ventas.step.1.title">Encuentra empresas que encajan con tu cliente ideal</h3>
+          <p data-i18n="lp.ventas.step.1.text">Definimos juntos el perfil (sector, zona, tamaño) y el sistema localiza empresas que cumplen esos criterios y a la persona adecuada dentro de cada una: gerente, director de compras, responsable de operaciones.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <h3 data-i18n="lp.ventas.step.2.title">Investiga cada empresa y escribe un correo a medida</h3>
+          <p data-i18n="lp.ventas.step.2.text">Antes de escribir, el sistema revisa la web y la actividad de cada empresa para encontrar un motivo real de contacto. Nada de "Estimado señor, le presento nuestros servicios": correos breves y concretos que hablan del negocio del destinatario.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <h3 data-i18n="lp.ventas.step.3.title">Hace el seguimiento que nadie tiene tiempo de hacer</h3>
+          <p data-i18n="lp.ventas.step.3.text">La mayoría de las respuestas llegan al segundo o tercer contacto. El sistema recuerda a quién escribió, cuándo y qué respondió, y envía los seguimientos en el momento adecuado. Cuando alguien muestra interés, te avisa para que entres tú.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div>
+          <h3 data-i18n="lp.ventas.step.4.title">Tú decides cuánto control quieres tener</h3>
+          <p data-i18n="lp.ventas.step.4.text">Puede dejarte cada correo como borrador para que lo apruebes, o funcionar de forma autónoma. Empezamos con supervisión total y la vas soltando cuando el sistema se gana tu confianza.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="results-band">
+  <div class="container">
+    <div class="results-grid">
+      <div class="result-item">
+        <div class="result-value">&lt;2 min</div>
+        <div class="result-label" data-i18n="lp.ventas.result.1">De lead detectado a primer contacto</div>
+      </div>
+      <div class="result-item">
+        <div class="result-value">+40%</div>
+        <div class="result-label" data-i18n="lp.ventas.result.2">Más oportunidades en el pipeline</div>
+      </div>
+      <div class="result-item">
+        <div class="result-value">0 h</div>
+        <div class="result-label" data-i18n="lp.ventas.result.3">De tu semana dedicadas a prospectar</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="para-quien">
+  <div class="container">
+    <div class="section-tag" data-i18n="lp.section.audience">Para quién es</div>
+    <h2 data-i18n="lp.ventas.audience.title">Pensado para pymes B2B que venden a otras empresas</h2>
+    <div class="fit-cols">
+      <div class="fit-col yes">
+        <h3 data-i18n="lp.fit.yes">Encaja contigo si…</h3>
+        <ul>
+          <li data-i18n="lp.ventas.fit.yes.1">Vendes a otras empresas: industria, servicios profesionales, distribución, exportación.</li>
+          <li data-i18n="lp.ventas.fit.yes.2">Tu equipo comercial es pequeño (o eres tú) y no da abasto.</li>
+          <li data-i18n="lp.ventas.fit.yes.3">Sabes describir a tu cliente ideal, aunque no tengas una lista.</li>
+          <li data-i18n="lp.ventas.fit.yes.4">Prefieres pocas conversaciones de calidad a miles de impactos.</li>
+        </ul>
+      </div>
+      <div class="fit-col">
+        <h3 data-i18n="lp.fit.no">No es para ti si…</h3>
+        <ul>
+          <li data-i18n="lp.ventas.fit.no.1">Vendes a consumidor final (B2C).</li>
+          <li data-i18n="lp.ventas.fit.no.2">Buscas envíos masivos a listas compradas.</li>
+          <li data-i18n="lp.ventas.fit.no.3">Esperas resultados sin definir a quién quieres vender.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARTE INFERIOR: TÉCNICA ============ -->
+
+<div class="tech-divider">
+  <div class="container">
+    <h2>Para perfiles técnicos: cómo está construido</h2>
+    <p>Si hasta aquí ya tienes lo que necesitas, pasa directamente al <a href="#contacto" style="color:var(--lime);">formulario de contacto</a>. Lo que sigue es el detalle de arquitectura e integraciones.</p>
+  </div>
+</div>
+
+<section class="tech-section">
+  <div class="container">
+    <div class="tech-block">
+      <h3>Arquitectura del sistema</h3>
+      <p>El agente se orquesta sobre n8n (self-hosted, sobre infraestructura del cliente) y combina fuentes de datos de enriquecimiento con generación controlada por LLM:</p>
+      <ul>
+        <li><strong>Listas objetivo:</strong> partimos de listas de empresas curadas y validadas manualmente, no de filtros firmográficos automáticos, que en el mercado español de pymes producen datos poco fiables. La lista se enriquece con datos de contacto verificados (solo emails verificados; los no verificados se descartan).</li>
+        <li><strong>Investigación por contacto:</strong> scraping de web corporativa y señales públicas para generar el gancho de personalización de cada correo.</li>
+        <li><strong>Personalización híbrida:</strong> solo el gancho de apertura se genera con IA sobre la investigación previa; el cuerpo del mensaje y la propuesta de valor son copy fijo, probado y controlado. Esto evita alucinaciones y mantiene el mensaje comercial consistente.</li>
+        <li><strong>Secuencia multi-toque:</strong> secuencia de 4 correos con lógica de estado por contacto (enviado, rebotado, respondido, baja), protección ante rebotes y parada automática al recibir respuesta.</li>
+        <li><strong>Human-in-the-loop:</strong> generación de borradores en Gmail u Outlook (Microsoft Graph API con OAuth2) para revisión humana antes del envío, configurable por fase de la secuencia.</li>
+      </ul>
+      <div class="project-types">
+        <span class="project-tag">n8n</span>
+        <span class="project-tag">HubSpot</span>
+        <span class="project-tag">Apollo</span>
+        <span class="project-tag">Gmail / Outlook</span>
+        <span class="project-tag">LinkedIn</span>
+        <span class="project-tag">LLM</span>
+      </div>
+    </div>
+
+    <div class="tech-block">
+      <h3>Integraciones habituales</h3>
+      <ul>
+        <li><strong>CRM:</strong> sincronización bidireccional con HubSpot (contactos, empresas, actividad de la secuencia). Adaptable a otros CRM con API.</li>
+        <li><strong>Email:</strong> Gmail y Microsoft 365, con envío desde el dominio del cliente y configuración correcta de SPF, DKIM y DMARC para proteger la entregabilidad.</li>
+        <li><strong>Datos:</strong> Apollo.io y scraping de LinkedIn (vía Apify) para enriquecimiento; Airtable o Google Sheets como capa de revisión cuando el cliente no tiene CRM.</li>
+      </ul>
+    </div>
+
+    <div class="tech-block">
+      <h3>Ejemplo real: el sistema que nos trae clientes a nosotros</h3>
+      <p>Este mismo agente es el que usa KAIzen Consult para su propia captación: las campañas de prospección que enviamos a pymes industriales del Baix Llobregat las gestiona el sistema que describes en esta página. Trabajamos con listas curadas por municipio, contactos verificados de dirección y gerencia, y una secuencia de 4 correos con revisión humana del primer envío. Si recibiste un correo nuestro, lo escribió el agente — y esa es la mejor demostración de que funciona.</p>
+      <div class="screenshot-placeholder">📷 Captura del flujo en n8n — pendiente de maquetación</div>
+      <div class="screenshot-placeholder">📷 Ejemplo de correo generado con gancho personalizado — pendiente de maquetación</div>
+    </div>
+
+    <div class="tech-block">
+      <h3>Preguntas frecuentes</h3>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>¿Los correos no parecerán spam?</summary>
+          <div class="faq-answer">No, y esa es la diferencia clave con las herramientas de envío masivo. El sistema trabaja con listas reducidas y seleccionadas a mano, escribe cada correo con información real de la empresa destinataria y solo envía a direcciones verificadas. Hablamos de decenas de correos relevantes a la semana, no de miles de correos genéricos. Además, configuramos tu dominio para proteger tu reputación de envío.</div>
+        </details>
+        <details class="faq-item">
+          <summary>¿Quién revisa lo que se envía en mi nombre?</summary>
+          <div class="faq-answer">Tú, si quieres. El sistema puede dejar cada correo preparado como borrador para que lo revises antes de enviarlo, o enviar directamente los mensajes de seguimiento ya validados. El nivel de supervisión lo decides tú y puede cambiar con el tiempo, a medida que ganas confianza en el sistema.</div>
+        </details>
+        <details class="faq-item">
+          <summary>¿Necesito tener un CRM o conocimientos técnicos?</summary>
+          <div class="faq-answer">No. Si ya usas un CRM (HubSpot, por ejemplo), lo integramos. Si no, el sistema funciona con un registro sencillo que puedes consultar en cualquier momento. De la parte técnica nos ocupamos nosotros: tú solo necesitas saber a qué tipo de cliente quieres llegar.</div>
+        </details>
+        <details class="faq-item">
+          <summary>¿Esto cumple con el RGPD?</summary>
+          <div class="faq-answer">Sí. La prospección B2B a correos corporativos se apoya en el interés legítimo, siempre que el mensaje sea relevante para la actividad de la empresa y se ofrezca una forma clara de darse de baja. El sistema gestiona las bajas automáticamente y no vuelve a contactar a quien lo solicita.</div>
+        </details>
+        <details class="faq-item">
+          <summary>¿El sistema es mío o pago una suscripción?</summary>
+          <div class="faq-answer">Es tuyo. Construimos el sistema sobre infraestructura que controlas, te lo entregamos documentado y te enseñamos a usarlo. No dependes de nosotros para que siga funcionando ni pagas licencias por usuario. Es la diferencia entre alquilar una herramienta y ser dueño de tu sistema de captación.</div>
+        </details>
+        <details class="faq-item">
+          <summary>¿Cuánto se tarda en ponerlo en marcha?</summary>
+          <div class="faq-answer">Entre dos y cuatro semanas desde la reunión inicial, dependiendo de las integraciones necesarias. La primera semana definimos juntos el cliente objetivo y el mensaje; después construimos, probamos con un grupo reducido y ampliamos.</div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contacto">
+  <div class="container">
+    <h2 data-i18n="lp.contact.title">¿Hablamos de tu caso?</h2>
+    <p class="contact-lead" data-i18n="lp.contact.lead.ventas">Cuéntanos a quién vendes y te diremos, sin compromiso, si este sistema tiene sentido para tu empresa.</p>
+    <div class="contact-form-wrap">
+      <form class="contact-form" action="https://formsubmit.co/elena@vinculo.io" method="POST" id="contact-form">
+        <input type="hidden" name="_subject" value="Solicitud desde Agente de Prospección B2B - KAIzen Consult" data-i18n-value="form.subject.ventas">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="" id="form-next">
+        <input type="hidden" name="interes" value="ventas">
+        <div class="form-row">
+          <div class="form-group">
+            <input type="text" name="name" data-i18n-placeholder="form.name" placeholder="Tu nombre *" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" data-i18n-placeholder="form.email" placeholder="Email *" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="text" name="empresa" data-i18n-placeholder="form.company" placeholder="Empresa (opcional)">
+        </div>
+        <div class="form-group">
+          <textarea name="message" data-i18n-placeholder="form.message.ventas" placeholder="¿A qué tipo de empresas vendes? ¿Cómo consigues clientes hoy?" rows="4"></textarea>
+        </div>
+        <button type="submit" class="form-submit" data-i18n="form.submit">Enviar mensaje →</button>
+        <p class="form-note" data-i18n="form.note">Sin compromiso · Respondemos en menos de 24 horas</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="vinculo.html" class="footer-logo">K<span>AI</span>zen Consult</a>
+        <div class="footer-contact">
+          <p class="footer-label" data-i18n="footer.findUs">Dónde estamos</p>
+          <p class="footer-address" data-i18n="footer.address">C/ Pau Claris, 162-164, pl. 3
+08037 Barcelona</p>
+          <a href="mailto:hello@kaizenconsult.es" class="footer-email">hello@kaizenconsult.es</a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <a href="soluciones.html" class="footer-social" data-i18n="nav.solutions">Soluciones</a>
+        <a href="agente-soporte-cliente.html" class="footer-social" data-i18n="footer.link.support">Agente de soporte al cliente</a>
+        <a href="automatizacion-de-procesos.html" class="footer-social" data-i18n="footer.link.automation">Automatización de procesos</a>
+        <a href="https://www.linkedin.com/company/kaizen-consult-ai/" target="_blank" rel="noopener" class="footer-social">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-i18n="footer.tagline">© 2025 KAIzen Consult — Agentes IA, Procesos y Automatización</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('form-next').value = window.location.href.split('#')[0] + '?sent=1#contacto';
+if (window.location.search.includes('sent=1')) {
+  const wrap = document.querySelector('.contact-form-wrap');
+  if (wrap) {
+    const msg = document.createElement('p');
+    msg.style.cssText = 'color:var(--electric);font-weight:600;margin-bottom:1rem;text-align:center;';
+    msg.setAttribute('data-i18n', 'form.success');
+    msg.textContent = '✓ Mensaje enviado. Respondemos en menos de 24 horas.';
+    wrap.insertBefore(msg, wrap.firstChild);
+    if (window.KaizenI18n) window.KaizenI18n.setLang(window.KaizenI18n.getLang());
+  }
+}
+</script>
+<script src="js/landing-i18n.js"></script>
+<script src="js/i18n.js"></script>
+
+</body>
+</html>

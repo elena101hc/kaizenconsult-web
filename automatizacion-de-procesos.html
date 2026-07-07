@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automatización de Procesos para Pymes — Tus sistemas conectados, tu equipo a lo importante | KAIzen Consult</title>
+<meta name="description" content="Cuando el correo, el ERP y el Excel no se hablan, el traductor es tu equipo. Eso es un defecto de proceso, y se elimina: automatización de facturas, pedidos e informes con las herramientas que ya usas.">
+<link rel="canonical" href="https://kaizenconsult-web.vercel.app/automatizacion-de-procesos.html">
+<meta property="og:title" content="Automatización de Procesos — KAIzen Consult">
+<meta property="og:description" content="Tus sistemas no se hablan entre sí. El traductor es tu equipo. Eliminamos ese defecto de proceso conectando las herramientas que ya usas.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/i18n.css">
+<link rel="stylesheet" href="css/landing.css">
+<link rel="stylesheet" href="css/footer.css">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #ffffff;
+  --bg-alt: #fafafa;
+  --text: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --electric: #2563eb;
+  --lime: #b8e04a;
+  --lime-dark: #9cc832;
+  --accent-light: rgba(37, 99, 235, 0.08);
+  --lime-light: rgba(184, 224, 74, 0.12);
+  --border: #e2e8f0;
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Space Grotesk', var(--font);
+}
+html { scroll-behavior: smooth; }
+body { font-family: var(--font); color: var(--text); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+.container { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; }
+
+nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 1rem 1.5rem;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+nav .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+.logo { font-weight: 700; font-size: 1.35rem; letter-spacing: -0.03em; color: var(--text); text-decoration: none; }
+.logo span { color: var(--lime); }
+nav a { font-size: 0.9rem; font-weight: 500; color: var(--text-secondary); text-decoration: none; }
+nav a:hover { color: var(--text); }
+.nav-cta { background: var(--lime); color: var(--text) !important; padding: 0.55rem 1.25rem; border-radius: 8px; font-weight: 600 !important; text-decoration: none; margin-left: 1.5rem; }
+.nav-cta:hover { background: var(--lime-dark); }
+
+.breadcrumb { padding: 6.5rem 0 0; font-size: 0.85rem; color: var(--text-muted); }
+.breadcrumb a { color: var(--text-muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--electric); }
+
+.page-hero { padding: 1.5rem 0 3.5rem; }
+.service-category { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--lime-dark); margin-bottom: 0.75rem; }
+.page-hero h1 { font-family: var(--font-display); font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 700; line-height: 1.15; letter-spacing: -0.03em; max-width: 720px; }
+.page-hero .hero-sub { color: var(--text-secondary); font-size: 1.15rem; margin-top: 1.25rem; max-width: 620px; line-height: 1.65; }
+.hero-actions { display: flex; gap: 0.75rem; margin-top: 2rem; flex-wrap: wrap; }
+.btn-primary {
+  background: var(--lime); color: var(--text);
+  padding: 0.9rem 1.75rem; border-radius: 8px;
+  font-family: var(--font); font-size: 0.95rem; font-weight: 600;
+  text-decoration: none; border: none; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 0.5rem; transition: background 0.2s;
+}
+.btn-primary:hover { background: var(--lime-dark); }
+.btn-secondary {
+  background: transparent; color: var(--text);
+  padding: 0.9rem 1.75rem; border-radius: 8px;
+  font-size: 0.95rem; font-weight: 500; text-decoration: none;
+  border: 1px solid var(--border); transition: all 0.2s;
+}
+.btn-secondary:hover { border-color: var(--text); background: var(--bg-alt); }
+
+section { padding: 3.5rem 0; }
+.section-tag { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--electric); margin-bottom: 0.75rem; }
+h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 700; line-height: 1.25; letter-spacing: -0.02em; margin-bottom: 1rem; }
+.section-intro { color: var(--text-secondary); max-width: 640px; margin-bottom: 2rem; }
+
+.pain-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+.pain-card { background: var(--bg-alt); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; }
+.pain-card p { color: var(--text-secondary); font-size: 0.95rem; }
+.pain-card .pain-quote { font-weight: 600; color: var(--text); font-style: italic; margin-bottom: 0.5rem; font-size: 1rem; }
+
+.steps { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.5rem; }
+.step { display: flex; gap: 1.25rem; align-items: flex-start; }
+.step-num {
+  flex-shrink: 0; width: 2.25rem; height: 2.25rem; border-radius: 50%;
+  background: var(--lime); color: var(--text);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-weight: 700;
+}
+.step h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.25rem; }
+.step p { color: var(--text-secondary); font-size: 0.95rem; max-width: 560px; }
+
+.examples-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+.example-card { border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; background: var(--bg); }
+.example-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
+.example-card p { color: var(--text-secondary); font-size: 0.92rem; }
+.example-card .example-before { color: var(--text-muted); font-size: 0.85rem; margin-top: 0.75rem; }
+.example-card .example-before strong { color: var(--lime-dark); }
+
+.results-band { background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+.result-item { text-align: center; }
+.result-value { font-family: var(--font-display); font-size: 2.25rem; font-weight: 700; color: var(--lime-dark); line-height: 1.2; }
+.result-label { font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.35rem; }
+
+.fit-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; }
+.fit-col { border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; }
+.fit-col.yes { background: var(--lime-light); border-color: var(--lime); }
+.fit-col h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem; }
+.fit-col ul { padding-left: 1.1rem; }
+.fit-col li { color: var(--text-secondary); font-size: 0.95rem; margin: 0.4rem 0; }
+@media (max-width: 640px) { .fit-cols { grid-template-columns: 1fr; } }
+
+.tech-divider {
+  background: var(--text); color: #cbd5e1;
+  padding: 2.5rem 0; text-align: center;
+}
+.tech-divider h2 { color: #f8fafc; margin-bottom: 0.5rem; }
+.tech-divider p { font-size: 0.95rem; max-width: 560px; margin: 0 auto; }
+
+.tech-section { background: var(--bg-alt); }
+.tech-block { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.75rem; margin-bottom: 1.25rem; }
+.tech-block h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; }
+.tech-block p, .tech-block li { color: var(--text-secondary); font-size: 0.95rem; }
+.tech-block ul { padding-left: 1.25rem; margin-top: 0.5rem; }
+.tech-block li { margin: 0.4rem 0; }
+.project-types { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.project-tag { font-size: 0.8rem; padding: 0.35rem 0.75rem; background: var(--lime-light); color: var(--lime-dark); border-radius: 6px; font-weight: 500; }
+
+.screenshot-placeholder {
+  border: 2px dashed var(--border); border-radius: 12px;
+  padding: 3rem 1.5rem; text-align: center; color: var(--text-muted);
+  font-size: 0.9rem; margin-top: 1rem; background: var(--bg);
+}
+
+.faq-list { margin-top: 1.5rem; }
+.faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 0.75rem; background: var(--bg); }
+.faq-item summary {
+  cursor: pointer; padding: 1.1rem 1.25rem; font-weight: 600; font-size: 0.98rem;
+  list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: '+'; font-size: 1.3rem; color: var(--lime-dark); flex-shrink: 0; }
+.faq-item[open] summary::after { content: '−'; }
+.faq-item .faq-answer { padding: 0 1.25rem 1.25rem; color: var(--text-secondary); font-size: 0.95rem; line-height: 1.65; }
+
+.contact-section { background: var(--bg-alt); border-top: 1px solid var(--border); }
+.contact-section h2 { text-align: center; }
+.contact-section .contact-lead { text-align: center; color: var(--text-secondary); margin-bottom: 2rem; }
+.contact-form-wrap { max-width: 480px; margin: 0 auto; }
+.contact-form { display: flex; flex-direction: column; gap: 1rem; }
+.form-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+.form-row .form-group { flex: 1; min-width: 200px; }
+.form-group input, .form-group textarea {
+  width: 100%; padding: 0.75rem 1rem;
+  border: 1px solid var(--border); border-radius: 8px;
+  font-family: var(--font); font-size: 0.95rem; background: var(--bg); color: var(--text);
+}
+.form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--electric); }
+.form-group textarea { min-height: 100px; resize: vertical; }
+.form-submit {
+  background: var(--lime); color: var(--text);
+  padding: 1rem 1.5rem; border-radius: 8px;
+  font-weight: 600; font-size: 1rem; border: none; cursor: pointer; font-family: var(--font);
+}
+.form-submit:hover { background: var(--lime-dark); }
+.form-note { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem; text-align: center; }
+@media (max-width: 768px) { .form-row { flex-direction: column; } .form-row .form-group { min-width: 100%; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Automatización de Procesos",
+  "serviceType": "Automatización de procesos empresariales con IA",
+  "provider": { "@type": "Organization", "name": "KAIzen Consult", "email": "hello@kaizenconsult.es", "address": { "@type": "PostalAddress", "streetAddress": "C/ Pau Claris, 162-164, pl. 3", "postalCode": "08037", "addressLocality": "Barcelona", "addressCountry": "ES" } },
+  "areaServed": "España",
+  "audience": { "@type": "BusinessAudience", "name": "Pymes con tareas administrativas repetitivas" },
+  "description": "Automatización de tareas administrativas repetitivas: lectura de facturas y documentos, traspaso de datos entre sistemas, aprobaciones e informes automáticos, conectando las herramientas que la empresa ya usa."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "¿Tengo que cambiar mis programas o mi ERP?", "acceptedAnswer": { "@type": "Answer", "text": "No. La automatización conecta las herramientas que ya usas: tu correo, tu ERP, tu CRM, tus hojas de cálculo. El objetivo es que los datos fluyan entre ellas sin que nadie los copie a mano, no obligarte a migrar a otro sistema." } },
+    { "@type": "Question", "name": "¿Qué pasa si la automatización falla o encuentra un caso raro?", "acceptedAnswer": { "@type": "Answer", "text": "Los casos dudosos no se procesan en silencio: se apartan y se avisa a una persona para que decida. Diseñamos cada flujo con puntos de control y registro de todo lo que hace, de forma que siempre se puede revisar qué pasó y por qué." } },
+    { "@type": "Question", "name": "¿Por dónde empiezo si no sé qué automatizar?", "acceptedAnswer": { "@type": "Answer", "text": "Por una auditoría breve de procesos. Revisamos contigo cómo trabaja tu equipo, identificamos las tareas que más tiempo consumen y te proponemos por cuál empezar según impacto y esfuerzo. Es la parte de 'procesos antes que código' de nuestro método: automatizar un proceso desordenado solo acelera el desorden." } },
+    { "@type": "Question", "name": "¿Es seguro? ¿Dónde quedan mis datos?", "acceptedAnswer": { "@type": "Answer", "text": "Los flujos se ejecutan sobre infraestructura que controlas y tus datos no salen de tus sistemas salvo hacia donde tú decidas. Te entregamos el sistema documentado: sabes en todo momento qué hace y con qué información." } },
+    { "@type": "Question", "name": "¿El sistema es mío o pago una suscripción?", "acceptedAnswer": { "@type": "Answer", "text": "Es tuyo. Lo construimos, te lo entregamos documentado y formamos a tu equipo. No hay licencias por usuario ni dependencia de nosotros para que siga funcionando; si quieres, ofrecemos mantenimiento, pero es opcional." } },
+    { "@type": "Question", "name": "¿Cuánto cuesta y cuánto se tarda?", "acceptedAnswer": { "@type": "Answer", "text": "Depende del proceso. Una automatización acotada (por ejemplo, registro de facturas) puede estar funcionando en dos o tres semanas. En la valoración inicial gratuita te damos una estimación concreta de plazo, coste y horas que vas a recuperar, para que decidas con números." } }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://kaizenconsult-web.vercel.app/" },
+    { "@type": "ListItem", "position": 2, "name": "Soluciones", "item": "https://kaizenconsult-web.vercel.app/soluciones.html" },
+    { "@type": "ListItem", "position": 3, "name": "Automatización de Procesos" }
+  ]
+}
+</script>
+</head>
+<body data-page-title="meta.lp.automatizacion.title" data-page-description="meta.lp.automatizacion.description">
+
+<nav>
+  <div class="nav-inner">
+    <a href="vinculo.html" class="logo">K<span>AI</span>zen Consult</a>
+    <div class="nav-right">
+      <div>
+        <a href="vinculo.html" data-i18n="nav.home">Inicio</a>
+        <a href="soluciones.html" style="margin-left:1.5rem;" data-i18n="nav.solutions">Soluciones</a>
+        <a href="#contacto" class="nav-cta" data-i18n="nav.contact.short">Hablemos</a>
+      </div>
+      <div class="lang-toggle" id="lang-toggle" role="group" aria-label="Language">
+        <span class="lang-option" data-lang="en">EN</span>
+        <span class="lang-option" data-lang="es">ES</span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container breadcrumb">
+  <a href="vinculo.html" data-i18n="breadcrumb.home">Inicio</a> / <a href="soluciones.html" data-i18n="breadcrumb.solutions">Soluciones</a> / <span data-i18n="breadcrumb.automatizacion">Automatización de Procesos</span>
+</div>
+
+<div class="container landing-hero-media">
+  <img src="images/automation-dashboard.jpg" alt="Process automation dashboard" width="900" height="386" loading="eager">
+</div>
+
+<!-- ============ PARTE SUPERIOR: NEGOCIO ============ -->
+
+<header class="page-hero">
+  <div class="container">
+    <div class="service-category" data-i18n="lp.auto.hero.category">Operaciones</div>
+    <h1 data-i18n="lp.auto.hero.title">Tus sistemas no se hablan entre sí. El traductor es tu equipo.</h1>
+    <p class="hero-sub" data-i18n="lp.auto.hero.sub">Cada pedido que se copia del correo al ERP, cada factura que se registra a mano, cada Excel que se cruza a final de mes no es trabajo administrativo: es un defecto de proceso. Lo eliminamos conectando las herramientas que ya usas — y tu equipo vuelve al trabajo que requiere criterio.</p>
+    <div class="hero-actions">
+      <a href="#contacto" class="btn-primary" data-i18n="lp.cta.free">Pedir una valoración gratuita →</a>
+      <a href="#ejemplos" class="btn-secondary" data-i18n="lp.cta.examples">Ver ejemplos</a>
+    </div>
+  </div>
+</header>
+
+<section id="problemas">
+  <div class="container">
+    <div class="section-tag" data-i18n="lp.section.problem">El problema</div>
+    <h2 data-i18n="lp.section.pain.q">¿Te suena alguna de estas situaciones?</h2>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <p class="pain-quote">"Media jornada se va en meter datos."</p>
+        <p>Facturas que llegan por correo y alguien registra a mano. Pedidos que se copian del email al ERP. Los mismos datos, tecleados dos y tres veces en sistemas distintos.</p>
+      </div>
+      <div class="pain-card">
+        <p class="pain-quote">"Cada error a mano nos cuesta dinero."</p>
+        <p>Un importe mal copiado, un pedido que no se registró, un cliente dado de alta dos veces. Los errores de teclado no son culpa de nadie: son culpa del proceso.</p>
+      </div>
+      <div class="pain-card">
+        <p class="pain-quote">"Todo depende de la persona que lo sabe hacer."</p>
+        <p>Si quien gestiona las facturas se pone enferma o se va de vacaciones, el proceso se para. El conocimiento está en cabezas, no en sistemas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ejemplos" style="padding-top:0;">
+  <div class="container">
+    <div class="section-tag" data-i18n="lp.section.solution">La solución</div>
+    <h2 data-i18n="lp.auto.solution.title">Ejemplos de lo que automatizamos</h2>
+    <p class="section-intro">Cada empresa es distinta, pero estos son los procesos que más se repiten en las pymes con las que trabajamos:</p>
+    <div class="examples-grid">
+      <div class="example-card">
+        <h3>Registro de facturas y albaranes</h3>
+        <p>El sistema lee las facturas que llegan por correo (aunque sean PDF escaneados), extrae los datos y los registra donde corresponda. Los casos dudosos los aparta para revisión humana.</p>
+        <p class="example-before">Antes: 5 min por factura → <strong>Después: revisión de excepciones</strong></p>
+      </div>
+      <div class="example-card">
+        <h3>Del correo al ERP sin teclear</h3>
+        <p>Pedidos, solicitudes o formularios que llegan por email se convierten en registros en tu ERP o CRM automáticamente, con confirmación al cliente incluida.</p>
+        <p class="example-before">Antes: copiar y pegar campo a campo → <strong>Después: automático</strong></p>
+      </div>
+      <div class="example-card">
+        <h3>Informes que se montan solos</h3>
+        <p>Ventas de la semana, estado de pedidos, indicadores de producción: el informe llega cada lunes a las 8:00 a quien tiene que verlo, con los datos ya cruzados.</p>
+        <p class="example-before">Antes: 2-3 h de Excel al mes → <strong>Después: 0</strong></p>
+      </div>
+      <div class="example-card">
+        <h3>Altas, aprobaciones y avisos</h3>
+        <p>Alta de un cliente nuevo, aprobación de un gasto, aviso cuando algo se sale de lo normal. Flujos con reglas claras que hoy se persiguen por WhatsApp y correo.</p>
+        <p class="example-before">Antes: perseguir a la gente → <strong>Después: el flujo persigue solo</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-tag" data-i18n="lp.section.method">Nuestro método</div>
+    <h2 data-i18n="lp.auto.method.title">Primero el proceso, después la tecnología</h2>
+    <p class="section-intro" data-i18n="lp.auto.method.intro">Automatizar un proceso desordenado solo acelera el desorden. Por eso trabajamos en este orden:</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <h3>Entendemos cómo trabajáis hoy</h3>
+          <p>Una o dos sesiones con tu equipo para mapear el proceso real: quién hace qué, con qué herramientas y dónde se pierde el tiempo. Aquí aplicamos más de 30 años de experiencia en mejora de procesos industriales.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <h3>Elegimos por dónde empezar, con números</h3>
+          <p>Te proponemos las automatizaciones ordenadas por impacto: horas recuperadas frente a esfuerzo de implantación. Empezamos por la que más devuelve, no por la más vistosa.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <h3>Construimos, probamos y entregamos</h3>
+          <p>El flujo se prueba en paralelo con el proceso manual hasta que da confianza. Después te lo entregamos funcionando, documentado y con tu equipo formado para el día a día.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="results-band">
+  <div class="container">
+    <div class="results-grid">
+      <div class="result-item">
+        <div class="result-value">Horas</div>
+        <div class="result-label" data-i18n="lp.auto.result.1">Recuperadas cada semana en tareas manuales</div>
+      </div>
+      <div class="result-item">
+        <div class="result-value">0</div>
+        <div class="result-label" data-i18n="lp.auto.result.2">Errores de tecleo en los procesos automatizados</div>
+      </div>
+      <div class="result-item">
+        <div class="result-value">Días</div>
+        <div class="result-label" data-i18n="lp.auto.result.3">De la primera reunión al primer flujo funcionando, no meses</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="para-quien">
+  <div class="container">
+    <div class="section-tag">Para quién es</div>
+    <h2>Pensado para pymes con carga administrativa real</h2>
+    <div class="fit-cols">
+      <div class="fit-col yes">
+        <h3>Encaja contigo si…</h3>
+        <ul>
+          <li>Tu equipo dedica horas cada semana a registrar, copiar o cruzar datos a mano.</li>
+          <li>Trabajáis con varios sistemas que no se hablan entre sí (correo, ERP, CRM, Excel).</li>
+          <li>Procesáis documentos en volumen: facturas, albaranes, pedidos, formularios.</li>
+          <li>Quieres reducir errores y depender menos de que "la persona que lo sabe" esté disponible.</li>
+        </ul>
+      </div>
+      <div class="fit-col">
+        <h3>No es para ti si…</h3>
+        <ul>
+          <li>El proceso cambia por completo cada vez que se ejecuta: primero hay que estabilizarlo (podemos ayudarte con eso también).</li>
+          <li>Buscas un software cerrado de estantería: lo nuestro son sistemas a medida sobre tus herramientas.</li>
+          <li>El volumen es tan bajo que la tarea manual no llega a una hora a la semana.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARTE INFERIOR: TÉCNICA ============ -->
+
+<div class="tech-divider">
+  <div class="container">
+    <h2>Para perfiles técnicos: cómo está construido</h2>
+    <p>Si hasta aquí ya tienes lo que necesitas, pasa directamente al <a href="#contacto" style="color:var(--lime);">formulario de contacto</a>. Lo que sigue es el detalle de arquitectura e integraciones.</p>
+  </div>
+</div>
+
+<section class="tech-section">
+  <div class="container">
+    <div class="tech-block">
+      <h3>Arquitectura de los flujos</h3>
+      <p>Los flujos se orquestan sobre n8n (self-hosted, sobre infraestructura del cliente), combinando integraciones por API con procesamiento documental por IA:</p>
+      <ul>
+        <li><strong>Lectura inteligente de documentos:</strong> OCR + LLM para extraer datos estructurados de facturas, albaranes y formularios, incluidos PDF escaneados y formatos heterogéneos de distintos proveedores. Validación contra reglas de negocio antes de registrar nada.</li>
+        <li><strong>Integración entre sistemas:</strong> conexión por API con ERP, CRM, correo y hojas de cálculo. Cuando un sistema no tiene API, se resuelve con importaciones estructuradas o capas intermedias (Airtable, Google Sheets).</li>
+        <li><strong>Manejo de excepciones:</strong> los casos con baja confianza de extracción o que incumplen las validaciones se derivan a una cola de revisión humana. Nada se registra en silencio sin pasar los controles.</li>
+        <li><strong>Trazabilidad:</strong> registro de cada ejecución (qué entró, qué se extrajo, dónde se registró, quién revisó) para auditoría y depuración.</li>
+        <li><strong>Lógica compleja fuera del orquestador:</strong> cuando la lógica de negocio supera lo razonable para un flujo visual, se implementa como servicio aparte (Python) testeado y versionado, y n8n orquesta. Esto evita flujos frágiles de decenas de nodos imposibles de mantener.</li>
+      </ul>
+      <div class="project-types">
+        <span class="project-tag">n8n</span>
+        <span class="project-tag">OCR + IA</span>
+        <span class="project-tag">APIs</span>
+        <span class="project-tag">ERP / CRM</span>
+        <span class="project-tag">Python</span>
+      </div>
+    </div>
+
+    <div class="tech-block">
+      <h3>Integraciones habituales</h3>
+      <ul>
+        <li><strong>Correo y documentos:</strong> Gmail, Microsoft 365, carpetas compartidas, escáneres de oficina.</li>
+        <li><strong>Negocio:</strong> HubSpot y otros CRM, ERPs con API, plataformas de e-commerce, Holded y herramientas de facturación.</li>
+        <li><strong>Datos y reporting:</strong> Google Sheets, Airtable, generación automática de informes en PDF o correo.</li>
+      </ul>
+    </div>
+
+    <div class="tech-block">
+      <h3>Ejemplo real: prospección comercial de una asociación empresarial</h3>
+      <p>Para una asociación empresarial del sector industrial automatizamos el proceso completo de identificación y cualificación de empresas: partiendo de listas curadas, el sistema enriquece cada empresa con datos de contacto verificados, filtra por criterios acordados y prepara la información lista para la acción comercial. Un trabajo que antes suponía horas de búsqueda manual por empresa quedó reducido a la revisión del resultado.</p>
+      <div class="screenshot-placeholder">📷 Captura del flujo de extracción y validación en n8n — pendiente de maquetación</div>
+      <div class="screenshot-placeholder">📷 Ejemplo de documento procesado: entrada y datos extraídos — pendiente de maquetación</div>
+    </div>
+
+    <div class="tech-block">
+      <h3>Preguntas frecuentes</h3>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>¿Tengo que cambiar mis programas o mi ERP?</summary>
+          <div class="faq-answer">No. La automatización conecta las herramientas que ya usas: tu correo, tu ERP, tu CRM, tus hojas de cálculo. El objetivo es que los datos fluyan entre ellas sin que nadie los copie a mano, no obligarte a migrar a otro sistema.</div>
+        </details>
+        <details class="faq-item">
+          <summary>¿Qué pasa si la automatización falla o encuentra un caso raro?</summary>
+          <div class="faq-answer">Los casos dudosos no se procesan en silencio: se apartan y se avisa a una persona para que decida. Diseñamos cada flujo con puntos de control y registro de todo lo que hace, de forma que siempre se puede revisar qué pasó y por qué.</div>
+        </details>
+        <details class="faq-item">
+          <summary>¿Por dónde empiezo si no sé qué automatizar?</summary>
+          <div class="faq-answer">Por una auditoría breve de procesos. Revisamos contigo cómo trabaja tu equipo, identificamos las tareas que más tiempo consumen y te proponemos por cuál empezar según impacto y esfuerzo. Es la parte de "procesos antes que código" de nuestro método: automatizar un proceso desordenado solo acelera el desorden.</div>
+        </details>
+        <details class="faq-item">
+          <summary>¿Es seguro? ¿Dónde quedan mis datos?</summary>
+          <div class="faq-answer">Los flujos se ejecutan sobre infraestructura que controlas y tus datos no salen de tus sistemas salvo hacia donde tú decidas. Te entregamos el sistema documentado: sabes en todo momento qué hace y con qué información.</div>
+        </details>
+        <details class="faq-item">
+          <summary>¿El sistema es mío o pago una suscripción?</summary>
+          <div class="faq-answer">Es tuyo. Lo construimos, te lo entregamos documentado y formamos a tu equipo. No hay licencias por usuario ni dependencia de nosotros para que siga funcionando; si quieres, ofrecemos mantenimiento, pero es opcional.</div>
+        </details>
+        <details class="faq-item">
+          <summary>¿Cuánto cuesta y cuánto se tarda?</summary>
+          <div class="faq-answer">Depende del proceso. Una automatización acotada (por ejemplo, registro de facturas) puede estar funcionando en dos o tres semanas. En la valoración inicial gratuita te damos una estimación concreta de plazo, coste y horas que vas a recuperar, para que decidas con números.</div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contacto">
+  <div class="container">
+    <h2 data-i18n="lp.contact.title">¿Hablamos de tu caso?</h2>
+    <p class="contact-lead" data-i18n="lp.contact.lead.automatizacion">Cuéntanos qué tarea os come más tiempo y te diremos, sin compromiso, si se puede automatizar y qué recuperarías.</p>
+    <div class="contact-form-wrap">
+      <form class="contact-form" action="https://formsubmit.co/elena@vinculo.io" method="POST" id="contact-form">
+        <input type="hidden" name="_subject" value="Solicitud desde Automatización de Procesos - KAIzen Consult" data-i18n-value="form.subject.automatizacion">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="" id="form-next">
+        <input type="hidden" name="interes" value="automatizacion">
+        <div class="form-row">
+          <div class="form-group">
+            <input type="text" name="name" data-i18n-placeholder="form.name" placeholder="Tu nombre *" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" data-i18n-placeholder="form.email" placeholder="Email *" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="text" name="empresa" data-i18n-placeholder="form.company" placeholder="Empresa (opcional)">
+        </div>
+        <div class="form-group">
+          <textarea name="message" data-i18n-placeholder="form.message.automatizacion" placeholder="¿Qué tarea repetitiva os quita más tiempo cada semana?" rows="4"></textarea>
+        </div>
+        <button type="submit" class="form-submit" data-i18n="form.submit">Enviar mensaje →</button>
+        <p class="form-note" data-i18n="form.note">Sin compromiso · Respondemos en menos de 24 horas</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="vinculo.html" class="footer-logo">K<span>AI</span>zen Consult</a>
+        <div class="footer-contact">
+          <p class="footer-label" data-i18n="footer.findUs">Dónde estamos</p>
+          <p class="footer-address" data-i18n="footer.address">C/ Pau Claris, 162-164, pl. 3
+08037 Barcelona</p>
+          <a href="mailto:hello@kaizenconsult.es" class="footer-email">hello@kaizenconsult.es</a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <a href="soluciones.html" class="footer-social" data-i18n="nav.solutions">Soluciones</a>
+        <a href="agente-prospeccion-b2b.html" class="footer-social" data-i18n="footer.link.ventas">Agente de prospección B2B</a>
+        <a href="agente-soporte-cliente.html" class="footer-social" data-i18n="footer.link.support">Agente de soporte al cliente</a>
+        <a href="https://www.linkedin.com/company/kaizen-consult-ai/" target="_blank" rel="noopener" class="footer-social">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-i18n="footer.tagline">© 2025 KAIzen Consult — Agentes IA, Procesos y Automatización</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('form-next').value = window.location.href.split('#')[0] + '?sent=1#contacto';
+if (window.location.search.includes('sent=1')) {
+  const wrap = document.querySelector('.contact-form-wrap');
+  if (wrap) {
+    const msg = document.createElement('p');
+    msg.style.cssText = 'color:var(--electric);font-weight:600;margin-bottom:1rem;text-align:center;';
+    msg.setAttribute('data-i18n', 'form.success');
+    msg.textContent = '✓ Mensaje enviado. Respondemos en menos de 24 horas.';
+    wrap.insertBefore(msg, wrap.firstChild);
+    if (window.KaizenI18n) window.KaizenI18n.setLang(window.KaizenI18n.getLang());
+  }
+}
+</script>
+<script src="js/landing-i18n.js"></script>
+<script src="js/i18n.js"></script>
+
+</body>
+</html>
