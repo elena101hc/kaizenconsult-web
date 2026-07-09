@@ -76,40 +76,46 @@
       'solutions.cta': 'Book a discovery session →',
 
       'card.ventas.category': 'B2B Sales',
-      'card.ventas.title': 'Prospecting & Outreach Agent',
-      'card.ventas.desc': 'Handles the pipeline pains that hurt most: finds companies like those who already buy from you, writes outreach (with RAG+AI that learns your team\'s tone) and follows up — your team supervises, escalates, and generates more opportunities.',
+      'card.ventas.title': 'Commercial Prospecting Agent',
+      'card.ventas.desc': 'Handles the pipeline pains that hurt most: finds companies like those who already buy from you, locates the right contact, writes with a knowledge base that learns your team\'s tone, and follows up. CRM always up to date — your team supervises, escalates, and generates more opportunities.',
+      'card.ventas.aria': 'View commercial prospecting agent',
       'card.ventas.metric1': 'Prospect to contact < 2 min',
       'card.ventas.metric2': '↑ +60% meetings in under 3 months',
       'card.ventas.result': '→ Full pipeline from lead to first contact in <2 minutes · Personalized emails',
       'card.ventas.cta': 'Learn more & request info',
 
       'card.soporte.category': 'Customer Experience',
-      'card.soporte.title': 'Ticketing Agent',
-      'card.soporte.desc': 'Most CRM tickets (or support inboxes) have known answers; the bottleneck is classifying and responding without losing important opportunities. Unifies your channels in your CRM and lets automation classify and resolve autonomously. Learns from your processes, detects patterns, and routes only what needs human intervention.',
+      'card.soporte.title': 'Customer Care Agent',
+      'card.soporte.desc': 'Most CRM tickets or emails have known answers; the hard part is classifying and responding without losing opportunities. Unifies all communications in your CRM — the agent resolves tickets or transfers the inquiry to your team with full context.',
+      'card.soporte.aria': 'View customer care agent',
       'card.soporte.result': '→ Auto-routing & ticket resolution · Custom architecture',
       'card.soporte.cta': 'Learn more & request info',
 
       'card.automatizacion.category': 'Operations',
       'card.automatizacion.title': 'Digital Transformation',
-      'card.automatizacion.desc': 'Your systems don\'t talk to each other — and your team is the translator. We eliminate repetitive tasks, map your processes, and co-design a functional architecture that connects your systems without anyone retyping data.',
+      'card.automatizacion.desc': 'Your systems don\'t talk to each other — and your team is the translator. We eliminate repetitive tasks: map your processes and co-design a functional architecture that connects your systems without anyone retyping data. Process first, technology second.',
+      'card.automatizacion.aria': 'View digital transformation',
       'card.automatizacion.result': '→ More productive teams',
       'card.automatizacion.cta': 'Learn more & request info',
 
       'card.consultoria.category': 'Consulting',
       'card.consultoria.title': 'Reengineering & Innovation',
-      'card.consultoria.desc': 'With 30+ years of operations and management experience in deeptech and automotive from our partner, we design a system to turn ideas into proof-of-concept. Whatever your size, we validate advanced technology applications in your industry.',
+      'card.consultoria.desc': 'With 30+ years in operations and management at deeptech and automotive companies, we design a system to turn ideas into proof-of-concept and deliver value with new technologies.',
+      'card.consultoria.aria': 'View reengineering and innovation',
       'card.consultoria.result': '→ PoC in days for R&D · Industry 4.0 projects',
       'card.consultoria.cta': 'Learn more & request info',
 
       'card.voz.category': 'Voice or Chat for B2C',
       'card.voz.title': 'Voice & Chat Agents',
       'card.voz.desc': 'Every missed call or message is a customer who won\'t call back. Bookings, questions, and requests handled instantly, 24/7, in multiple languages.',
+      'card.voz.aria': 'View voice and chat agents',
       'card.voz.result': '→ No wait times · Bookings · Reminders · Reviews',
       'card.voz.cta': 'Learn more & request info',
 
       'card.formacion.category': 'Training',
       'card.formacion.title': 'We teach you to turn AI into real work',
       'card.formacion.desc': 'AI doesn\'t fail because of the tool — it fails because of how it\'s used, and it renews every quarter. We run hands-on workshops on your real cases so your team works with it with judgment.',
+      'card.formacion.aria': 'View AI training',
       'card.formacion.result': '→ AI kit for every department',
       'card.formacion.cta': 'Learn more & request info',
 
@@ -210,6 +216,9 @@
       'page.solutions.hero.title': 'What AI systems solve and how they work.',
       'page.solutions.hero.desc': 'B2B prospecting, customer support, admin automation, process reengineering, voice agents, and training. Business value up top; technical detail below for those who want to look inside.',
       'page.solutions.projectTypes': 'Project types:',
+      'page.solutions.cta.title': 'Book a discovery session',
+      'page.solutions.cta.subtitle': 'If you want to transform your business with AI, we\'ll give you a no-obligation assessment.',
+      'page.solutions.cta.btn': 'Book your session →',
 
       'detail.ventas.desc': 'A prospecting system that runs every day: identifies companies like those who already buy from you, finds the right person, writes with a real reason to reach out, and follows up until the meeting. Your team supervises output and the CRM stays current.',
       'detail.ventas.li1': '24/7 inbound lead detection and qualification',
@@ -331,40 +340,46 @@
       'solutions.cta': 'Reserva una sesión de descubrimiento →',
 
       'card.ventas.category': 'Ventas B2B',
-      'card.ventas.title': 'Agente de Prospección y Outreach',
-      'card.ventas.desc': 'Gestiona todas o las partes del pipeline que más dolores de cabeza dan: encuentra empresas como las que ya te compran, les escribe (con un RAG+IA que aprende del tono y forma de tu propio equipo) y hace el seguimiento — tu equipo supervisa, escala y genera más oportunidades de negocio',
+      'card.ventas.title': 'Agente de Prospección Comercial',
+      'card.ventas.desc': 'Gestiona las partes del pipeline comercial que más dolores de cabeza dan: encuentra empresas como las que ya te compran, localiza a la persona adecuada, escribe con una base de conocimiento que aprende del tono de tu equipo y hace el seguimiento. CRM siempre al día, tu equipo supervisa, escala y genera más oportunidades.',
+      'card.ventas.aria': 'Ver agente de prospección comercial',
       'card.ventas.metric1': 'De prospecto a contacto < 2 min',
       'card.ventas.metric2': '↑ +60% reuniones en menos de 3 meses',
       'card.ventas.result': '→ Pipeline completo de lead a primer contacto en <2 minutos · Emails personalizados',
       'card.ventas.cta': 'Ver más y solicitar info',
 
       'card.soporte.category': 'Customer Experience',
-      'card.soporte.title': 'Agente de ticketing',
-      'card.soporte.desc': 'La mayoría de las consultas en los tickets de tu CRM (o inbox de atención / info) tienen respuestas conocidas; el cuello de botella es categorizar y responder sin perder oportunidades importantes en el camino. Unifica tus canales en tu CRM y deja que la automatización los clasifique y los resuelva de forma autónoma. Aprende de tus procesos, detecta patrones y deriva a tu equipo sólo lo que requiere intervención.',
+      'card.soporte.title': 'Agente Customer Care',
+      'card.soporte.desc': 'La mayoría de las consultas en los tickets de tu CRM o Email tienen respuestas conocidas; lo difícil es categorizar y responder sin perder oportunidades. Unifica todas las comunicaciones en tu CRM y el agente resuelve los tickets o los transfiere a tu equipo la consulta con todo el contexto.',
+      'card.soporte.aria': 'Ver agente customer care',
       'card.soporte.result': '→ Auto-ruta y resolución de tickets · Arquitectura a medida',
       'card.soporte.cta': 'Ver más y solicitar info',
 
       'card.automatizacion.category': 'Operaciones',
       'card.automatizacion.title': 'Transformación Digital',
-      'card.automatizacion.desc': 'Tus sistemas no se hablan entre sí, y el traductor es tu equipo. Erradica las tareas repetitivas, mapeamos tus procesos y diseñamos juntos una arquitectura funcional que conecte tus sistemas sin que nadie los teclee.',
+      'card.automatizacion.desc': 'Tus sistemas no se hablan entre sí, y el traductor es tu equipo. Erradica las tareas repetitivas: mapeamos tus procesos y diseñamos juntos una arquitectura funcional que conecte tus sistemas sin que nadie los teclee. Proceso primero, tecnología después.',
+      'card.automatizacion.aria': 'Ver transformación digital',
       'card.automatizacion.result': '→ Equipos más productivos',
       'card.automatizacion.cta': 'Ver más y solicitar info',
 
       'card.consultoria.category': 'Consultoría',
       'card.consultoria.title': 'Reingeniería e Innovación',
-      'card.consultoria.desc': 'Gracias a los más de 30 años de experiencia en operaciones y gerencia de empresas deeptech y de automoción de nuestro partner, diseñamos un sistema para convertir ideas en pruebas de concepto. Independientemente de tu tamaño, validamos la aplicación de tecnologías avanzadas en tu industria.',
+      'card.consultoria.desc': 'Con más de 30 años de experiencia en operaciones y gerencia de empresas deeptech y de automoción, diseñamos un sistema para convertir ideas en pruebas de concepto para aportar valor con las nuevas tecnologías.',
+      'card.consultoria.aria': 'Ver reingeniería e innovación',
       'card.consultoria.result': '→ PoC en días para proyectos · I+D · Industria 4.0',
       'card.consultoria.cta': 'Ver más y solicitar info',
 
       'card.voz.category': 'Voz o Chat para B2C',
       'card.voz.title': 'Agentes de Voz y Chat',
       'card.voz.desc': 'Cada llamada o mensaje que no se coge es un cliente que no vuelve a llamar. Reservas, dudas y gestiones atendidas al momento, 24/7 y en varios idiomas.',
+      'card.voz.aria': 'Ver agentes de voz y chat',
       'card.voz.result': '→ Atención sin esperas · Reservas · Recordatorios · Reseñas',
       'card.voz.cta': 'Ver más y solicitar info',
 
       'card.formacion.category': 'Capacitación',
       'card.formacion.title': 'Te enseñamos a convertir la IA en trabajo real',
       'card.formacion.desc': 'La IA no falla por la herramienta: falla por cómo se usa y, encima, se renueva cada trimestre y a veces se acaba usando poco o mal. Hacemos talleres prácticos sobre tus casos reales para que tu equipo trabaje con ella con criterio.',
+      'card.formacion.aria': 'Ver capacitación en IA',
       'card.formacion.result': '→ Kit IA para cada departamento',
       'card.formacion.cta': 'Ver más y solicitar info',
 
@@ -465,6 +480,9 @@
       'page.solutions.hero.title': 'Qué resuelven y cómo funcionan los sistemas de IA.',
       'page.solutions.hero.desc': 'Prospección comercial, soporte al cliente, automatización administrativa, reingeniería de procesos, agentes de voz y formación. Arriba, lo que le importa a tu negocio; abajo, el detalle técnico para quien quiera mirar dentro.',
       'page.solutions.projectTypes': 'Tipos de proyectos:',
+      'page.solutions.cta.title': 'Reserva una sesión de descubrimiento',
+      'page.solutions.cta.subtitle': 'Si quieres transformar tu negocio con IA te daremos una valoración sin compromiso.',
+      'page.solutions.cta.btn': 'Reserva tu sesión →',
 
       'detail.ventas.desc': 'Un sistema de prospección que se ejecuta cada día: identifica empresas como las que ya te compran, localiza a la persona adecuada, escribe con un motivo real de contacto y hace el seguimiento hasta la reunión. Con tu equipo supervisando lo que sale y el CRM siempre al día.',
       'detail.ventas.li1': 'Detección y cualificación de leads inbound 24/7',
@@ -533,7 +551,13 @@
   }
 
   function t(lang, key) {
-    return translations[lang]?.[key] ?? translations.en[key] ?? key;
+    if (translations[lang] && translations[lang][key] !== undefined) {
+      return translations[lang][key];
+    }
+    if (translations.en[key] !== undefined) {
+      return translations.en[key];
+    }
+    return null;
   }
 
   function applyLang(lang) {
@@ -542,6 +566,7 @@
     document.querySelectorAll('[data-i18n]').forEach((el) => {
       const key = el.getAttribute('data-i18n');
       const value = t(lang, key);
+      if (value === null) return;
       if (el.hasAttribute('data-i18n-html')) {
         el.innerHTML = value;
       } else {
@@ -549,33 +574,44 @@
       }
     });
 
+    document.querySelectorAll('[data-i18n-aria]').forEach((el) => {
+      const value = t(lang, el.getAttribute('data-i18n-aria'));
+      if (value !== null) el.setAttribute('aria-label', value);
+    });
+
     document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
-      el.placeholder = t(lang, el.getAttribute('data-i18n-placeholder'));
+      const value = t(lang, el.getAttribute('data-i18n-placeholder'));
+      if (value !== null) el.placeholder = value;
     });
 
     document.querySelectorAll('[data-i18n-value]').forEach((el) => {
-      el.value = t(lang, el.getAttribute('data-i18n-value'));
+      const value = t(lang, el.getAttribute('data-i18n-value'));
+      if (value !== null) el.value = value;
     });
 
     const titleKey = document.body.getAttribute('data-page-title');
     if (titleKey) {
-      document.title = t(lang, titleKey);
+      const title = t(lang, titleKey);
+      if (title !== null) document.title = title;
     }
 
     const descMeta = document.querySelector('meta[name="description"]');
     const descKey = document.body.getAttribute('data-page-description');
     if (descMeta && descKey) {
-      descMeta.setAttribute('content', t(lang, descKey));
+      const desc = t(lang, descKey);
+      if (desc !== null) descMeta.setAttribute('content', desc);
     }
 
     const subjectInput = document.querySelector('input[name="_subject"][data-i18n-value]');
     if (subjectInput) {
-      subjectInput.value = t(lang, subjectInput.getAttribute('data-i18n-value'));
+      const value = t(lang, subjectInput.getAttribute('data-i18n-value'));
+      if (value !== null) subjectInput.value = value;
     }
 
     const successEl = document.querySelector('.form-success');
     if (successEl) {
-      successEl.textContent = t(lang, 'form.success');
+      const msg = t(lang, 'form.success');
+      if (msg !== null) successEl.textContent = msg;
     }
 
     document.querySelectorAll('.lang-option').forEach((btn) => {
