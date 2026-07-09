@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Solutions — KAIzen Consult | AI Agents, Automation & Consulting</title>
+<title>Solutions � KAIzen Consult | AI Agents, Automation & Consulting</title>
 <meta name="description" content="Service details: sales and support AI agents, process automation, reengineering and innovation, voice agents, and training. Projects with measurable ROI.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -57,13 +57,36 @@ nav a:hover { color: var(--text); }
 .service-section {
   padding: 4rem 0;
   border-bottom: 1px solid var(--border);
+  scroll-margin-top: 5rem;
 }
 .service-section:last-of-type { border-bottom: none; }
+.service-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.service-icon {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  background: linear-gradient(135deg, var(--accent-light), var(--lime-light));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.45rem;
+  line-height: 1;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+.service-header-text { flex: 1; min-width: 0; }
+.service-header-text .service-category { margin-bottom: 0.35rem; }
 .service-section h2 {
   font-family: var(--font-display);
   font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
   color: var(--text);
 }
 .service-section .service-category {
@@ -185,8 +208,13 @@ nav a:hover { color: var(--text); }
 
 <section class="service-section" id="ventas">
   <div class="container">
-    <div class="service-category" data-i18n="card.ventas.category">B2B Sales</div>
-    <h2 data-i18n="card.ventas.title">Prospecting & Outreach Agent</h2>
+    <div class="service-header">
+      <div class="service-icon" aria-hidden="true">??</div>
+      <div class="service-header-text">
+        <div class="service-category" data-i18n="card.ventas.category">B2B Sales</div>
+        <h2 data-i18n="card.ventas.title">Prospecting & Outreach Agent</h2>
+      </div>
+    </div>
     <p data-i18n="detail.ventas.desc">An AI agent that works your sales pipeline autonomously: detects leads on your website or CRM, researches prospects, drafts personalized outreach, and follows up. Integrated with HubSpot, LinkedIn, Gmail, and your data sources.</p>
     <p><strong data-i18n="page.solutions.projectTypes">Project types:</strong></p>
     <ul>
@@ -202,14 +230,19 @@ nav a:hover { color: var(--text); }
       <span class="project-tag">ZoomInfo</span>
       <span class="project-tag">CRM</span>
     </div>
-    <a href="agente-prospeccion-b2b.html" class="service-cta" data-i18n="detail.ventas.cta">Request information →</a>
+    <a href="agente-prospeccion-b2b.html" class="service-cta" data-i18n="detail.ventas.cta">Request information ?</a>
   </div>
 </section>
 
 <section class="service-section" id="soporte">
   <div class="container">
-    <div class="service-category" data-i18n="card.soporte.category">Customer Experience</div>
-    <h2 data-i18n="card.soporte.title">Customer Support Agent</h2>
+    <div class="service-header">
+      <div class="service-icon" aria-hidden="true">??</div>
+      <div class="service-header-text">
+        <div class="service-category" data-i18n="card.soporte.category">Customer Experience</div>
+        <h2 data-i18n="card.soporte.title">Customer Support Agent</h2>
+      </div>
+    </div>
     <p data-i18n="detail.soporte.desc">Multichannel chatbots (web, WhatsApp, email) that resolve Tier 1 issues in seconds. RAG on your knowledge base, consistent responses, and scaling without expanding headcount. Detects patterns and proposes proactive fixes.</p>
     <p><strong data-i18n="page.solutions.projectTypes">Project types:</strong></p>
     <ul>
@@ -226,14 +259,19 @@ nav a:hover { color: var(--text); }
       <span class="project-tag">RAG + LLM</span>
       <span class="project-tag">WhatsApp</span>
     </div>
-    <a href="agente-soporte-cliente.html" class="service-cta" data-i18n="detail.ventas.cta">Request information →</a>
+    <a href="agente-soporte-cliente.html" class="service-cta" data-i18n="detail.ventas.cta">Request information ?</a>
   </div>
 </section>
 
 <section class="service-section" id="automatizacion">
   <div class="container">
-    <div class="service-category" data-i18n="card.automatizacion.category">Operations</div>
-    <h2 data-i18n="card.automatizacion.title">Process Automation</h2>
+    <div class="service-header">
+      <div class="service-icon" aria-hidden="true">??</div>
+      <div class="service-header-text">
+        <div class="service-category" data-i18n="card.automatizacion.category">Operations</div>
+        <h2 data-i18n="card.automatizacion.title">Process Automation</h2>
+      </div>
+    </div>
     <p data-i18n="detail.automatizacion.desc">Eliminate bottlenecks and repetitive tasks. Intelligent document reading (OCR + AI), structured data extraction, flows connecting n8n, CRM, APIs, and your systems without writing code. Process first, technology second.</p>
     <p><strong data-i18n="page.solutions.projectTypes">Project types:</strong></p>
     <ul>
@@ -248,14 +286,19 @@ nav a:hover { color: var(--text); }
       <span class="project-tag">APIs</span>
       <span class="project-tag">OCR + IA</span>
     </div>
-    <a href="automatizacion-de-procesos.html" class="service-cta" data-i18n="detail.ventas.cta">Request information →</a>
+    <a href="automatizacion-de-procesos.html" class="service-cta" data-i18n="detail.ventas.cta">Request information ?</a>
   </div>
 </section>
 
 <section class="service-section" id="consultoria">
   <div class="container">
-    <div class="service-category" data-i18n="card.consultoria.category">Consulting</div>
-    <h2 data-i18n="card.consultoria.title">Reengineering & Innovation</h2>
+    <div class="service-header">
+      <div class="service-icon" aria-hidden="true">??</div>
+      <div class="service-header-text">
+        <div class="service-category" data-i18n="card.consultoria.category">Consulting</div>
+        <h2 data-i18n="card.consultoria.title">Reengineering & Innovation</h2>
+      </div>
+    </div>
     <p data-i18n="detail.consultoria.desc">30+ years in continuous improvement and reengineering in Automotive and DeepTech. The solid foundation every digital transformation needs. Before automating, we optimize: diagnosis, mapping, and flow design.</p>
     <p><strong data-i18n="page.solutions.projectTypes">Project types:</strong></p>
     <ul>
@@ -270,14 +313,19 @@ nav a:hover { color: var(--text); }
       <span class="project-tag" data-i18n="tag.industry">Industry</span>
       <span class="project-tag" data-i18n="tag.continuous">Continuous improvement</span>
     </div>
-    <a href="contacto.html" class="service-cta" data-i18n="detail.ventas.cta">Request information →</a>
+    <a href="contacto.html" class="service-cta" data-i18n="detail.ventas.cta">Request information ?</a>
   </div>
 </section>
 
 <section class="service-section" id="voz">
   <div class="container">
-    <div class="service-category" data-i18n="card.voz.category">Voice</div>
-    <h2 data-i18n="card.voz.title">Voice Agents & Callbots</h2>
+    <div class="service-header">
+      <div class="service-icon" aria-hidden="true">???</div>
+      <div class="service-header-text">
+        <div class="service-category" data-i18n="card.voz.category">Voice</div>
+        <h2 data-i18n="card.voz.title">Voice Agents & Callbots</h2>
+      </div>
+    </div>
     <p data-i18n="detail.voz.desc">Intelligent voice assistants for bookings, payments, information, and phone support. Real-time conversational AI. Your switchboard powered 24/7, multilingual, with no wait times.</p>
     <p><strong data-i18n="page.solutions.projectTypes">Project types:</strong></p>
     <ul>
@@ -292,14 +340,19 @@ nav a:hover { color: var(--text); }
       <span class="project-tag" data-i18n="tag.payments">Payments</span>
       <span class="project-tag" data-i18n="tag.multilingual">Multilingual</span>
     </div>
-    <a href="contacto.html" class="service-cta" data-i18n="detail.ventas.cta">Request information →</a>
+    <a href="contacto.html" class="service-cta" data-i18n="detail.ventas.cta">Request information ?</a>
   </div>
 </section>
 
 <section class="service-section" id="formacion">
   <div class="container">
-    <div class="service-category" data-i18n="card.formacion.category">Training</div>
-    <h2 data-i18n="card.formacion.title">AI Training</h2>
+    <div class="service-header">
+      <div class="service-icon" aria-hidden="true">??</div>
+      <div class="service-header-text">
+        <div class="service-category" data-i18n="card.formacion.category">Training</div>
+        <h2 data-i18n="card.formacion.title">AI Training</h2>
+      </div>
+    </div>
     <p data-i18n="detail.formacion.desc">Hands-on workshops on prompt engineering, AI adoption, and change management. Your team learns to leverage AI with business judgment. Not theory: real cases, exercises, and ready-to-use tools.</p>
     <p><strong data-i18n="page.solutions.projectTypes">Project types:</strong></p>
     <ul>
@@ -313,7 +366,7 @@ nav a:hover { color: var(--text); }
       <span class="project-tag">Change Management</span>
       <span class="project-tag">Workshops</span>
     </div>
-    <a href="contacto.html" class="service-cta" data-i18n="detail.ventas.cta">Request information →</a>
+    <a href="contacto.html" class="service-cta" data-i18n="detail.ventas.cta">Request information ?</a>
   </div>
 </section>
 
@@ -324,7 +377,7 @@ nav a:hover { color: var(--text); }
       <div class="footer-brand">
         <a href="vinculo.html" class="footer-logo">K<span>AI</span>zen Consult</a>
         <div class="footer-contact">
-          <p class="footer-label" data-i18n="footer.findUs">Dónde estamos</p>
+          <p class="footer-label" data-i18n="footer.findUs">D�nde estamos</p>
           <p class="footer-address" data-i18n="footer.address">C/ Pau Claris, 162-164, pl. 3
 08037 Barcelona</p>
           <a href="tel:+34722327895" class="footer-email" style="display:block;margin-bottom:0.35rem;">+34 722 327 895</a>
@@ -340,7 +393,7 @@ nav a:hover { color: var(--text); }
       </div>
     </div>
     <div class="footer-bottom">
-      <p data-i18n="footer.tagline">© 2025 KAIzen Consult — Agentes IA, Procesos y Automatización</p>
+      <p data-i18n="footer.tagline">� 2025 KAIzen Consult � Agentes IA, Procesos y Automatizaci�n</p>
     </div>
   </div>
 </footer>
