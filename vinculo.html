@@ -196,7 +196,29 @@ nav a:hover { color: var(--text); }
   box-shadow: 0 4px 20px rgba(163, 230, 53, 0.15);
 }
 .hero-stat-value { font-family: var(--font-display); font-size: 2rem; font-weight: 700; color: var(--lime-dark); line-height: 1.2; }
-.hero-stat-label { font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.25rem; font-weight: 500; }
+.hero-stat-label { font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.25rem; font-weight: 500; line-height: 1.35; }
+.highlight-underline {
+  text-decoration: underline;
+  text-decoration-color: var(--lime);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+.process-closing {
+  text-align: center;
+  max-width: 640px;
+  margin: 3rem auto 0;
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+.process-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+.process-gallery img { width: 100%; height: 200px; object-fit: cover; border-radius: 12px; display: block; }
+@media (max-width: 700px) { .process-gallery { grid-template-columns: 1fr; } }
 
 /* BADGES */
 .badges {
@@ -399,16 +421,17 @@ nav a:hover { color: var(--text); }
 
 /* BLOG */
 .blog-section { padding: 6rem 0; background: var(--bg-alt); }
-.blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
-.blog-card { display: block; background: var(--bg); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; text-decoration: none; color: inherit; transition: all 0.25s; }
+.blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.blog-card { display: block; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; text-decoration: none; color: inherit; transition: all 0.25s; }
 a.blog-card:hover { border-color: var(--lime); box-shadow: 0 6px 24px rgba(0,0,0,0.06); transform: translateY(-2px); }
-.blog-thumb { width: 100%; height: 180px; object-fit: cover; display: block; }
-.blog-card-body { padding: 1.5rem; }
-.blog-date { font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
-.blog-card-body h3 { font-family: var(--font-display); font-size: 1.15rem; line-height: 1.35; margin: 0.5rem 0; color: var(--text); }
-.blog-card-body p { font-size: 0.92rem; color: var(--text-secondary); }
-.blog-link { display: inline-block; margin-top: 0.75rem; font-weight: 600; font-size: 0.9rem; color: var(--lime-dark); }
-.blog-card-soon { opacity: 0.85; }
+.blog-thumb { width: 100%; height: 110px; object-fit: cover; display: block; }
+.blog-card-body { padding: 1rem 1.15rem 1.25rem; }
+.blog-date { font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
+.blog-card-body h3 { font-family: var(--font-display); font-size: 0.95rem; line-height: 1.35; margin: 0.4rem 0; color: var(--text); }
+.blog-card-body p { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5; }
+.blog-link { display: inline-block; margin-top: 0.6rem; font-weight: 600; font-size: 0.82rem; color: var(--lime-dark); }
+.blog-card-soon { opacity: 0.92; cursor: default; }
+@media (max-width: 900px) { .blog-grid { grid-template-columns: 1fr; } .blog-thumb { height: 140px; } }
 
 /* PROACTIVE */
 .proactive {
@@ -736,16 +759,16 @@ a.blog-card:hover { border-color: var(--lime); box-shadow: 0 6px 24px rgba(0,0,0
   <div class="container">
     <div class="hero-stats reveal" style="margin-top:0;">
       <div class="hero-stat">
-        <div class="hero-stat-value">+10</div>
-        <div class="hero-stat-label" data-i18n="hero.stat1.label">años en B2B e industria</div>
+        <div class="hero-stat-value" data-i18n="hero.stat1.value">+10 años</div>
+        <div class="hero-stat-label" data-i18n="hero.stat1.label">en industria B2B</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-value">+30</div>
-        <div class="hero-stat-label" data-i18n="hero.stat2.label">años en procesos y reingeniería</div>
+        <div class="hero-stat-value" data-i18n="hero.stat2.value">+30 años</div>
+        <div class="hero-stat-label" data-i18n="hero.stat2.label">en procesos, Lean y reingeniería</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-value">+7</div>
-        <div class="hero-stat-label" data-i18n="hero.stat3.label">automatizaciones en producción</div>
+        <div class="hero-stat-value" data-i18n="hero.stat3.value">+7 sistemas</div>
+        <div class="hero-stat-label" data-i18n="hero.stat3.label">en producción, funcionando hoy</div>
       </div>
     </div>
   </div>
@@ -756,8 +779,8 @@ a.blog-card:hover { border-color: var(--lime); box-shadow: 0 6px 24px rgba(0,0,0
   <div class="container">
     <div class="section-header reveal">
       <div class="section-tag" data-i18n="solutions.tag">Lo que resolvemos</div>
-      <h2 class="section-title" data-i18n="solutions.title">Seis procesos que en la mayoría de pymes se sostienen a base de horas. Seis sistemas que los ejecutan solos.</h2>
-      <p class="section-desc" data-i18n="solutions.desc">Prospección, atención al cliente, operaciones: los tres pilares que las empresas sostienen a base de horas. Los rediseñamos y los automatizamos con criterio de ingeniería — sobre las herramientas que ya usas y con tu equipo supervisando.</p>
+      <h2 class="section-title" data-i18n="solutions.title">Ventas, atención al cliente y operaciones: los tres pilares que las pymes sostienen a base de horas.</h2>
+      <p class="section-desc" data-i18n="solutions.desc" data-i18n-html>Los rediseñamos con criterio de ingeniería y los convertimos en sistemas que <span class="highlight-underline">trabajan solos</span>. Sobre las herramientas que ya usas.</p>
       <a href="contacto.html" class="btn-primary" style="margin-top:1.5rem;" data-i18n="solutions.cta">Reserva una sesión de descubrimiento →</a>
     </div>
     <div class="solutions-grid">
@@ -854,23 +877,23 @@ a.blog-card:hover { border-color: var(--lime); box-shadow: 0 6px 24px rgba(0,0,0
   <div class="container">
     <div class="section-header reveal">
       <div class="section-tag" data-i18n="features.tag">Por qué KAIzen Consult</div>
-      <h2 class="section-title" data-i18n="features.title">Velocidad de ejecución. Procesos primero. IA a medida.</h2>
+      <h2 class="section-title" data-i18n="features.title">Procesos primero. IA a medida tuyos, no alquilados.</h2>
     </div>
     <div class="features-grid">
       <div class="feature-card reveal">
-        <div class="feature-icon">⚡</div>
-        <h3 class="feature-title" data-i18n="features.1.title">De idea a arquitectura funcional en días</h3>
-        <p class="feature-desc" data-i18n="features.1.desc">Metodología Kaizen y ejecución ágil. No proyectos de 6 meses. Pasamos de brief a sistema integrado en semanas, no meses.</p>
+        <div class="feature-icon">🔑</div>
+        <h3 class="feature-title" data-i18n="features.3.title">Sistemas tuyos, no una subscripción más</h3>
+        <p class="feature-desc" data-i18n="features.3.desc">Cada solución se configura según cómo trabajas de verdad: conectada a tus sistemas, tus documentos y tus reglas — los sistemas no son un programa o subscripción más.</p>
       </div>
       <div class="feature-card reveal">
         <div class="feature-icon">⚙️</div>
         <h3 class="feature-title" data-i18n="features.2.title">Siempre procesos antes que código</h3>
-        <p class="feature-desc" data-i18n="features.2.desc">Flujos B2B, ventas, compras, operaciones. Mapeamos y optimizamos antes de desplegar. La IA amplifica sólo procesos bien diseñados.</p>
+        <p class="feature-desc" data-i18n="features.2.desc">Mapeamos y optimizamos tus procesos antes de programar. La IA amplifica sólo procesos bien diseñados, automatizamos con orden.</p>
       </div>
       <div class="feature-card reveal">
-        <div class="feature-icon">🎯</div>
-        <h3 class="feature-title" data-i18n="features.3.title">Hecho a tu medida, no a la de un programa más</h3>
-        <p class="feature-desc" data-i18n="features.3.desc">Cada solución se configura según cómo trabajas de verdad: conectada a tus sistemas, tus documentos y tus reglas — los sistemas no son un programa o subscripción más.</p>
+        <div class="feature-icon">⚡</div>
+        <h3 class="feature-title" data-i18n="features.1.title">De idea a arquitectura funcional en semanas</h3>
+        <p class="feature-desc" data-i18n="features.1.desc">Metodología Kaizen y ejecución ágil. No proyectos de 6 meses. Empezamos por la automatización que más retorno da, la probamos en paralelo con el proceso manual y ampliamos de manera controlada.</p>
       </div>
     </div>
   </div>
@@ -887,33 +910,24 @@ a.blog-card:hover { border-color: var(--lime); box-shadow: 0 6px 24px rgba(0,0,0
       <div class="process-step reveal">
         <div class="process-num">1</div>
         <h4 data-i18n="process.1.title">Conecta</h4>
-        <p data-i18n="process.1.desc">Brief de procesos, flujos B2B e integraciones. Diagnóstico gratuito de oportunidades.</p>
+        <p data-i18n="process.1.desc">Diagnóstico gratuito de 30 minutos: entendemos tu negocio, tus flujos de trabajo y dónde se van las horas. Sales con oportunidades identificadas.</p>
       </div>
       <div class="process-step reveal">
         <div class="process-num">2</div>
         <h4 data-i18n="process.2.title">Configura</h4>
-        <p data-i18n="process.2.desc">Mapeo de procesos, diseño del agente a medida y stack técnico (RAG, n8n, APIs).</p>
+        <p data-i18n="process.2.desc">Mapeo del proceso real, diseño del sistema a medida y elección del stack por impacto (n8n, RAGs, Apis).</p>
       </div>
       <div class="process-step reveal">
         <div class="process-num">3</div>
         <h4 data-i18n="process.3.title">Despliega</h4>
-        <p data-i18n="process.3.desc">Implementación ágil. Idea a agente en producción en días. Sin DevOps, sin equipos grandes.</p>
+        <p data-i18n="process.3.desc">Construimos, probamos en paralelo con el proceso manual y entregamos la automatización funcionando en producción, documentada y con el equipo formado.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- PROACTIVE -->
-<section class="proactive">
-  <div class="container">
-    <div class="proactive-inner reveal">
-      <h2 data-i18n="proactive.title">Proactivos por defecto</h2>
-      <p data-i18n="proactive.desc">Entendemos tu negocio antes de proponer una solución. Porque la mejor tecnología aplicada al problema equivocado es solo un gasto más.</p>
-      <div class="proactive-gallery reveal">
-        <img src="images/sales-analytics.jpg" alt="Analítica de ventas en tiempo real" loading="lazy">
-        <img src="images/automation-dashboard.jpg" alt="Panel de control de automatizaciones" loading="lazy">
-        <img src="images/modern-office.jpg" alt="Espacio de trabajo" loading="lazy">
-      </div>
+    <p class="process-closing reveal" data-i18n="process.closing">Entendemos tu negocio antes de proponer una solución. La mejor tecnología aplicada al problema equivocado es solo un gasto más.</p>
+    <div class="process-gallery reveal">
+      <img src="images/sales-analytics.jpg" alt="Analítica de procesos en tiempo real" loading="lazy">
+      <img src="images/automation-dashboard.jpg" alt="Panel de automatizaciones" loading="lazy">
+      <img src="images/modern-office.jpg" alt="Equipo trabajando con sistemas automatizados" loading="lazy">
     </div>
   </div>
 </section>
@@ -963,6 +977,15 @@ a.blog-card:hover { border-color: var(--lime); box-shadow: 0 6px 24px rgba(0,0,0
           <span class="blog-link" data-i18n="blog.2.link">Leer artículo →</span>
         </div>
       </a>
+      <div class="blog-card reveal blog-card-soon">
+        <img src="images/hero-business.jpg" alt="Inteligencia artificial para empresas" class="blog-thumb" loading="lazy">
+        <div class="blog-card-body">
+          <span class="blog-date" data-i18n="blog.3.date">7 de mayo de 2026</span>
+          <h3 data-i18n="blog.3.title">Inteligencia artificial para empresas: El reto es 80% negocio y solo 20% tecnología.</h3>
+          <p data-i18n="blog.3.desc">No implantes por FOMO. Tecnología antes de tiempo, sin proceso detrás, es un gran error. Prioriza por impacto real en tu cuenta de resultados, y poniendo la tecnología justa.</p>
+          <span class="blog-link" data-i18n="blog.3.soon">Próximamente</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
