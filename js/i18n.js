@@ -167,6 +167,9 @@
       'blog.2.title': 'How to automate processes with AI in your company: A practical guide',
       'blog.2.desc': 'Start with the process, never the technology. The 30% rule, the four steps we follow in every project, and where to begin tomorrow.',
       'blog.2.link': 'Read article →',
+      'blog.2.cta.title': 'Want to transform your business with AI?',
+      'blog.2.cta.desc': 'Book a free discovery session',
+      'blog.2.cta.btn': 'Book your session →',
 
       'contact.title': 'If your business is ready to take the leap, let\'s talk.',
       'contact.desc': 'Free assessment: we identify processes, flows, and custom AI opportunities for your operation.',
@@ -411,6 +414,9 @@
       'blog.2.title': 'Cómo automatizar procesos con IA en tu empresa: Guía Práctica',
       'blog.2.desc': 'Empieza por el proceso, nunca por la tecnología. La regla del 30%, los cuatro pasos que seguimos en cada proyecto y por dónde empezar mañana.',
       'blog.2.link': 'Leer artículo →',
+      'blog.2.cta.title': 'Si quieres transformar tu negocio con IA',
+      'blog.2.cta.desc': 'Reserva una sesión de descubrimiento gratuita',
+      'blog.2.cta.btn': 'Reserva tu sesión →',
 
       'contact.title': 'Si tu negocio está listo para dar el salto, hablemos.',
       'contact.desc': 'Diagnóstico gratuito: identificamos procesos, flujos y oportunidades de IA a medida para tu operación.',

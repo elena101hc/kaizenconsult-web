@@ -13,7 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/nav.css">
 <link rel="stylesheet" href="css/i18n.css">
-<link rel="stylesheet" href="css/landing.css">
+<link rel="stylesheet" href="css/cta-banner.css">
 <link rel="stylesheet" href="css/footer.css">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -266,10 +266,11 @@ article strong { color: var(--text); }
 
 <script src="js/landing-i18n.js"></script>
 <script src="js/i18n.js"></script>
-
-
+<script>
 document.querySelectorAll('nav a').forEach(a => {
   a.addEventListener('click', () => document.querySelector('.nav-right')?.classList.remove('open'));
 });
+</script>
+
 </body>
 </html>

@@ -1,21 +1,22 @@
-/* Full-width CTA banner — discovery session */
+/* Home-only CTA section — light band + navy card, distinct from footer */
 .cta-banner {
   width: 100%;
-  background: #0f172a;
+  background: #f1f5f9;
+  padding: 5rem 1.5rem;
+  border-top: 1px solid #e2e8f0;
 }
 
-.cta-banner-inner {
-  width: 100%;
-  padding: 4.5rem 1.5rem;
-  text-align: center;
-}
-
-.cta-banner-content {
-  max-width: 720px;
+.cta-banner-card {
+  max-width: 900px;
   margin: 0 auto;
+  text-align: center;
+  background: #0f172a;
+  border-radius: 16px;
+  padding: 3.5rem 2.5rem;
+  box-shadow: 0 16px 48px rgba(15, 23, 42, 0.12);
 }
 
-.cta-banner-inner h2 {
+.cta-banner-card h2 {
   font-family: var(--font-display, 'Space Grotesk', sans-serif);
   font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 700;
@@ -25,10 +26,13 @@
   margin-bottom: 0.75rem;
 }
 
-.cta-banner-inner p {
+.cta-banner-card p {
   color: #94a3b8;
   font-size: 1.05rem;
   margin-bottom: 1.75rem;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cta-banner-btn {
@@ -51,7 +55,52 @@
 }
 
 @media (max-width: 640px) {
-  .cta-banner-inner {
-    padding: 3rem 1.25rem;
+  .cta-banner {
+    padding: 3.5rem 1.25rem;
   }
+
+  .cta-banner-card {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+/* Blog article CTA — card inside article column */
+.article-cta {
+  background: var(--bg-alt, #fafafa);
+  border: 1px solid var(--border, #e2e8f0);
+  border-radius: 14px;
+  padding: 2rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.article-cta h3 {
+  font-family: var(--font-display, 'Space Grotesk', sans-serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text, #0f172a);
+  margin-bottom: 0.5rem;
+}
+
+.article-cta p {
+  color: var(--text-secondary, #475569);
+  margin: 0 0 1.25rem;
+}
+
+.article-cta .btn-primary {
+  background: var(--lime, #b8e04a);
+  color: var(--text, #0f172a);
+  padding: 0.9rem 1.75rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.2s;
+}
+
+.article-cta .btn-primary:hover {
+  background: var(--lime-dark, #9cc832);
 }

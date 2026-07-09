@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="css/nav.css">
 <link rel="stylesheet" href="css/i18n.css">
 <link rel="stylesheet" href="css/cta-banner.css">
+<link rel="stylesheet" href="css/landing.css">
 <link rel="stylesheet" href="css/footer.css">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -64,6 +65,28 @@ article strong { color: var(--text); }
   padding-top: 2rem;
   margin-top: 2.5rem;
 }
+.article-figure {
+  margin: 2rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
+}
+.article-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+.article-figure figcaption {
+  padding: 0.75rem 1rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  background: var(--bg-alt);
+  border-top: 1px solid var(--border);
+  line-height: 1.45;
+}
 </style>
 <script type="application/ld+json">
 {
@@ -105,6 +128,10 @@ article strong { color: var(--text); }
   <a href="vinculo.html" data-i18n="breadcrumb.home">Inicio</a> / <a href="vinculo.html#blog" data-i18n="breadcrumb.blog">Blog</a> / Cómo automatizar procesos con IA
 </div>
 
+<div class="container landing-hero-media">
+  <img src="images/automation-dashboard.jpg" alt="Panel de automatización de procesos con IA" width="900" height="386" loading="eager">
+</div>
+
 <article>
   <div class="container">
     <span class="article-date">23 de abril de 2026</span>
@@ -115,6 +142,11 @@ article strong { color: var(--text); }
     Facturas que alguien cruza una a una con pedidos y albaranes.<br>
     Consultas de clientes que se contestan igual cien veces al mes.</p>
     <p>La IA ha hecho la automatización asequible como nunca. Lo difícil ya no es la tecnología, sino decidir qué automatizar, cómo hacerlo y, sobre todo, saber cuándo tiene sentido.</p>
+
+    <figure class="article-figure">
+      <img src="images/hero-ai.jpg" alt="Automatización de tareas repetitivas con inteligencia artificial" width="760" height="428" loading="lazy">
+      <figcaption>La IA hace viable automatizar tareas repetitivas — el reto está en elegir bien qué proceso atacar primero.</figcaption>
+    </figure>
 
     <h2>1. Empieza por el proceso, nunca por la tecnología</h2>
     <p>En una jornada reciente sobre IA en empresas industriales, los expertos dieron el mismo diagnóstico: el freno nunca fue la tecnología, sino el proceso y la cultura.</p>
@@ -132,6 +164,11 @@ article strong { color: var(--text); }
     </div>
     <p>Es la parte menos vistosa del proyecto, pero la que marca si la automatización aportará beneficios o no.</p>
 
+    <figure class="article-figure">
+      <img src="images/strategy-planning.jpg" alt="Mapeo y diseño de procesos antes de automatizar" width="760" height="428" loading="lazy">
+      <figcaption>Mapear el proceso real — quién hace qué y con qué herramientas — antes de desplegar cualquier tecnología.</figcaption>
+    </figure>
+
     <h2>2. ¿Qué automatizar primero? La regla del 30%</h2>
     <p>McKinsey lo midió antes incluso de que iniciase la adopción de esta nueva IA generativa:</p>
     <p class="stat-line">→ Apenas un 5% de los puestos es automatizable por completo.<br>
@@ -147,6 +184,11 @@ article strong { color: var(--text); }
     <p>Las tareas que sí piden criterio — como aprobar, negociar, decidir una excepción — se quedan siempre fuera del primer alcance de automatización.</p>
     <p>Empezar por asistentes supervisados, y no por agentes autónomos, es exactamente lo que hicieron las empresas que hoy van por delante.</p>
 
+    <figure class="article-figure">
+      <img src="images/sales-analytics.jpg" alt="Análisis de tareas repetitivas y volumen de trabajo" width="760" height="428" loading="lazy">
+      <figcaption>La unidad de análisis es la tarea: identificar cuáles se repiten en alto volumen y tienen datos accesibles.</figcaption>
+    </figure>
+
     <h2>3. Los cuatro pasos que seguimos en cada proyecto</h2>
     <ol style="padding-left:1.35rem;margin:1rem 0;">
       <li style="color:var(--text-secondary);margin:0.75rem 0;"><strong style="color:var(--text);">Mapear el proceso tal como es hoy:</strong> no como queremos que sea. Aquí aparecen las sorpresas: pasos duplicados, aprobaciones que nadie recuerda por qué existen, información que se copia varias veces.</li>
@@ -155,10 +197,20 @@ article strong { color: var(--text); }
       <li style="color:var(--text-secondary);margin:0.75rem 0;"><strong style="color:var(--text);">Supervisar, medir y escalar:</strong> todo agente, sistema o automatización debe arrancar siempre con revisión humana en lo que importa. A medida que los datos demuestran que acierta, se amplía su autonomía, no antes.</li>
     </ol>
 
+    <figure class="article-figure">
+      <img src="images/tech-network.jpg" alt="Integración de sistemas y flujos de automatización" width="760" height="428" loading="lazy">
+      <figcaption>De idea a sistema en producción: conectar herramientas, validar un caso de uso y escalar con supervisión humana.</figcaption>
+    </figure>
+
     <h2>4. El beneficio real: escalar sin contratar</h2>
     <p>Hay que ser honestos con lo que la automatización y la inteligencia artificial hace y lo que no.</p>
     <p>Automatizar no consiste en sustituir a ninguna persona. Va de liberar horas que se pierden en tareas repetitivas y sin criterio para poder crecer y facturar más antes de ampliar la plantilla.</p>
     <p>El resultado nunca debe ser «menos equipo», sino más productividad para el equipo que ya existe. <strong>Hacer más con menos.</strong></p>
+
+    <figure class="article-figure">
+      <img src="images/team-collaboration.jpg" alt="Equipo más productivo tras automatizar tareas repetitivas" width="760" height="428" loading="lazy">
+      <figcaption>Automatizar libera horas del equipo para trabajo de criterio — no sustituye personas, amplifica su capacidad.</figcaption>
+    </figure>
 
     <h2>5. Suscripción o desarrollo: la decisión que casi nadie te cuenta</h2>
     <p>Hay dos maneras principales de automatizar procesos con IA:</p>
@@ -172,6 +224,11 @@ article strong { color: var(--text); }
       <p style="margin:0;font-weight:500;color:var(--text-secondary);">Ya no se necesitan esos presupuestos para aplicar los mismos proyectos en tu empresa. Hace falta método.</p>
     </div>
 
+    <figure class="article-figure">
+      <img src="images/process-team.jpg" alt="Metodología de automatización con sistemas propios" width="760" height="428" loading="lazy">
+      <figcaption>Construir sobre tus herramientas (n8n, APIs, ERP) con gobernanza propia — sin acumular suscripciones por proceso.</figcaption>
+    </figure>
+
     <h2>Por dónde empezar</h2>
     <p>Elige un solo proceso; el que más horas come o el que más pesa en tu cuenta de resultados, y hazte estas tres preguntas:</p>
     <ul>
@@ -182,18 +239,14 @@ article strong { color: var(--text); }
     <p>Si puedes responderlas, estás listo para automatizar. Si no puedes, ya sabes cuál es el primer trabajo. Y ese también tiene un retorno enorme.</p>
 
     <p class="article-question">¿Y en tu empresa, qué proceso automatizarías mañana si supieras que va a funcionar?</p>
-  </div>
-</article>
 
-<section class="cta-banner">
-  <div class="cta-banner-inner">
-    <div class="cta-banner-content">
-      <h2 data-i18n="cta.banner.title">¿Preparado para transformar tu negocio con IA?</h2>
-      <p data-i18n="cta.banner.subtitle">Reserva una sesión de descubrimiento gratuita de 30 minutos</p>
-      <a href="contacto.html" class="cta-banner-btn" data-i18n="cta.banner.btn">Reserva tu sesión →</a>
+    <div class="article-cta">
+      <h3 data-i18n="blog.2.cta.title">Si quieres transformar tu negocio con IA</h3>
+      <p data-i18n="blog.2.cta.desc">Reserva una sesión de descubrimiento gratuita</p>
+      <a href="contacto.html" class="btn-primary" data-i18n="blog.2.cta.btn">Reserva tu sesión →</a>
     </div>
   </div>
-</section>
+</article>
 
 <footer class="site-footer">
   <div class="container">
