@@ -11,6 +11,7 @@
 <meta property="og:type" content="article">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/nav.css">
 <link rel="stylesheet" href="css/i18n.css">
 <link rel="stylesheet" href="css/landing.css">
 <link rel="stylesheet" href="css/footer.css">
@@ -118,12 +119,16 @@ article strong { color: var(--text); }
 <nav>
   <div class="nav-inner">
     <a href="vinculo.html" class="logo">K<span>AI</span>zen Consult</a>
-    <div class="nav-right">
-      <div>
-        <a href="vinculo.html" data-i18n="nav.home">Inicio</a>
-        <a href="soluciones.html" style="margin-left:1.5rem;" data-i18n="nav.solutions">Soluciones</a>
-        <a href="vinculo.html#contacto" class="nav-cta" data-i18n="nav.contact.short">Hablemos</a>
-      </div>
+    <button class="hamburger" onclick="document.querySelector('.nav-right')?.classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-right mobile-collapsible">
+      <ul>
+        <li><a href="vinculo.html" data-i18n="nav.home">Inicio</a></li>
+        <li><a href="soluciones.html" data-i18n="nav.services">Servicios</a></li>
+        <li><a href="vinculo.html#proceso" data-i18n="nav.kaizen">Kaizen</a></li>
+        <li><a href="contacto.html" class="nav-cta" data-i18n="nav.contact">Contacto</a></li>
+      </ul>
       <div class="lang-toggle" id="lang-toggle" role="group" aria-label="Language">
         <span class="lang-option" data-lang="en">EN</span>
         <span class="lang-option" data-lang="es">ES</span>
@@ -227,13 +232,13 @@ article strong { color: var(--text); }
     <div class="article-cta">
       <h3 data-i18n="blog.article.cta.title">¿Hablamos de tu caso?</h3>
       <p data-i18n="blog.article.cta.desc">Cuéntanos dónde está tu empresa en la adopción de IA y te daremos una valoración sin compromiso.</p>
-      <a href="vinculo.html#contacto" class="btn-primary" data-i18n="blog.article.cta.btn">Agendar diagnóstico gratuito →</a>
+      <a href="contacto.html" class="btn-primary" data-i18n="blog.article.cta.btn">Agendar diagnóstico gratuito →</a>
     </div>
   </div>
 </article>
 
 <footer class="site-footer">
-  <div class="container" style="max-width:1200px;">
+  <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="vinculo.html" class="footer-logo">K<span>AI</span>zen Consult</a>
@@ -246,9 +251,11 @@ article strong { color: var(--text); }
         </div>
       </div>
       <div class="footer-nav">
-        <a href="soluciones.html" class="footer-social" data-i18n="nav.solutions">Soluciones</a>
-        <a href="#" class="footer-social">FAQs</a>
-        <a href="https://www.linkedin.com/company/kaizen-consult-ai/" target="_blank" rel="noopener" class="footer-social">LinkedIn</a>
+        <a href="vinculo.html" class="footer-social" data-i18n="nav.home">Inicio</a>
+        <a href="soluciones.html" class="footer-social" data-i18n="nav.services">Servicios</a>
+        <a href="vinculo.html#proceso" class="footer-social" data-i18n="nav.kaizen">Kaizen</a>
+        <a href="contacto.html" class="footer-social" data-i18n="nav.contact">Contacto</a>
+        <a href="https://www.linkedin.com/company/kaizen-consult-ai/" target="_blank" rel="noopener" class="footer-social" data-i18n="footer.linkedin">LinkedIn</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -260,5 +267,9 @@ article strong { color: var(--text); }
 <script src="js/landing-i18n.js"></script>
 <script src="js/i18n.js"></script>
 
+
+document.querySelectorAll('nav a').forEach(a => {
+  a.addEventListener('click', () => document.querySelector('.nav-right')?.classList.remove('open'));
+});
 </body>
 </html>

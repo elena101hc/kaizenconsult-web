@@ -11,6 +11,7 @@
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/nav.css">
 <link rel="stylesheet" href="css/i18n.css">
 <link rel="stylesheet" href="css/landing.css">
 <link rel="stylesheet" href="css/footer.css">
@@ -210,12 +211,16 @@ h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 2.5vw, 2rem); fo
 <nav>
   <div class="nav-inner">
     <a href="vinculo.html" class="logo">K<span>AI</span>zen Consult</a>
-    <div class="nav-right">
-      <div>
-        <a href="vinculo.html" data-i18n="nav.home">Inicio</a>
-        <a href="soluciones.html" style="margin-left:1.5rem;" data-i18n="nav.solutions">Soluciones</a>
-        <a href="#contacto" class="nav-cta" data-i18n="nav.contact.short">Hablemos</a>
-      </div>
+    <button class="hamburger" onclick="document.querySelector('.nav-right')?.classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-right mobile-collapsible">
+      <ul>
+        <li><a href="vinculo.html" data-i18n="nav.home">Inicio</a></li>
+        <li><a href="soluciones.html" data-i18n="nav.services">Servicios</a></li>
+        <li><a href="vinculo.html#proceso" data-i18n="nav.kaizen">Kaizen</a></li>
+        <li><a href="contacto.html" class="nav-cta" data-i18n="nav.contact">Contacto</a></li>
+      </ul>
       <div class="lang-toggle" id="lang-toggle" role="group" aria-label="Language">
         <span class="lang-option" data-lang="en">EN</span>
         <span class="lang-option" data-lang="es">ES</span>
@@ -240,7 +245,7 @@ h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 2.5vw, 2rem); fo
     <h1 data-i18n="lp.soporte.hero.title">Las respuestas ya existen. El cuello de botella es quién las escribe.</h1>
     <p class="hero-sub" data-i18n="lp.soporte.hero.sub">El 80% de las consultas que recibe tu equipo tienen respuesta conocida: está en el catálogo, en las condiciones de envío, en la cabeza de quien lleva años. Montamos un asistente que responde con esa información en segundos, por WhatsApp, web o email — y deriva a tu equipo solo lo que requiere criterio.</p>
     <div class="hero-actions">
-      <a href="#contacto" class="btn-primary" data-i18n="lp.cta.free">Pedir una valoración gratuita →</a>
+      <a href="contacto.html" class="btn-primary" data-i18n="lp.cta.free">Pedir una valoración gratuita →</a>
       <a href="#como-funciona" class="btn-secondary" data-i18n="lp.cta.how">Ver cómo funciona</a>
     </div>
   </div>
@@ -355,7 +360,7 @@ h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 2.5vw, 2rem); fo
 <div class="tech-divider">
   <div class="container">
     <h2>Para perfiles técnicos: cómo está construido</h2>
-    <p>Si hasta aquí ya tienes lo que necesitas, pasa directamente al <a href="#contacto" style="color:var(--lime);">formulario de contacto</a>. Lo que sigue es el detalle de arquitectura e integraciones.</p>
+    <p>Si hasta aquí ya tienes lo que necesitas, pasa directamente al <a href="contacto.html" style="color:var(--lime);">formulario de contacto</a>. Lo que sigue es el detalle de arquitectura e integraciones.</p>
   </div>
 </div>
 
@@ -469,14 +474,16 @@ h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 2.5vw, 2rem); fo
           <p class="footer-label" data-i18n="footer.findUs">Dónde estamos</p>
           <p class="footer-address" data-i18n="footer.address">C/ Pau Claris, 162-164, pl. 3
 08037 Barcelona</p>
+          <a href="tel:+34722327895" class="footer-email" style="display:block;margin-bottom:0.35rem;">+34 722 327 895</a>
           <a href="mailto:hello@kaizenconsult.es" class="footer-email">hello@kaizenconsult.es</a>
         </div>
       </div>
       <div class="footer-nav">
-        <a href="soluciones.html" class="footer-social" data-i18n="nav.solutions">Soluciones</a>
-        <a href="agente-prospeccion-b2b.html" class="footer-social" data-i18n="footer.link.ventas">Agente de prospección B2B</a>
-        <a href="automatizacion-de-procesos.html" class="footer-social" data-i18n="footer.link.automation">Automatización de procesos</a>
-        <a href="https://www.linkedin.com/company/kaizen-consult-ai/" target="_blank" rel="noopener" class="footer-social">LinkedIn</a>
+        <a href="vinculo.html" class="footer-social" data-i18n="nav.home">Inicio</a>
+        <a href="soluciones.html" class="footer-social" data-i18n="nav.services">Servicios</a>
+        <a href="vinculo.html#proceso" class="footer-social" data-i18n="nav.kaizen">Kaizen</a>
+        <a href="contacto.html" class="footer-social" data-i18n="nav.contact">Contacto</a>
+        <a href="https://www.linkedin.com/company/kaizen-consult-ai/" target="_blank" rel="noopener" class="footer-social" data-i18n="footer.linkedin">LinkedIn</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -502,5 +509,9 @@ if (window.location.search.includes('sent=1')) {
 <script src="js/landing-i18n.js"></script>
 <script src="js/i18n.js"></script>
 
+
+document.querySelectorAll('nav a').forEach(a => {
+  a.addEventListener('click', () => document.querySelector('.nav-right')?.classList.remove('open'));
+});
 </body>
 </html>

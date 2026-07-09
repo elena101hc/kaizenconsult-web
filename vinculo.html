@@ -7,8 +7,10 @@
 <meta name="description" content="We help small and medium businesses stop losing time on repetitive tasks: sales follow-up, customer support, and admin work, automated and working 24/7. No tech expertise needed on your end. Results in days.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/nav.css">
 <link rel="stylesheet" href="css/i18n.css">
 <link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/cta-banner.css">
 <link rel="stylesheet" href="css/images.css">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -689,9 +691,10 @@ a.blog-card:hover { border-color: var(--lime); box-shadow: 0 6px 24px rgba(0,0,0
     </button>
     <div class="nav-right mobile-collapsible">
       <ul>
-        <li><a href="soluciones.html" data-i18n="nav.solutions">Solutions</a></li>
-        <li><a href="#proceso" data-i18n="nav.process">Process</a></li>
-        <li><a href="vinculo.html#contacto" class="nav-cta" data-i18n="nav.contact">Contact us</a></li>
+        <li><a href="vinculo.html" data-i18n="nav.home">Inicio</a></li>
+        <li><a href="soluciones.html" data-i18n="nav.services">Servicios</a></li>
+        <li><a href="vinculo.html#proceso" data-i18n="nav.kaizen">Kaizen</a></li>
+        <li><a href="contacto.html" class="nav-cta" data-i18n="nav.contact">Contacto</a></li>
       </ul>
       <div class="lang-toggle" id="lang-toggle" role="group" aria-label="Language">
         <span class="lang-option active" data-lang="en">EN</span>
@@ -709,8 +712,8 @@ a.blog-card:hover { border-color: var(--lime); box-shadow: 0 6px 24px rgba(0,0,0
       <h1 class="reveal" data-i18n="hero.title" data-i18n-html>No vendemos IA. Diseñamos <span style="color:var(--lime)">procesos</span> que funcionan solos.</h1>
       <p class="hero-sub reveal" data-i18n="hero.subtitle">Las grandes empresas automatizaron hace años. En muchas en cambio, a los nuevos clientes o proveedores se les busca y sigue cuando hay hueco, las consultas esperan al lunes, y los datos viajan a mano entre sistemas. Cada empresa, tenga 5 empleados o 100, tiene sistemas que trabajan solos a su alcance.</p>
       <div class="hero-actions reveal">
-        <a href="#contacto" class="btn-primary" data-i18n="hero.cta1">Diseña tu arquitectura de procesos →</a>
-        <a href="soluciones.html" class="btn-secondary" data-i18n="hero.cta2">Ver soluciones</a>
+        <a href="contacto.html" class="btn-primary" data-i18n="hero.cta1">Reserva una sesión de descubrimiento →</a>
+        <a href="soluciones.html" class="btn-secondary" data-i18n="hero.cta2">Ver servicios</a>
       </div>
     </div>
     <div class="hero-visual reveal">
@@ -755,7 +758,7 @@ a.blog-card:hover { border-color: var(--lime); box-shadow: 0 6px 24px rgba(0,0,0
       <div class="section-tag" data-i18n="solutions.tag">Lo que resolvemos</div>
       <h2 class="section-title" data-i18n="solutions.title">Seis procesos que en la mayoría de pymes se sostienen a base de horas. Seis sistemas que los ejecutan solos.</h2>
       <p class="section-desc" data-i18n="solutions.desc">Prospección, atención al cliente, operaciones: los tres pilares que las empresas sostienen a base de horas. Los rediseñamos y los automatizamos con criterio de ingeniería — sobre las herramientas que ya usas y con tu equipo supervisando.</p>
-      <a href="vinculo.html#contacto" class="btn-primary" style="margin-top:1.5rem;" data-i18n="solutions.cta">¿Lis@ para automatizar? →</a>
+      <a href="contacto.html" class="btn-primary" style="margin-top:1.5rem;" data-i18n="solutions.cta">Reserva una sesión de descubrimiento →</a>
     </div>
     <div class="solutions-grid">
       <div class="solution-card reveal">
@@ -963,54 +966,13 @@ a.blog-card:hover { border-color: var(--lime); box-shadow: 0 6px 24px rgba(0,0,0
   </div>
 </section>
 
-<!-- CTA + FORM -->
-<section class="cta" id="contacto">
-  <div class="container reveal">
-    <h2 data-i18n="contact.title">Si tu negocio está listo para dar el salto, hablemos.</h2>
-    <p data-i18n="contact.desc">Diagnóstico gratuito: identificamos procesos, flujos y oportunidades de IA a medida para tu operación.</p>
-
-    <div class="contact-form-wrap">
-      <form class="contact-form" action="https://formsubmit.co/elena@vinculo.io" method="POST" id="contact-form">
-        <input type="hidden" name="_subject" data-i18n-value="form.subject.home" value="New contact from KAIzen Consult">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_next" value="" id="form-next">
-        <div class="form-row">
-          <div class="form-group">
-            <input type="text" name="name" data-i18n-placeholder="form.name" placeholder="Your name *" required>
-          </div>
-          <div class="form-group">
-            <input type="email" name="email" data-i18n-placeholder="form.email" placeholder="Email *" required>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <input type="text" name="empresa" data-i18n-placeholder="form.company" placeholder="Company (optional)">
-          </div>
-          <div class="form-group">
-            <select name="interes">
-              <option value="" data-i18n="form.interest">What are you interested in?</option>
-              <option value="ventas" data-i18n="form.opt.ventas">Sales Agent</option>
-              <option value="soporte" data-i18n="form.opt.soporte">Support Agent</option>
-              <option value="automatizacion" data-i18n="form.opt.automatizacion">Automation</option>
-              <option value="voice" data-i18n="form.opt.voice">Voice Agents</option>
-              <option value="consultoria" data-i18n="form.opt.consultoria">Consulting</option>
-              <option value="formacion" data-i18n="form.opt.formacion">Training</option>
-              <option value="otro" data-i18n="form.opt.otro">Other</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group">
-          <textarea name="message" data-i18n-placeholder="form.message.home" placeholder="Tell us briefly about your situation..." rows="4"></textarea>
-        </div>
-        <button type="submit" class="form-submit" data-i18n="form.submit">Send message →</button>
-        <p class="form-note" data-i18n="form.note">No commitment · We respond within 24 hours</p>
-      </form>
-    </div>
-
-    <div class="cta-links">
-      <a href="mailto:hello@kaizenconsult.es">hello@kaizenconsult.es</a>
-      <a href="https://www.linkedin.com/company/kaizen-consult-ai/" target="_blank" rel="noopener">LinkedIn</a>
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="cta-banner-inner reveal">
+      <h2 data-i18n="cta.banner.title">¿Preparado para transformar tu negocio con IA?</h2>
+      <p data-i18n="cta.banner.subtitle">Reserva una sesión de descubrimiento gratuita de 30 minutos</p>
+      <a href="contacto.html" class="cta-banner-btn" data-i18n="cta.banner.btn">Reserva tu sesión →</a>
     </div>
   </div>
 </section>
@@ -1030,11 +992,11 @@ a.blog-card:hover { border-color: var(--lime); box-shadow: 0 6px 24px rgba(0,0,0
         </div>
       </div>
       <div class="footer-nav">
-        <a href="#" class="footer-social">FAQ'S</a>
-        <a href="#" class="footer-social">CASOS DE USO</a>
-        <a href="soluciones.html#formacion" class="footer-social">FORMACIONES</a>
-        <a href="soluciones.html#voz" class="footer-social">AGENTES B2C</a>
-        <a href="https://www.linkedin.com/company/kaizen-consult-ai/" target="_blank" rel="noopener" class="footer-social">LinkedIn</a>
+        <a href="vinculo.html" class="footer-social" data-i18n="nav.home">Inicio</a>
+        <a href="soluciones.html" class="footer-social" data-i18n="nav.services">Servicios</a>
+        <a href="vinculo.html#proceso" class="footer-social" data-i18n="nav.kaizen">Kaizen</a>
+        <a href="contacto.html" class="footer-social" data-i18n="nav.contact">Contacto</a>
+        <a href="https://www.linkedin.com/company/kaizen-consult-ai/" target="_blank" rel="noopener" class="footer-social" data-i18n="footer.linkedin">LinkedIn</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -1044,22 +1006,6 @@ a.blog-card:hover { border-color: var(--lime); box-shadow: 0 6px 24px rgba(0,0,0
 </footer>
 
 <script>
-// FormSubmit: redirect back to same page after success
-document.getElementById('form-next').value = window.location.href.split('#')[0] + '?sent=1#contacto';
-
-// Show success message if redirected after form submit
-if (window.location.search.includes('sent=1') || window.location.hash.includes('sent=1')) {
-  const wrap = document.querySelector('.contact-form-wrap');
-  if (wrap) {
-    const msg = document.createElement('p');
-    msg.className = 'form-success';
-    msg.style.cssText = 'color:var(--electric);font-weight:600;margin-bottom:1rem;';
-    msg.setAttribute('data-i18n', 'form.success');
-    msg.textContent = '✓ Message sent. We\'ll respond within 24 hours.';
-    wrap.insertBefore(msg, wrap.firstChild);
-  }
-}
-
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {

@@ -7,6 +7,7 @@
 <meta name="description" content="Service details: sales and support AI agents, process automation, reengineering and innovation, voice agents, and training. Projects with measurable ROI.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/nav.css">
 <link rel="stylesheet" href="css/i18n.css">
 <link rel="stylesheet" href="css/footer.css">
 <style>
@@ -157,14 +158,18 @@ nav a:hover { color: var(--text); }
 <nav>
   <div class="nav-inner">
     <a href="vinculo.html" class="logo">K<span>AI</span>zen Consult</a>
-    <div class="nav-right">
-      <div>
-        <a href="vinculo.html" data-i18n="nav.home">Home</a>
-        <a href="vinculo.html#proceso" style="margin-left:1.5rem;" data-i18n="nav.process">Process</a>
-        <a href="vinculo.html#contacto" class="nav-cta" data-i18n="nav.contact">Contact us</a>
-      </div>
+    <button class="hamburger" onclick="document.querySelector('.nav-right')?.classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-right mobile-collapsible">
+      <ul>
+        <li><a href="vinculo.html" data-i18n="nav.home">Inicio</a></li>
+        <li><a href="soluciones.html" data-i18n="nav.services">Servicios</a></li>
+        <li><a href="vinculo.html#proceso" data-i18n="nav.kaizen">Kaizen</a></li>
+        <li><a href="contacto.html" class="nav-cta" data-i18n="nav.contact">Contacto</a></li>
+      </ul>
       <div class="lang-toggle" id="lang-toggle" role="group" aria-label="Language">
-        <span class="lang-option active" data-lang="en">EN</span>
+        <span class="lang-option" data-lang="en">EN</span>
         <span class="lang-option" data-lang="es">ES</span>
       </div>
     </div>
@@ -265,7 +270,7 @@ nav a:hover { color: var(--text); }
       <span class="project-tag" data-i18n="tag.industry">Industry</span>
       <span class="project-tag" data-i18n="tag.continuous">Continuous improvement</span>
     </div>
-    <a href="vinculo.html#contacto" class="service-cta" data-i18n="detail.ventas.cta">Request information →</a>
+    <a href="contacto.html" class="service-cta" data-i18n="detail.ventas.cta">Request information →</a>
   </div>
 </section>
 
@@ -287,7 +292,7 @@ nav a:hover { color: var(--text); }
       <span class="project-tag" data-i18n="tag.payments">Payments</span>
       <span class="project-tag" data-i18n="tag.multilingual">Multilingual</span>
     </div>
-    <a href="vinculo.html#contacto" class="service-cta" data-i18n="detail.ventas.cta">Request information →</a>
+    <a href="contacto.html" class="service-cta" data-i18n="detail.ventas.cta">Request information →</a>
   </div>
 </section>
 
@@ -308,58 +313,10 @@ nav a:hover { color: var(--text); }
       <span class="project-tag">Change Management</span>
       <span class="project-tag">Workshops</span>
     </div>
-    <a href="vinculo.html#contacto" class="service-cta" data-i18n="detail.ventas.cta">Request information →</a>
+    <a href="contacto.html" class="service-cta" data-i18n="detail.ventas.cta">Request information →</a>
   </div>
 </section>
 
-<section class="contact-section" id="contacto">
-  <div class="container">
-    <h2 data-i18n="contact.title.short">Let's talk?</h2>
-    <p data-i18n="contact.desc.short">Tell us about your project and we'll respond with a proposal in under 24 hours.</p>
-    <div class="contact-form-wrap">
-      <form class="contact-form" action="https://formsubmit.co/elena@vinculo.io" method="POST" id="contact-form">
-        <input type="hidden" name="_subject" data-i18n-value="form.subject.solutions" value="Request from Solutions - KAIzen Consult">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_next" value="" id="form-next">
-        <div class="form-row">
-          <div class="form-group">
-            <input type="text" name="name" data-i18n-placeholder="form.name" placeholder="Your name *" required>
-          </div>
-          <div class="form-group">
-            <input type="email" name="email" data-i18n-placeholder="form.email" placeholder="Email *" required>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <input type="text" name="empresa" data-i18n-placeholder="form.company" placeholder="Company (optional)">
-          </div>
-          <div class="form-group">
-            <select name="interes">
-              <option value="" data-i18n="form.interest.service">Which service interests you?</option>
-              <option value="ventas" data-i18n="form.opt.ventas">Sales Agent</option>
-              <option value="soporte" data-i18n="form.opt.soporte">Support Agent</option>
-              <option value="automatizacion" data-i18n="form.opt.automatizacion">Automation</option>
-              <option value="voice" data-i18n="form.opt.voice">Voice Agents</option>
-              <option value="consultoria" data-i18n="form.opt.consultoria">Consulting</option>
-              <option value="formacion" data-i18n="form.opt.formacion">Training</option>
-              <option value="otro" data-i18n="form.opt.otro">Other</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group">
-          <textarea name="message" data-i18n-placeholder="form.message.solutions" placeholder="Briefly describe your project or need..." rows="4"></textarea>
-        </div>
-        <button type="submit" class="form-submit" data-i18n="form.submit">Send message →</button>
-        <p class="form-note" data-i18n="form.note">No commitment · We respond within 24 hours</p>
-      </form>
-    </div>
-    <div class="contact-links">
-      <a href="mailto:hello@kaizenconsult.es">hello@kaizenconsult.es</a>
-      <a href="https://www.linkedin.com/company/kaizen-consult-ai/" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
-  </div>
-</section>
 
 <footer class="site-footer">
   <div class="container">
@@ -367,38 +324,32 @@ nav a:hover { color: var(--text); }
       <div class="footer-brand">
         <a href="vinculo.html" class="footer-logo">K<span>AI</span>zen Consult</a>
         <div class="footer-contact">
-          <p class="footer-label" data-i18n="footer.findUs">Find us</p>
+          <p class="footer-label" data-i18n="footer.findUs">Dónde estamos</p>
           <p class="footer-address" data-i18n="footer.address">C/ Pau Claris, 162-164, pl. 3
 08037 Barcelona</p>
+          <a href="tel:+34722327895" class="footer-email" style="display:block;margin-bottom:0.35rem;">+34 722 327 895</a>
           <a href="mailto:hello@kaizenconsult.es" class="footer-email">hello@kaizenconsult.es</a>
         </div>
       </div>
       <div class="footer-nav">
-        <a href="https://www.linkedin.com/company/kaizen-consult-ai/" target="_blank" rel="noopener" class="footer-social">LinkedIn</a>
+        <a href="vinculo.html" class="footer-social" data-i18n="nav.home">Inicio</a>
+        <a href="soluciones.html" class="footer-social" data-i18n="nav.services">Servicios</a>
+        <a href="vinculo.html#proceso" class="footer-social" data-i18n="nav.kaizen">Kaizen</a>
+        <a href="contacto.html" class="footer-social" data-i18n="nav.contact">Contacto</a>
+        <a href="https://www.linkedin.com/company/kaizen-consult-ai/" target="_blank" rel="noopener" class="footer-social" data-i18n="footer.linkedin">LinkedIn</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <p data-i18n="footer.tagline">© 2025 KAIzen Consult — AI Agents, Processes & Automation</p>
+      <p data-i18n="footer.tagline">© 2025 KAIzen Consult — Agentes IA, Procesos y Automatización</p>
     </div>
   </div>
 </footer>
 
-<script>
-document.getElementById('form-next').value = window.location.href.split('#')[0] + '?sent=1#contacto';
-if (window.location.search.includes('sent=1')) {
-  const wrap = document.querySelector('.contact-form-wrap');
-  if (wrap) {
-    const msg = document.createElement('p');
-    msg.className = 'form-success';
-    msg.style.cssText = 'color:var(--electric);font-weight:600;margin-bottom:1rem;';
-    msg.setAttribute('data-i18n', 'form.success');
-    msg.textContent = '✓ Message sent. We\'ll respond within 24 hours.';
-    wrap.insertBefore(msg, wrap.firstChild);
-    if (window.KaizenI18n) window.KaizenI18n.setLang(window.KaizenI18n.getLang());
-  }
-}
-</script>
 <script src="js/i18n.js"></script>
 
+
+document.querySelectorAll('nav a').forEach(a => {
+  a.addEventListener('click', () => document.querySelector('.nav-right')?.classList.remove('open'));
+});
 </body>
 </html>

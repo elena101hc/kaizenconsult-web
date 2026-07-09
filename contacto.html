@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto — KAIzen Consult</title>
+<meta name="description" content="Contacta con KAIzen Consult. Reserva una sesión de descubrimiento gratuita y cuéntanos cómo podemos ayudarte a automatizar procesos con IA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/i18n.css">
+<link rel="stylesheet" href="css/contact.css">
+<link rel="stylesheet" href="css/footer.css">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #ffffff;
+  --bg-alt: #fafafa;
+  --text: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --electric: #2563eb;
+  --lime: #b8e04a;
+  --lime-dark: #9cc832;
+  --lime-light: rgba(184, 224, 74, 0.12);
+  --border: #e2e8f0;
+  --border-light: #f1f5f9;
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Space Grotesk', var(--font);
+}
+html { scroll-behavior: smooth; }
+body { font-family: var(--font); color: var(--text); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+</style>
+</head>
+<body data-page-title="meta.contact.title" data-page-description="meta.contact.description">
+
+<nav>
+  <div class="nav-inner">
+    <a href="vinculo.html" class="logo">K<span>AI</span>zen Consult</a>
+    <button class="hamburger" onclick="document.querySelector('.nav-right')?.classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-right mobile-collapsible">
+      <ul>
+        <li><a href="vinculo.html" data-i18n="nav.home">Inicio</a></li>
+        <li><a href="soluciones.html" data-i18n="nav.services">Servicios</a></li>
+        <li><a href="vinculo.html#proceso" data-i18n="nav.kaizen">Kaizen</a></li>
+        <li><a href="contacto.html" class="nav-cta" data-i18n="nav.contact">Contacto</a></li>
+      </ul>
+      <div class="lang-toggle" id="lang-toggle" role="group" aria-label="Language">
+        <span class="lang-option" data-lang="en">EN</span>
+        <span class="lang-option" data-lang="es">ES</span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="contact-page-hero">
+  <div class="container">
+    <h1 data-i18n="page.contact.hero.title">Contacta con nosotros</h1>
+    <p data-i18n="page.contact.hero.subtitle">Estamos aquí para ayudarte a transformar tu negocio con procesos que funcionan solos.</p>
+  </div>
+</section>
+
+<div class="container contact-layout">
+  <div class="contact-form-card">
+    <h2 data-i18n="page.contact.form.title">Envíanos un mensaje</h2>
+    <form class="contact-form" action="https://formsubmit.co/elena@vinculo.io" method="POST" id="contact-form">
+      <input type="hidden" name="_subject" value="Nuevo contacto desde Contacto - KAIzen Consult" data-i18n-value="form.subject.contact">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="" id="form-next">
+      <div class="form-row">
+        <div class="form-group">
+          <label data-i18n="form.name.label">Nombre</label>
+          <input type="text" name="name" data-i18n-placeholder="form.name" placeholder="Tu nombre *" required>
+        </div>
+        <div class="form-group">
+          <label data-i18n="form.company.label">Empresa</label>
+          <input type="text" name="empresa" data-i18n-placeholder="form.company" placeholder="Empresa (opcional)">
+        </div>
+      </div>
+      <div class="form-group">
+        <label data-i18n="form.email.label">Correo electrónico</label>
+        <input type="email" name="email" data-i18n-placeholder="form.email" placeholder="Email *" required>
+      </div>
+      <div class="form-group">
+        <label data-i18n="form.subject.label">Asunto</label>
+        <input type="text" name="asunto" data-i18n-placeholder="form.subject.placeholder" placeholder="¿Sobre qué quieres hablar?">
+      </div>
+      <div class="form-group">
+        <label data-i18n="form.interest.service">¿Qué servicio te interesa?</label>
+        <select name="interes">
+          <option value="" data-i18n="form.interest">¿Qué te interesa?</option>
+          <option value="ventas" data-i18n="form.opt.ventas">Agente de Ventas</option>
+          <option value="soporte" data-i18n="form.opt.soporte">Agente de Soporte</option>
+          <option value="automatizacion" data-i18n="form.opt.automatizacion">Automatización</option>
+          <option value="voice" data-i18n="form.opt.voice">Agentes de Voz</option>
+          <option value="consultoria" data-i18n="form.opt.consultoria">Consultoría</option>
+          <option value="formacion" data-i18n="form.opt.formacion">Formación</option>
+          <option value="otro" data-i18n="form.opt.otro">Otro</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label data-i18n="form.message.label">Mensaje</label>
+        <textarea name="message" data-i18n-placeholder="form.message.contact" placeholder="Cuéntanos brevemente tu situación y cómo podemos ayudarte..." rows="5"></textarea>
+      </div>
+      <button type="submit" class="form-submit" data-i18n="form.submit">Enviar mensaje →</button>
+      <p class="form-note" data-i18n="form.note">Sin compromiso · Te respondemos en menos de 24h</p>
+    </form>
+  </div>
+
+  <aside class="contact-sidebar">
+    <div class="contact-info-card">
+      <h3 data-i18n="page.contact.info.title">Información de contacto</h3>
+      <div class="contact-info-item" style="margin-bottom:1.25rem;">
+        <div class="contact-info-icon">✉</div>
+        <div>
+          <div class="contact-info-label" data-i18n="form.email.label">Correo electrónico</div>
+          <a href="mailto:hello@kaizenconsult.es" class="contact-info-value">hello@kaizenconsult.es</a>
+        </div>
+      </div>
+      <div class="contact-info-item">
+        <div class="contact-info-icon">📞</div>
+        <div>
+          <div class="contact-info-label" data-i18n="page.contact.phone.label">Teléfono</div>
+          <a href="tel:+34722327895" class="contact-info-value">+34 722 327 895</a>
+        </div>
+      </div>
+    </div>
+    <div class="contact-info-card">
+      <h3 data-i18n="page.contact.follow">Síguenos</h3>
+      <a href="https://www.linkedin.com/company/kaizen-consult-ai/" target="_blank" rel="noopener" class="linkedin-btn" aria-label="LinkedIn">in</a>
+    </div>
+  </aside>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="vinculo.html" class="footer-logo">K<span>AI</span>zen Consult</a>
+        <div class="footer-contact">
+          <p class="footer-label" data-i18n="footer.findUs">Dónde estamos</p>
+          <p class="footer-address" data-i18n="footer.address">C/ Pau Claris, 162-164, pl. 3
+08037 Barcelona</p>
+          <a href="tel:+34722327895" class="footer-email" style="display:block;margin-bottom:0.35rem;">+34 722 327 895</a>
+          <a href="mailto:hello@kaizenconsult.es" class="footer-email">hello@kaizenconsult.es</a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <a href="vinculo.html" class="footer-social" data-i18n="nav.home">Inicio</a>
+        <a href="soluciones.html" class="footer-social" data-i18n="nav.services">Servicios</a>
+        <a href="vinculo.html#proceso" class="footer-social" data-i18n="nav.kaizen">Kaizen</a>
+        <a href="contacto.html" class="footer-social" data-i18n="nav.contact">Contacto</a>
+        <a href="https://www.linkedin.com/company/kaizen-consult-ai/" target="_blank" rel="noopener" class="footer-social" data-i18n="footer.linkedin">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-i18n="footer.tagline">© 2025 KAIzen Consult — Agentes IA, Procesos y Automatización</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('form-next').value = window.location.href.split('?')[0] + '?sent=1';
+if (window.location.search.includes('sent=1')) {
+  const form = document.getElementById('contact-form');
+  if (form) {
+    const msg = document.createElement('p');
+    msg.className = 'form-success';
+    msg.style.cssText = 'color:var(--electric);font-weight:600;margin-bottom:1rem;text-align:center;';
+    msg.setAttribute('data-i18n', 'form.success');
+    msg.textContent = '✓ Mensaje enviado. Te responderemos en menos de 24h.';
+    form.parentNode.insertBefore(msg, form);
+    if (window.KaizenI18n) window.KaizenI18n.setLang(window.KaizenI18n.getLang());
+  }
+}
+document.querySelectorAll('nav a').forEach(a => {
+  a.addEventListener('click', () => document.querySelector('.nav-right')?.classList.remove('open'));
+});
+</script>
+<script src="js/i18n.js"></script>
+
+</body>
+</html>

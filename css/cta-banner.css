@@ -1,0 +1,59 @@
+/* Home bottom CTA — discovery session banner */
+.cta-banner {
+  padding: 4.5rem 0;
+  background: var(--bg-alt, #fafafa);
+}
+
+.cta-banner-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  background: #0f172a;
+  border-radius: 16px;
+  padding: 3.5rem 2.5rem;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.15);
+}
+
+.cta-banner-inner h2 {
+  font-family: var(--font-display, 'Space Grotesk', sans-serif);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: #f8fafc;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.cta-banner-inner p {
+  color: #94a3b8;
+  font-size: 1.05rem;
+  margin-bottom: 1.75rem;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-banner-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--lime, #b8e04a);
+  color: var(--text, #0f172a);
+  padding: 0.95rem 2rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.cta-banner-btn:hover {
+  background: var(--lime-dark, #9cc832);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+  .cta-banner-inner {
+    padding: 2.5rem 1.5rem;
+  }
+}
