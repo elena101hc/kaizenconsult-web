@@ -207,7 +207,7 @@
       'footer.findUs': 'Find us',
       'footer.address': 'C/ Pau Claris, 162-164, pl. 3\n08037 Barcelona',
 
-      'page.solutions.hero.title': 'Each service in two levels: what it solves and how it\'s built.',
+      'page.solutions.hero.title': 'What AI systems solve and how they work.',
       'page.solutions.hero.desc': 'B2B prospecting, customer support, admin automation, process reengineering, voice agents, and training. Business value up top; technical detail below for those who want to look inside.',
       'page.solutions.projectTypes': 'Project types:',
 
@@ -462,7 +462,7 @@
       'footer.findUs': 'Dónde estamos',
       'footer.address': 'C/ Pau Claris, 162-164, pl. 3\n08037 Barcelona',
 
-      'page.solutions.hero.title': 'Cada servicio, explicado en dos niveles: qué resuelve y cómo está construido.',
+      'page.solutions.hero.title': 'Qué resuelven y cómo funcionan los sistemas de IA.',
       'page.solutions.hero.desc': 'Prospección comercial, soporte al cliente, automatización administrativa, reingeniería de procesos, agentes de voz y formación. Arriba, lo que le importa a tu negocio; abajo, el detalle técnico para quien quiera mirar dentro.',
       'page.solutions.projectTypes': 'Tipos de proyectos:',
 
