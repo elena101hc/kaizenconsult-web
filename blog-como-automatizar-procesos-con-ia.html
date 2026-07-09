@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cómo automatizar procesos con IA en tu empresa: Guía Práctica | Blog KAIzen Consult</title>
+<meta name="description" content="Guía práctica para automatizar procesos con IA: empieza por el proceso, la regla del 30%, cuatro pasos de implementación y cómo escalar sin contratar.">
+<link rel="canonical" href="https://kaizenconsult-web.vercel.app/blog-como-automatizar-procesos-con-ia.html">
+<meta property="og:title" content="Cómo automatizar procesos con IA — Blog KAIzen Consult">
+<meta property="og:description" content="Empieza por el proceso, nunca por la tecnología. Una guía práctica para automatizar con IA en pymes e industria.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/i18n.css">
+<link rel="stylesheet" href="css/cta-banner.css">
+<link rel="stylesheet" href="css/footer.css">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #ffffff;
+  --bg-alt: #fafafa;
+  --text: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --electric: #2563eb;
+  --lime: #b8e04a;
+  --lime-dark: #9cc832;
+  --lime-light: rgba(184, 224, 74, 0.12);
+  --border: #e2e8f0;
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Space Grotesk', var(--font);
+}
+html { scroll-behavior: smooth; }
+body { font-family: var(--font); color: var(--text); background: var(--bg); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+.container { max-width: 760px; margin: 0 auto; padding: 0 1.5rem; }
+.breadcrumb { padding: 6.5rem 0 0; font-size: 0.85rem; color: var(--text-muted); }
+.breadcrumb a { color: var(--text-muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--electric); }
+article { padding: 1.5rem 0 3rem; }
+.article-date { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--lime-dark); }
+article h1 { font-family: var(--font-display); font-size: clamp(1.85rem, 4vw, 2.5rem); font-weight: 700; line-height: 1.15; letter-spacing: -0.03em; margin: 0.75rem 0 1.5rem; }
+article h2 { font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; line-height: 1.3; margin: 2.5rem 0 1rem; color: var(--text); }
+article p { color: var(--text-secondary); margin: 1rem 0; }
+article ul { padding-left: 1.35rem; margin: 1rem 0; }
+article li { color: var(--text-secondary); margin: 0.5rem 0; }
+article strong { color: var(--text); }
+.stat-line { font-weight: 600; color: var(--text); margin: 0.75rem 0; }
+.insight-box {
+  background: var(--lime-light);
+  border-left: 3px solid var(--lime);
+  border-radius: 0 10px 10px 0;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+}
+.insight-box p { margin: 0 0 0.5rem; font-weight: 600; color: var(--text); }
+.insight-box ul { margin: 0.5rem 0 0; }
+.article-question {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+  border-top: 1px solid var(--border);
+  padding-top: 2rem;
+  margin-top: 2.5rem;
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Cómo automatizar procesos con IA en tu empresa: Guía Práctica",
+  "datePublished": "2026-04-23",
+  "inLanguage": "es",
+  "author": { "@type": "Organization", "name": "KAIzen Consult" },
+  "publisher": { "@type": "Organization", "name": "KAIzen Consult", "email": "hello@kaizenconsult.es" },
+  "description": "Guía práctica para automatizar procesos con IA: empieza por el proceso, la regla del 30%, cuatro pasos de implementación y cómo escalar sin contratar."
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="vinculo.html" class="logo">K<span>AI</span>zen Consult</a>
+    <button class="hamburger" onclick="document.querySelector('.nav-right')?.classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-right mobile-collapsible">
+      <ul>
+        <li><a href="vinculo.html" data-i18n="nav.home">Inicio</a></li>
+        <li><a href="soluciones.html" data-i18n="nav.services">Servicios</a></li>
+        <li><a href="vinculo.html#proceso" data-i18n="nav.kaizen">Kaizen</a></li>
+        <li><a href="contacto.html" class="nav-cta" data-i18n="nav.contact">Contacto</a></li>
+      </ul>
+      <div class="lang-toggle" id="lang-toggle" role="group" aria-label="Language">
+        <span class="lang-option" data-lang="en">EN</span>
+        <span class="lang-option" data-lang="es">ES</span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container breadcrumb">
+  <a href="vinculo.html" data-i18n="breadcrumb.home">Inicio</a> / <a href="vinculo.html#blog" data-i18n="breadcrumb.blog">Blog</a> / Cómo automatizar procesos con IA
+</div>
+
+<article>
+  <div class="container">
+    <span class="article-date">23 de abril de 2026</span>
+    <h1>Cómo automatizar procesos con IA en tu empresa: Guía Práctica</h1>
+
+    <p>Si has llegado aquí buscando cómo automatizar procesos, con o sin inteligencia artificial, seguramente ya tienes claro lo importante: eliminar tareas de poco valor que devoran horas y apenas requieren criterio.</p>
+    <p>Pedidos que se teclean a mano desde un email.<br>
+    Facturas que alguien cruza una a una con pedidos y albaranes.<br>
+    Consultas de clientes que se contestan igual cien veces al mes.</p>
+    <p>La IA ha hecho la automatización asequible como nunca. Lo difícil ya no es la tecnología, sino decidir qué automatizar, cómo hacerlo y, sobre todo, saber cuándo tiene sentido.</p>
+
+    <h2>1. Empieza por el proceso, nunca por la tecnología</h2>
+    <p>En una jornada reciente sobre IA en empresas industriales, los expertos dieron el mismo diagnóstico: el freno nunca fue la tecnología, sino el proceso y la cultura.</p>
+    <p>Lo resumieron en una cifra que uso a diario:</p>
+    <p class="stat-line">El reto es 80% de negocio y 20% de tecnología.</p>
+    <p>La consecuencia práctica es inmediata: automatizar un proceso desordenado sólo amplía el caos. Si tu proceso de pedidos vive en la cabeza de una persona y en tres Excel paralelos, un agente o un sistema de IA encima de eso no arreglará nada.</p>
+    <p>Lo mismo pasa cuando se arranca una transformación digital solo por el «miedo a quedarse atrás» o por el «hype» que se dice hoy en día; la IA o tecnología sólo amplificará el caos o el orden de tus procesos.</p>
+    <div class="insight-box">
+      <p>💡 Qué puedes hacer:</p>
+      <ul>
+        <li>Mapear el proceso tal como es HOY (no como debería ser)</li>
+        <li>Identificar quién hace qué, con qué información y en qué herramientas</li>
+        <li>Separar qué decisiones piden criterio humano y cuáles no</li>
+      </ul>
+    </div>
+    <p>Es la parte menos vistosa del proyecto, pero la que marca si la automatización aportará beneficios o no.</p>
+
+    <h2>2. ¿Qué automatizar primero? La regla del 30%</h2>
+    <p>McKinsey lo midió antes incluso de que iniciase la adopción de esta nueva IA generativa:</p>
+    <p class="stat-line">→ Apenas un 5% de los puestos es automatizable por completo.<br>
+    → PERO un 60% de los puestos tiene un tercio de sus tareas automatizables.</p>
+    <p>La unidad de análisis no es el puesto de trabajo. <strong>Es la tarea.</strong></p>
+    <p>Las tareas más susceptibles de ser automatizadas comparten tres rasgos:</p>
+    <ul>
+      <li><strong>Repetitivas y de alto volumen:</strong> ocurren decenas o cientos de veces al mes, siempre con la misma estructura.</li>
+      <li><strong>No piden criterio, piden proceso:</strong> extraer datos de un PDF, clasificar un email, preparar un borrador de respuesta.</li>
+      <li><strong>Tienen la información accesible:</strong> en el email, el ERP o un documento. No en la cabeza de alguien. Si los datos que necesita el proceso están dispersos en distintos formatos, primero habrá un trabajo de datos.</li>
+    </ul>
+    <p>Un buen agente o automatización de IA funciona como un becario muy bien formado: investiga, prepara el trabajo y tu equipo supervisa y decide.</p>
+    <p>Las tareas que sí piden criterio — como aprobar, negociar, decidir una excepción — se quedan siempre fuera del primer alcance de automatización.</p>
+    <p>Empezar por asistentes supervisados, y no por agentes autónomos, es exactamente lo que hicieron las empresas que hoy van por delante.</p>
+
+    <h2>3. Los cuatro pasos que seguimos en cada proyecto</h2>
+    <ol style="padding-left:1.35rem;margin:1rem 0;">
+      <li style="color:var(--text-secondary);margin:0.75rem 0;"><strong style="color:var(--text);">Mapear el proceso tal como es hoy:</strong> no como queremos que sea. Aquí aparecen las sorpresas: pasos duplicados, aprobaciones que nadie recuerda por qué existen, información que se copia varias veces.</li>
+      <li style="color:var(--text-secondary);margin:0.75rem 0;"><strong style="color:var(--text);">Rediseñar antes de automatizar:</strong> muchas veces el mayor ahorro no viene de la IA o tecnología, viene de eliminar pasos que sobraban. Primero se elimina el desperdicio y luego se aterrizan los pasos que aportan valor y se priorizan los casos de uso.</li>
+      <li style="color:var(--text-secondary);margin:0.75rem 0;"><strong style="color:var(--text);">Construir el mínimo sistema que funcione de punta a punta:</strong> una tarea, un proceso, un caso, en producción y validado. Priorizar pequeños avances en vez de un piloto de 6 meses con veinte casos de uso: uno que funcione y libere horas desde la primera semana.</li>
+      <li style="color:var(--text-secondary);margin:0.75rem 0;"><strong style="color:var(--text);">Supervisar, medir y escalar:</strong> todo agente, sistema o automatización debe arrancar siempre con revisión humana en lo que importa. A medida que los datos demuestran que acierta, se amplía su autonomía, no antes.</li>
+    </ol>
+
+    <h2>4. El beneficio real: escalar sin contratar</h2>
+    <p>Hay que ser honestos con lo que la automatización y la inteligencia artificial hace y lo que no.</p>
+    <p>Automatizar no consiste en sustituir a ninguna persona. Va de liberar horas que se pierden en tareas repetitivas y sin criterio para poder crecer y facturar más antes de ampliar la plantilla.</p>
+    <p>El resultado nunca debe ser «menos equipo», sino más productividad para el equipo que ya existe. <strong>Hacer más con menos.</strong></p>
+
+    <h2>5. Suscripción o desarrollo: la decisión que casi nadie te cuenta</h2>
+    <p>Hay dos maneras principales de automatizar procesos con IA:</p>
+    <ul>
+      <li><strong>Alquilar:</strong> contratar un SaaS por proceso. Es rápido al principio, pero con el tiempo se acumulan suscripciones, tus datos no son tuyos y el coste mensual sólo sube.</li>
+      <li><strong>Desarrollar:</strong> construir sistemas sobre las herramientas que ya usas, con soluciones como n8n autogestionado, con el sistema documentado, auditable y bajo tu propiedad. Cuando el desarrollador termina, el sistema sigue siendo tuyo.</li>
+    </ul>
+    <p>Las grandes empresas catalanas lo tienen claro: no compraron herramientas, han construido internamente con gobernanza, repositorios propios y equipos formados.</p>
+    <div class="insight-box">
+      <p>💡 La buena noticia:</p>
+      <p style="margin:0;font-weight:500;color:var(--text-secondary);">Ya no se necesitan esos presupuestos para aplicar los mismos proyectos en tu empresa. Hace falta método.</p>
+    </div>
+
+    <h2>Por dónde empezar</h2>
+    <p>Elige un solo proceso; el que más horas come o el que más pesa en tu cuenta de resultados, y hazte estas tres preguntas:</p>
+    <ul>
+      <li>¿Está documentado cómo funciona hoy?</li>
+      <li>¿Qué parte pide criterio y qué parte es pura repetición?</li>
+      <li>¿Dónde está la información necesaria para hacer el proceso o la tarea?</li>
+    </ul>
+    <p>Si puedes responderlas, estás listo para automatizar. Si no puedes, ya sabes cuál es el primer trabajo. Y ese también tiene un retorno enorme.</p>
+
+    <p class="article-question">¿Y en tu empresa, qué proceso automatizarías mañana si supieras que va a funcionar?</p>
+  </div>
+</article>
+
+<section class="cta-banner">
+  <div class="cta-banner-inner">
+    <div class="cta-banner-content">
+      <h2 data-i18n="cta.banner.title">¿Preparado para transformar tu negocio con IA?</h2>
+      <p data-i18n="cta.banner.subtitle">Reserva una sesión de descubrimiento gratuita de 30 minutos</p>
+      <a href="contacto.html" class="cta-banner-btn" data-i18n="cta.banner.btn">Reserva tu sesión →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="vinculo.html" class="footer-logo">K<span>AI</span>zen Consult</a>
+        <div class="footer-contact">
+          <p class="footer-label" data-i18n="footer.findUs">Dónde estamos</p>
+          <p class="footer-address" data-i18n="footer.address">C/ Pau Claris, 162-164, pl. 3
+08037 Barcelona</p>
+          <a href="tel:+34722327895" class="footer-email" style="display:block;margin-bottom:0.35rem;">+34 722 327 895</a>
+          <a href="mailto:hello@kaizenconsult.es" class="footer-email">hello@kaizenconsult.es</a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <a href="vinculo.html" class="footer-social" data-i18n="nav.home">Inicio</a>
+        <a href="soluciones.html" class="footer-social" data-i18n="nav.services">Servicios</a>
+        <a href="vinculo.html#proceso" class="footer-social" data-i18n="nav.kaizen">Kaizen</a>
+        <a href="contacto.html" class="footer-social" data-i18n="nav.contact">Contacto</a>
+        <a href="https://www.linkedin.com/company/kaizen-consult-ai/" target="_blank" rel="noopener" class="footer-social" data-i18n="footer.linkedin">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-i18n="footer.tagline">© 2025 KAIzen Consult — Agentes IA, Procesos y Automatización</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('nav a').forEach(a => {
+  a.addEventListener('click', () => document.querySelector('.nav-right')?.classList.remove('open'));
+});
+</script>
+<script src="js/i18n.js"></script>
+
+</body>
+</html>
